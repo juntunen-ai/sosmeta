@@ -39,7 +39,7 @@ curl http://localhost:5000/api/v1/schemas
 curl http://localhost:5000/health
 
 # Run validation tests
-python -m pytest tests/ -v
+pytest -v
 ```
 
 ## How to Contribute

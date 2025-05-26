@@ -100,6 +100,9 @@ def require_api_key(f):
         return f(*args, **kwargs)
     return decorated_function
 
+# Clients must include the API key in the request header:
+# `Authorization: Bearer <API_KEY>`
+
 # Add to all routes
 @app.route('/api/v1/schemas', methods=['GET'])
 @require_api_key

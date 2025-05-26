@@ -105,7 +105,8 @@ Object Identifiers follow the pattern:
 ## Authentication & Rate Limits
 
 ### API Key Required
-All endpoints require valid API authentication.
+All endpoints require valid API authentication. Include your key in the
+`Authorization` header as `Bearer <API_KEY>` for every request.
 
 ### Rate Limits
 - Schema queries: 100/minute
