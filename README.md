@@ -102,6 +102,12 @@ Object Identifiers follow the pattern:
 - `1.2.246.537.6.1506.*` - Service-specific documents
 - Date suffix indicates version (YYYY.M.D)
 
+### Schema Files
+All schema JSON files reside in the `Valmis/` directory at the repository root. Each
+file is named by its OID, for example `1.2.246.537.6.1506.1000.2023.9.8.json`. Schemas
+can be fetched through the API using `/api/v1/schemas/<oid>` or directly from GitHub
+via `https://raw.githubusercontent.com/<owner>/<repo>/main/Valmis/<oid>.json`.
+
 ## Authentication & Rate Limits
 
 ### API Key Required
