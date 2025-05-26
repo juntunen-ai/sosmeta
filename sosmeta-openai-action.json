@@ -1,0 +1,574 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Finnish Social Services Schema API",
+    "description": "API for working with Finnish social services document schemas (SOSMETA). Provides schema validation, document assistance, and metadata extraction for standardized social services documentation.",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "https://your-api-domain.com/api/v1",
+      "description": "Production server"
+    }
+  ],
+  "paths": {
+    "/schemas": {
+      "get": {
+        "summary": "List all available schemas",
+        "description": "Retrieve a list of all available Finnish social services schemas with their metadata",
+        "operationId": "listSchemas",
+        "parameters": [
+          {
+            "name": "documentType",
+            "in": "query",
+            "description": "Filter by document type (e.g., Päätös, Suunnitelma, Arvio)",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "Päätös",
+                "Suunnitelma", 
+                "Arvio",
+                "Ilmoitus",
+                "Asiakaskertomusmerkintä",
+                "Hakemus",
+                "Pyyntö",
+                "Lausunto",
+                "Yhteenveto",
+                "Suostumus",
+                "Selvitys",
+                "Sopimus",
+                "Kuulemisasiakirja",
+                "Laskelma",
+                "Lähete",
+                "Maksusitoumus",
+                "Luovutuslupa-asiakirja",
+                "Kieltoasiakirja",
+                "Asiakkuusasiakirja",
+                "Asia-asiakirja"
+              ]
+            }
+          },
+          {
+            "name": "documentSubject",
+            "in": "query",
+            "description": "Filter by subject area",
+            "required": false,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "Sosiaalihuollon  palvelutehtäville yhteiset asiakasasiakirjat",
+                "Lastensuojelun sijaishuollon asiakasasiakirjat",
+                "Vammaispalvelujen asiakasasiakirjat",
+                "Vanhemmuuden selvittämisen asiakasasiakirjat",
+                "Sosiaalisen luototuksen asiakasasiakirjat",
+                "Adoptioneuvonnan asiakasasiakirjat",
+                "Iäkkäiden palvelujen asiakasasiakirjat",
+                "Lapsiperheiden palvelujen asiakasasiakirjat"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of schemas",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "schemas": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/SchemaMetadata"
+                      }
+                    },
+                    "total": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/schemas/{oid}": {
+      "get": {
+        "summary": "Get specific schema",
+        "description": "Retrieve a specific schema by its OID (Object Identifier)",
+        "operationId": "getSchema",
+        "parameters": [
+          {
+            "name": "oid",
+            "in": "path",
+            "required": true,
+            "description": "The OID of the schema (e.g., 1.2.246.537.6.1506.1000.2023.9.8)",
+            "schema": {
+              "type": "string",
+              "pattern": "^1\\.2\\.246\\.537\\.6\\.(1505|1506)\\.[0-9]+\\.[0-9]{4}\\.[0-9]{1,2}\\.[0-9]{1,2}$"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Schema details",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SchemaDetail"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Schema not found"
+          }
+        }
+      }
+    },
+    "/validate": {
+      "post": {
+        "summary": "Validate document against schema",
+        "description": "Validate a JSON document against a specific Finnish social services schema",
+        "operationId": "validateDocument",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "schemaOid": {
+                    "type": "string",
+                    "description": "The OID of the schema to validate against",
+                    "pattern": "^1\\.2\\.246\\.537\\.6\\.(1505|1506)\\.[0-9]+\\.[0-9]{4}\\.[0-9]{1,2}\\.[0-9]{1,2}$"
+                  },
+                  "document": {
+                    "type": "object",
+                    "description": "The JSON document to validate"
+                  }
+                },
+                "required": ["schemaOid", "document"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Validation result",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ValidationResult"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/generate-template": {
+      "post": {
+        "summary": "Generate document template",
+        "description": "Generate a template document structure based on a schema",
+        "operationId": "generateTemplate",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "schemaOid": {
+                    "type": "string",
+                    "description": "The OID of the schema to generate template for",
+                    "pattern": "^1\\.2\\.246\\.537\\.6\\.(1505|1506)\\.[0-9]+\\.[0-9]{4}\\.[0-9]{1,2}\\.[0-9]{1,2}$"
+                  },
+                  "includeOptional": {
+                    "type": "boolean",
+                    "description": "Whether to include optional fields in the template",
+                    "default": false
+                  },
+                  "language": {
+                    "type": "string",
+                    "enum": ["fi", "sv"],
+                    "description": "Language for field descriptions",
+                    "default": "fi"
+                  }
+                },
+                "required": ["schemaOid"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Generated template",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocumentTemplate"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/search": {
+      "get": {
+        "summary": "Search schemas",
+        "description": "Search schemas by title, description, or field names",
+        "operationId": "searchSchemas",
+        "parameters": [
+          {
+            "name": "q",
+            "in": "query",
+            "required": true,
+            "description": "Search query in Finnish or Swedish",
+            "schema": {
+              "type": "string",
+              "minLength": 2
+            }
+          },
+          {
+            "name": "language",
+            "in": "query",
+            "description": "Search language",
+            "schema": {
+              "type": "string",
+              "enum": ["fi", "sv"],
+              "default": "fi"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Search results",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "results": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/SearchResult"
+                      }
+                    },
+                    "total": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/assistant/help": {
+      "post": {
+        "summary": "Get assistance with document creation",
+        "description": "Get AI assistance for creating or understanding Finnish social services documents",
+        "operationId": "getDocumentAssistance",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "question": {
+                    "type": "string",
+                    "description": "User's question about document creation or understanding"
+                  },
+                  "context": {
+                    "type": "object",
+                    "properties": {
+                      "documentType": {
+                        "type": "string",
+                        "description": "Type of document being worked on"
+                      },
+                      "subject": {
+                        "type": "string",
+                        "description": "Subject area of the document"
+                      },
+                      "currentDocument": {
+                        "type": "object",
+                        "description": "Current document being edited (optional)"
+                      }
+                    }
+                  }
+                },
+                "required": ["question"]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Assistant response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AssistanceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "SchemaMetadata": {
+        "type": "object",
+        "properties": {
+          "oid": {
+            "type": "string",
+            "description": "Object Identifier"
+          },
+          "title": {
+            "type": "string",
+            "description": "Schema title"
+          },
+          "documentType": {
+            "type": "string",
+            "description": "Type of document"
+          },
+          "documentSubject": {
+            "type": "string",
+            "description": "Subject area"
+          },
+          "documentAuthor": {
+            "type": "string",
+            "description": "Author type"
+          },
+          "status": {
+            "type": "string",
+            "description": "Schema status"
+          },
+          "documentDefinitionVersion": {
+            "type": "string",
+            "description": "Version date"
+          },
+          "dataComponentLibraryVersion": {
+            "type": "string",
+            "description": "Library version"
+          }
+        }
+      },
+      "SchemaDetail": {
+        "type": "object",
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/SchemaMetadata"
+          },
+          "schema": {
+            "type": "object",
+            "description": "Full JSON schema definition"
+          },
+          "summary": {
+            "type": "object",
+            "properties": {
+              "requiredFields": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "optionalFields": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "fieldCount": {
+                "type": "integer"
+              }
+            }
+          }
+        }
+      },
+      "ValidationResult": {
+        "type": "object",
+        "properties": {
+          "valid": {
+            "type": "boolean",
+            "description": "Whether the document is valid"
+          },
+          "errors": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "description": "JSON path where error occurred"
+                },
+                "message": {
+                  "type": "string",
+                  "description": "Error message"
+                },
+                "field": {
+                  "type": "string",
+                  "description": "Field name"
+                }
+              }
+            }
+          },
+          "warnings": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "path": {
+                  "type": "string"
+                },
+                "message": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "summary": {
+            "type": "object",
+            "properties": {
+              "totalErrors": {
+                "type": "integer"
+              },
+              "totalWarnings": {
+                "type": "integer"
+              },
+              "completeness": {
+                "type": "number",
+                "description": "Percentage of required fields completed"
+              }
+            }
+          }
+        }
+      },
+      "DocumentTemplate": {
+        "type": "object",
+        "properties": {
+          "template": {
+            "type": "object",
+            "description": "Document template with placeholder values"
+          },
+          "instructions": {
+            "type": "object",
+            "properties": {
+              "requiredFields": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    },
+                    "example": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "optionalFields": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "properties": {
+                    "field": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    },
+                    "type": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "SearchResult": {
+        "type": "object",
+        "properties": {
+          "oid": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "documentType": {
+            "type": "string"
+          },
+          "documentSubject": {
+            "type": "string"
+          },
+          "relevanceScore": {
+            "type": "number",
+            "description": "Search relevance score (0-1)"
+          },
+          "matchedFields": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Fields that matched the search query"
+          }
+        }
+      },
+      "AssistanceResponse": {
+        "type": "object",
+        "properties": {
+          "response": {
+            "type": "string",
+            "description": "AI assistant response"
+          },
+          "suggestedSchemas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SchemaMetadata"
+            },
+            "description": "Relevant schemas for the user's question"
+          },
+          "nextSteps": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Suggested next steps"
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "description": {
+                  "type": "string"
+                },
+                "example": {
+                  "type": "object"
+                }
+              }
+            },
+            "description": "Relevant examples"
+          }
+        }
+      }
+    }
+  }
+}
