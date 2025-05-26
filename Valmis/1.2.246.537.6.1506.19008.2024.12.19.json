@@ -1,0 +1,4115 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Merkintä rajoitustoimenpiteestä\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Merkintä rajoitustoimenpiteestä\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2024-12-19",
+    "dataComponentLibraryVersion": "2024-11-13",
+    "oid": "1.2.246.537.6.1506.19008.2024.12.19",
+    "documentType": "Asiakaskertomusmerkintä",
+    "documentAuthor": "Ammattihenkilö",
+    "documentSubject": "Sosiaalihuollon  palvelutehtäville yhteiset asiakasasiakirjat"
+  },
+  "required": [
+    "merkinta_rajoitustoimenpiteesta"
+  ],
+  "properties": {
+    "merkinta_rajoitustoimenpiteesta": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Merkintä rajoitustoimenpiteestä"
+          },
+          {
+            "lang": "sv",
+            "value": "Anteckning om begränsningsåtgärd"
+          }
+        ]
+      },
+      "required": [
+        "asiakas",
+        "palvelutehtava",
+        "sosiaalipalvelu",
+        "yksikko",
+        "laatija"
+      ],
+      "properties": {
+        "asiakas": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Asiakas"
+              },
+              {
+                "lang": "sv",
+                "value": "Klient"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Asiakas on henkilö, jolle rajoitustoimenpide on tehty."
+              },
+              {
+                "lang": "sv",
+                "value": "Klienten är den person, för vilken begränsningsåtgärden har utförts."
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 1
+          },
+          "required": [
+            "sukunimi",
+            "etunimet"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 2
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 3
+              }
+            },
+            "henkilotunnus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Henkilötunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Tilapäinen yksilöintitunnus -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Tilapäinen yksilöintitunnus -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Tunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Identifierare"
+                  }
+                ],
+                "systemUri": [
+                  {
+                    "lang": "",
+                    "value": "urn:oid:1.2.246.21"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 4
+              },
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            },
+            "tilapainen_yksilointitunnus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Tilapäinen yksilöintitunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Temporär identifikationskod"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan henkilön tilapäiseen yksilöintiin annettu tunnus."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas identifikationskoden som getts personen för tillfällig identifiering."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "112233-445a"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "112233-445a"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Tilapäinen yksilöintitunnus -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Tilapäinen yksilöintitunnus -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Tunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Identifierare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 5
+              },
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "palvelutehtava": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Palvelutehtävä"
+              },
+              {
+                "lang": "sv",
+                "value": "Serviceuppgift"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan luokituksen avulla palvelutehtävä, johon asiakaskertomusmerkintä kuuluu."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas med hjälp av klassificeringen den serviceuppgift, som anteckningen i klientjournalen hänför sig till."
+              }
+            ],
+            "classification": [
+              {
+                "lang": "fi",
+                "value": "Koodistopalvelin: Sosiaalihuolto - Palvelutehtävä 1.2.246.537.6.1221"
+              },
+              {
+                "lang": "sv",
+                "value": "Kodtjänsten: Socialvård - Serviceuppgift 1.2.246.537.6.1221"
+              }
+            ],
+            "classificationLink": [
+              {
+                "lang": "",
+                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d704\u0026versionKey\u003d2563"
+              }
+            ],
+            "classificationOid": [
+              {
+                "lang": "",
+                "value": "1.2.246.537.6.1221"
+              }
+            ],
+            "valueSet": [
+              {
+                "lang": "fi",
+                "value": "10 \u003d Lastensuojelu, \n20 \u003d  Vammaispalvelut"
+              },
+              {
+                "lang": "sv",
+                "value": "10 \u003d Barnskydd, \n20  \u003d Service för personer med funktionsnedsättning"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Koodi"
+              },
+              {
+                "lang": "sv",
+                "value": "Kod"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "acceptedValues": [
+              {
+                "lang": "",
+                "value": "10"
+              },
+              {
+                "lang": "",
+                "value": "20"
+              }
+            ],
+            "rowNumber": 6
+          },
+          "required": [
+            "system",
+            "code",
+            "display"
+          ],
+          "properties": {
+            "system": {
+              "type": "string",
+              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1221(\\.\\d+)*$"
+            },
+            "code": {
+              "type": "string",
+              "enum": [
+                "10",
+                "20"
+              ]
+            },
+            "display": {
+              "type": "string"
+            }
+          }
+        },
+        "sosiaalipalvelu": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Sosiaalipalvelu"
+              },
+              {
+                "lang": "sv",
+                "value": "Socialservice"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan luokituksen avulla sosiaalipalvelu, jonka antamiseen asiakaskertomusmerkintä liittyy."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas med hjälp av klassificeringen den socialservice, som anteckningen i klientjournalen hänför sig till."
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Jos Palvelutehtävä-kenttään valitaan 10 \u003d Lastensuojelu, sallitut arvot ovat 2 \u003d Ammatillinen perhehoito, 24 \u003d Laitospalvelu ja 31 \u003d Perhehoito. Jos palvelutehtävä-kenttään valitaan 20 \u003d Vammaispalvelut, sallitut arvot ovat: 24 \u003d Laitospalvelu, 37 \u003d Päivätoiminta, 55 \u003d Vammaisten henkilöiden työtoiminta, 85 \u003d Ympärivuorokautinen palveluasuminen, 93 \u003d Asumisen tuki ja 94 \u003d Lapsen asumisen tuki."
+              },
+              {
+                "lang": "sv",
+                "value": "Jos Palvelutehtävä-kenttään valitaan 10 \u003d Lastensuojelu, sallitut arvot ovat 2 \u003d Ammatillinen perhehoito, 24 \u003d Laitospalvelu ja 31 \u003d Perhehoito. Jos palvelutehtävä-kenttään valitaan 20 \u003d Vammaispalvelut, sallitut arvot ovat: 24 \u003d Laitospalvelu, 37 \u003d Päivätoiminta, 55 \u003d Vammaisten henkilöiden työtoiminta, 85 \u003d Ympärivuorokautinen palveluasuminen, 93 \u003d Asumisen tuki ja 94 \u003d Lapsen asumisen tuki."
+              }
+            ],
+            "classification": [
+              {
+                "lang": "fi",
+                "value": "Koodistopalvelin: Sosiaalihuolto - Sosiaalipalvelut 1.2.246.537.6.1222"
+              },
+              {
+                "lang": "sv",
+                "value": "Kodtjänsten: Socialvården - Socialservice 1.2.246.537.6.1222"
+              }
+            ],
+            "classificationLink": [
+              {
+                "lang": "",
+                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d703\u0026versionKey\u003d2683"
+              }
+            ],
+            "classificationOid": [
+              {
+                "lang": "",
+                "value": "1.2.246.537.6.1222"
+              }
+            ],
+            "valueSet": [
+              {
+                "lang": "fi",
+                "value": "2 \u003d Ammatillinen perhehoito\n24 \u003d Laitospalvelu,\n31 \u003d Perhehoito, \n37 \u003d Päivätoiminta,\n55 \u003d Vammaisten henkilöiden työtoiminta, \n85 \u003d Ympärivuorokautinen palveluasuminen\n93 \u003d Asumisen tuki\n94 \u003d Lapsen asumisen tuki"
+              },
+              {
+                "lang": "sv",
+                "value": "24 \u003d Service på en institution,\n37 \u003d Dagverksamhet,\n55 \u003d Arbetsverksamhet för personer med funktionsnedsättning,\n85 \u003d Serviceboende med heldygnsomsorg\n93 \u003d Stöd för boendet\n94 \u003d Stöd för boendet för barn"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Koodi"
+              },
+              {
+                "lang": "sv",
+                "value": "Kod"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "acceptedValues": [
+              {
+                "lang": "",
+                "value": "24"
+              },
+              {
+                "lang": "",
+                "value": "37"
+              },
+              {
+                "lang": "",
+                "value": "55"
+              },
+              {
+                "lang": "",
+                "value": "85"
+              },
+              {
+                "lang": "",
+                "value": "93"
+              },
+              {
+                "lang": "",
+                "value": "94"
+              },
+              {
+                "lang": "",
+                "value": "2"
+              },
+              {
+                "lang": "",
+                "value": "31"
+              }
+            ],
+            "rowNumber": 7
+          },
+          "required": [
+            "system",
+            "code",
+            "display"
+          ],
+          "properties": {
+            "system": {
+              "type": "string",
+              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1222(\\.\\d+)*$"
+            },
+            "code": {
+              "type": "string",
+              "enum": [
+                "24",
+                "37",
+                "55",
+                "85",
+                "93",
+                "94",
+                "2",
+                "31"
+              ]
+            },
+            "display": {
+              "type": "string"
+            }
+          }
+        },
+        "yksikko": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Yksikkö"
+              },
+              {
+                "lang": "sv",
+                "value": "Enhet"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Yksikkö, jossa rajoitustoimenpide toteutetaan"
+              },
+              {
+                "lang": "sv",
+                "value": "Enhet där begränsningsåtgärden utförs"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas namnet på serviceenheten enligt Organisationsregistret för social- och hälsovården."
+              }
+            ],
+            "example": [
+              {
+                "lang": "fi",
+                "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+              },
+              {
+                "lang": "sv",
+                "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Esbo centrums barnskydd, Esbo stad, social- och hälsovårdssektorn"
+              }
+            ],
+            "classification": [
+              {
+                "lang": "fi",
+                "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+              },
+              {
+                "lang": "sv",
+                "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+              }
+            ],
+            "classificationLink": [
+              {
+                "lang": "",
+                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+              }
+            ],
+            "classificationOid": [
+              {
+                "lang": "",
+                "value": "1.2.246.537.6.202"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Koodi"
+              },
+              {
+                "lang": "sv",
+                "value": "Kod"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 8
+          },
+          "required": [
+            "system",
+            "code",
+            "display"
+          ],
+          "properties": {
+            "system": {
+              "type": "string",
+              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+            },
+            "code": {
+              "type": "string"
+            },
+            "display": {
+              "type": "string"
+            }
+          }
+        },
+        "rajoitustoimenpide": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Rajoitustoimenpide"
+              },
+              {
+                "lang": "sv",
+                "value": "Begränsningsåtgärd"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 9
+          },
+          "required": [],
+          "properties": {
+            "millaista_tilannetta_kirjaaminen_koskee": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Millaista tilannetta kirjaaminen koskee?"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Hurudan situation gäller anteckningen?"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Luokituksesta valitaan 1, jos merkintään on tarkoitus kirjata ylös tiedot ilman päätöstä tehdystä rajoitustoimenpiteestä. Lastensuojelulain 74 §:n mukaan rajoitustoimenpiteiden käytön seurannan ja valvonnan turvaamiseksi lastensuojelulaitoksen on asianmukaisesti kirjattava käyttämänsä rajoitustoimenpiteet. Kun rajoitustoimenpiteestä tehdään päätös, on samat tiedot kirjattava päätösasiakirjaan, jolloin niitä ei tarvitse kirjata toista kertaa tähän merkintään. \n\nLuokituksesta valitaan 2, jos merkintään on tarkoitus kirjata ylös huomioita rajoitustoimenpiteen aikana. Lastensuojelulaitoksessa voi olla tarpeen tehdä kirjauksia esimerkiksi liikkumisvapauden rajoittamisen tai erityisen huolenpidon aikana.\n\nLuokituksesta valitaan 3, jos merkintään on tarkoitus kirjata ylös lastensuojelun eristämiseen liittyviä, lastensuojelulain 74 §:n 2 mom. perustuvia asioita."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I klassificeringen väljs 1, om syftet är att göra en anteckning om en begränsningsåtgärd som har utförts utan beslut. Enligt 74 § i barnskyddslagen ska barnskyddsanstalten för tryggande av uppföljningen och övervakningen av bruket av begränsningsåtgärder på behörigt sätt göra anteckningar om de begränsningsåtgärder som anstalten har vidtagit. När beslut om en begränsningsåtgärd fattas ska samma uppgifter antecknas i beslutshandlingen, varvid de inte behöver antecknas en andra gång här. I klassificeringen väljs 2, om syftet är att göra en anteckning om observationer under begränsningsåtgärden. På barnskyddsanstalter kan det finnas behov av att göra anteckningar till exempel under begränsning av rörelsefriheten eller särskild omsorg. I klassificeringen väljs 3, om syftet är att göra en anteckning gällande isolering inom barnskyddet, gällande sådant som grundar sig på 74 § 2 mom. i barnskyddslagen."
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa. \nJärjestelmässä näytetään oikeat kentät tämän valinnan perusteella."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa. \nJärjestelmässä näytetään oikeat kentät tämän valinnan perusteella."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Sisäinen luokitus:\n1 \u003d Ilman päätöstä tehdyn rajoituksen tietojen kirjaaminen,\n2 \u003d Rajoituksen aikainen kirjaaminen,\n3 \u003d Eristämiseen liittyvä kirjaaminen"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Intern klassificering:\n1 \u003d Dokumentation av uppgifter om en begränsning som har genomförts utan beslut,\n2 \u003d Dokumentation under en begränsning,\n3 \u003d Dokumentation om isolering"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "Merkintä rajoitustoimenpiteestä/Millaista tilannetta kirjaaminen koskee?"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "acceptedValues": [
+                  {
+                    "lang": "",
+                    "value": "1"
+                  },
+                  {
+                    "lang": "",
+                    "value": "2"
+                  },
+                  {
+                    "lang": "",
+                    "value": "3"
+                  }
+                ],
+                "rowNumber": 10
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "enum": [
+                    "merkinta_rajoitustoimenpiteesta/millaista_tilannetta_kirjaaminen_koskee"
+                  ]
+                },
+                "code": {
+                  "type": "string",
+                  "enum": [
+                    "1",
+                    "2",
+                    "3"
+                  ]
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "lastensuojelun_rajoitustoimenpiteen_laji": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lastensuojelun rajoitustoimenpiteen laji"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Typ av begränsning inom barnskyddet"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Jos Palvelutehtävä-kenttään on valittu Lastensuojelu, näytetään tämä kenttä, ja Kehitysvammaisten erityishuollon rajoitustoimenpiteen laji -kenttää ei näytetä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Jos Palvelutehtävä-kenttään on valittu Lastensuojelu, näytetään tämä kenttä, ja Kehitysvammaisten erityishuollon rajoitustoimenpiteen laji -kenttää ei näytetä."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: Sosiaalihuolto - Lastensuojelun rajoitustoimenpiteen laji 1.2.246.537.6.1218"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kodtjänsten: Socialvård - Typ av begränsning i barnskyddssyfte 1.2.246.537.6.1218"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d606\u0026versionKey\u003d706"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.1218"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 11
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1218(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "kehitysvammaisten_erityishuollon_rajoitustoimenpiteen_laji": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Kehitysvammaisten erityishuollon rajoitustoimenpiteen laji"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Typ av begränsning inom specialomsorger om personer med utvecklingsstörning"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Jos Palvelutehtävä-kenttään on valittu Vammaispalvelut, näytetään tämä kenttä, ja Lastensuojelun rajoitustoimenpiteen laji -kenttää ei näytetä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Jos Palvelutehtävä-kenttään on valittu Vammaispalvelut, näytetään tämä kenttä, ja Lastensuojelun rajoitustoimenpiteen laji -kenttää ei näytetä."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: Sosiaalihuolto - Rajoitustoimenpiteet kehitysvammaisten erityishuollossa 1.2.246.537.6.1266"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kodtjänsten: Socialvård - Begränsningsåtgärder inom specialomsorger om utvecklingsstörda 1.2.246.537.6.1266"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d2544\u0026versionKey\u003d2844"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.1266"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 12
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1266(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "rajoitustoimenpide": {
+              "type": "array",
+              "minItems": 0,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Rajoitustoimenpide"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Begränsningsåtgärd"
+                    }
+                  ],
+                  "title": [
+                    {
+                      "lang": "fi",
+                      "value": "Ilman päätöstä tehty rajoitustoimenpide"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Begränsningsåtgärd som har utförts utan beslut"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Tähän kirjataan tiedot sellaisesta rajoitustoimenpiteestä, josta ei lain perusteella tarvitse tehdä kirjallista päätöstä. Lastensuojelussa tämä tarkoittaa aineiden ja esineiden haltuunottoa (jos aineet ja esineet palautetaan), kiinnipitämistä ja henkilöntarkastusta. Tietokokonaisuutta käytetään erityisesti lastensuojelussa. Muiden rajoitustoimenpiteiden kohdalla lastensuojelussa tehdään päätös, ja tiedot kirjataan päätösasiakirjaan. Niitä ei ole syytä kirjata toista kertaa tähän kertomusmerkintään, jonka vuoksi tämä tietokokonaisuus on tarkoitettu vain ilman päätöstä tehtyjen rajoitusten tietojen kirjaamiseen.\n\nKehitysvammaisten erityishuollossa tiedot rajoitustoimenpiteistä kirjataan pääsääntöisesti yhteenvetoon jälkiselvittelystä ja selvitykseen rajoitustoimenpiteestä. Jos kuitenkin tätä tietokokonaisuutta käytetään kehitysvammaisten erityishuollossa, sitä käytetään seuraavien, ilman päätöstä tehtävien rajoitustoimenpiteiden kohdalla: aineiden ja esineiden haltuunotto (jos aine/esine palautetaan vuorokauden kuluessa), kiinnipitäminen, henkilöntarkastus, lyhytaikainen erillään pitäminen, rajoittavien välineiden tai asusteiden käyttö päivittäisissä toiminnoissa ja lyhytaikainen poistumisen estäminen. Muiden rajoitustoimenpiteiden kohdalla kehitysvammaisten erityishuollossa tehdään päätös, johon kirjataan tätä tietokokonaisuutta vastaavat, kehitysvammaisten erityishuollosta annetun lain 42 o §:n mukaiset tiedot."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Här antecknas uppgifter om sådana begränsningsåtgärder, för vilka ett skriftligt beslut inte behöver fattas enligt lagen. Inom barnskyddet innebär detta omhändertagande av ämnen och föremål (om ämnena och föremålen återlämnas), fasthållande och kroppsvisitation. Uppgiftshelheten används särskilt inom barnskyddet. I fråga om övriga begränsningsåtgärder fattas ett beslut inom barnskyddet, och uppgifterna antecknas i beslutshandlingen. Det finns ingen anledning att anteckna dem en andra gång i denna journalhandling, och därför är denna informationshelhet avsedd endast för anteckning av uppgifter om begränsningsåtgärder som har utförts utan beslut. \n\nInom specialomsorger om utvecklingsstörda antecknas uppgifter om begränsningsåtgärder i regel i sammanfattningen av genomgången i efterhand och utredningen av begränsningsåtgärden. Om denna informationshelhet ändå används inom specialomsorger om utvecklingsstörda, används den vid följande begränsningsåtgärder som utförs utan beslut: omhändertagande av ämnen och föremål (om ämnet/föremålet återlämnas inom ett dygn), fasthållande, kroppsvisitation, kortvarig avskildhet, användning av begränsande anordningar eller klädesplagg i dagliga funktioner och kortvarigt kvarhållande. I fråga om övriga begränsningsåtgärder fattas ett beslut inom specialomsorger om utvecklingsstörda. I beslutet antecknas uppgifter enligt 42 o § i lagen angående specialomsorger om utvecklingsstörda som motsvarar denna uppgiftshelhet."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Jos \"Millaista tilannetta kirjaaminen koskee?\" -kenttään on valittu luokituksesta 1, tämä tietokokonaisuus näytetään. Jos luokituksesta on valittu 2 tai 3, ei tätä tietokokonaisuutta näytetä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Jos \"Millaista tilannetta kirjaaminen koskee?\" -kenttään on valittu luokituksesta 1, tämä tietokokonaisuus näytetään. Jos luokituksesta on valittu 2 tai 3, ei tätä tietokokonaisuutta näytetä."
+                    }
+                  ],
+                  "repeatable": true,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 13
+                },
+                "required": [],
+                "properties": {
+                  "ajanjakso": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Ajanjakso"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Tidsperiod"
+                        }
+                      ],
+                      "title": [
+                        {
+                          "lang": "fi",
+                          "value": "Rajoitustoimenpiteen kesto"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Begränsningsåtgärdens varaktighet"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Lastensuojelulain 74 §:n mukaan rajoitustoimenpiteen kirjaamisen tulee sisältää tiedon rajoitustoimenpiteen kestosta. Kehitysvammaisten erityishuollosta annetun lain 42 o §:n mukaan erityishuollossa olevan henkilön asiakasasiakirjoihin on kirjattava rajoitustoimenpiteen alkamis- ja päättymisajankohta. Kehitysvammaisten erityishuollossa kirjaamista tähän ei tarvitse tehdä, jos asia on kirjattu jo yhteenveto jälkiselvittelystä -asiakirjaan."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Enligt 74 § i barnskyddslagen ska anteckningen om begränsningsåtgärden omfatta hur länge begränsningsåtgärden har varat. Enligt 42 o § i lagen angående specialomsorger om utvecklingsstörda ska tidpunkten för när en begränsningsåtgärd har inletts och avslutats antecknas i klienthandlingarna för en person som ges specialomsorger. Inom specialomsorger om utvecklingsstörda behöver anteckningar inte göras här, om ärendet redan har antecknats i handlingen sammanfattning av genomgång i efterhand."
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 14
+                    },
+                    "required": [],
+                    "properties": {
+                      "alkamishetki": {
+                        "type": "string",
+                        "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Alkamishetki"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Inledningstidpunkt"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "Kenttään kirjataan ajanjakson aloittava päivämäärä ja kellonaika."
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "I fältet antecknas datumet och klockslaget som inleder tidsperioden."
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "2020-10-13T10:49:14+03:00"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "2020-10-13T10:49:14+03:00"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Hetki"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Datum och klockslag"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 15
+                        }
+                      },
+                      "paattymishetki": {
+                        "type": "string",
+                        "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Päättymishetki"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Avslutningstidpunkt"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "Kenttään kirjataan ajanjakson päättävä päivämäärä ja kellonaika."
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "I fältet antecknas datumet och klockslaget som avslutar tidsperioden."
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "2020-10-13T10:49:14+03:00"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "2020-10-13T10:49:14+03:00"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Hetki"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Datum och klockslag"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 16
+                        }
+                      }
+                    }
+                  },
+                  "muut_lastensuojelun_rajoitukset": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Muut lastensuojelun rajoitukset"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Andra begränsningar inom barnskyddet"
+                          }
+                        ],
+                        "title": [
+                          {
+                            "lang": "fi",
+                            "value": "Muut lastensuojelun rajoitukset, joita on käytetty samaan aikaan"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Andra begränsningar inom barnskyddet, som har använts samtidigt"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "Lastensuojelulain 74 §:n mukaan rajoitustoimenpiteen kirjaamisen tulee sisältää kuvauksen siitä, minkälaisia muita rajoituksia on mahdollisesti käytetty samaan aikaan."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Enligt 74 § i barnskyddslagen ska anteckningen om begränsningsåtgärden omfatta en beskrivning av hurdana andra begränsningar som eventuellt har tillgripits samtidigt."
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Jos Palvelutehtävä-kenttään on valittu Lastensuojelu, näytetään tämä kenttä, ja Muut kehitysvammaisten erityishuollon rajoitukset, joita on käytetty samaan aikaan -kenttää ei näytetä."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Jos Palvelutehtävä-kenttään on valittu Lastensuojelu, näytetään tämä kenttä, ja Muut kehitysvammaisten erityishuollon rajoitukset, joita on käytetty samaan aikaan -kenttää ei näytetä."
+                          }
+                        ],
+                        "classification": [
+                          {
+                            "lang": "fi",
+                            "value": "Koodistopalvelin: Sosiaalihuolto - Lastensuojelun rajoitustoimenpiteen laji 1.2.246.537.6.1218"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kodtjänsten: Socialvård - Typ av begränsning i barnskyddssyfte 1.2.246.537.6.1218"
+                          }
+                        ],
+                        "classificationLink": [
+                          {
+                            "lang": "",
+                            "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d606\u0026versionKey\u003d706"
+                          }
+                        ],
+                        "classificationOid": [
+                          {
+                            "lang": "",
+                            "value": "1.2.246.537.6.1218"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Koodi"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kod"
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 17
+                      },
+                      "required": [
+                        "system",
+                        "code",
+                        "display"
+                      ],
+                      "properties": {
+                        "system": {
+                          "type": "string",
+                          "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1218(\\.\\d+)*$"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "display": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "muut_kehitysvammaisten_erityishuollon_rajoitukset": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Muut kehitysvammaisten erityishuollon rajoitukset"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Andra begränsningar inom specialomsorger om personer med utvecklingsstörning"
+                          }
+                        ],
+                        "title": [
+                          {
+                            "lang": "fi",
+                            "value": "Muut kehitysvammaisten erityishuollon rajoitukset, joita on käytetty samaan aikaan"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Andra begränsningar inom specialomsorger om personer med utvecklingsstörning, som har använts samtidigt"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "Kehitysvammaisten erityishuollosta annetun lain 42 d §:n mukaan rajoitustoimenpiteiden yhteisvaikutukseen on kiinnitettävä erityistä huomiota, jos henkilöön kohdistetaan useampia rajoitustoimenpiteitä samanaikaisesti tai peräkkäin."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Enligt 42 d § i lagen angående specialomsorger om utvecklingsstörda ska särskild uppmärksamhet fästas vid de samfällda konsekvenserna om en person blir föremål för flera begränsningsåtgärder samtidigt eller efter varandra."
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Jos Palvelutehtävä-kenttään on valittu Vammaispalvelut, näytetään tämä kenttä, ja Muut lastensuojelun rajoitukset, joita on käytetty samaan aikaan -kenttää ei näytetä."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Jos Palvelutehtävä-kenttään on valittu Vammaispalvelut, näytetään tämä kenttä, ja Muut lastensuojelun rajoitukset, joita on käytetty samaan aikaan -kenttää ei näytetä."
+                          }
+                        ],
+                        "classification": [
+                          {
+                            "lang": "fi",
+                            "value": "Koodistopalvelin: Sosiaalihuolto - Rajoitustoimenpiteet kehitysvammaisten erityishuollossa 1.2.246.537.6.1266"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kodtjänsten: Socialvård - Begränsningsåtgärder inom specialomsorger om utvecklingsstörda 1.2.246.537.6.1266"
+                          }
+                        ],
+                        "classificationLink": [
+                          {
+                            "lang": "",
+                            "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d2544\u0026versionKey\u003d2844"
+                          }
+                        ],
+                        "classificationOid": [
+                          {
+                            "lang": "",
+                            "value": "1.2.246.537.6.1266"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Koodi"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kod"
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 18
+                      },
+                      "required": [
+                        "system",
+                        "code",
+                        "display"
+                      ],
+                      "properties": {
+                        "system": {
+                          "type": "string",
+                          "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1266(\\.\\d+)*$"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "display": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "kuvaus": {
+                    "type": "string",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Kuvaus"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Beskrivning"
+                        }
+                      ],
+                      "title": [
+                        {
+                          "lang": "fi",
+                          "value": "Kuvaus rajoitustoimenpiteestä ja siitä, kuinka se on toteutettu"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Beskrivning av begränsningsåtgärden och hur den har genomförts"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Lastensuojelulain 74 §:n mukaan rajoitustoimenpiteen kirjaamisen tulee sisältää kuvaus rajoitustoimenpiteestä ja siitä, miten rajoitus on toteutettu. Kehitysvammaisten erityishuollosta annetun lain 42 o §:n mukaan erityishuollossa olevan henkilön asiakasasiakirjoihin on kirjattava rajoitustoimenpiteen käyttö. Jos kyseessä on lyhytaikainen erillään pitäminen, kuvataan millaisessa tilassa rajoittaminen toteutetaan ja sisältyykö siihen oven lukitsemista. Kehitysvammaisten erityishuollossa kirjaamista tähän ei tarvitse tehdä, jos asia on kirjattu jo yhteenveto jälkiselvittelystä -asiakirjaan."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Enligt 74 § i barnskyddslagen ska anteckningen om begränsningsåtgärden omfatta en beskrivning av hur begränsningen har genomförts. Enligt 42 o § i lagen angående specialomsorger om utvecklingsstörda ska användningen av en begränsningsåtgärd antecknas i klienthandlingarna för en person som ges specialomsorger. Om det är frågan om en kortvarig avskildhet, beskriver man i vilket utrymme begränsningen utförs och om låsning av dörren ingår. Inom specialomsorger om utvecklingsstörda behöver anteckningar inte göras här, om ärendet redan har antecknats i handlingen sammanfattning av genomgång i efterhand."
+                        }
+                      ],
+                      "example": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Teksti"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Text"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 19
+                    }
+                  },
+                  "perustelu": {
+                    "type": "string",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Perustelu"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Motiveringar"
+                        }
+                      ],
+                      "title": [
+                        {
+                          "lang": "fi",
+                          "value": "Rajoitustoimenpiteen perustelu"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Grunden för begränsningsåtgärden"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Lastensuojelulain 74 §:n mukaan rajoitustoimenpiteen kirjaamisen tulee sisältää tiedon rajoitustoimenpiteen perusteesta. Jos kyseessä on henkilöntarkastus, kenttään kirjataan syyt, joiden vuoksi on perusteltua epäillä, että lapsella on vaatteissaan tai muutoin yllään lastensuojelulain 65 §:n 1 momentissa tarkoitettuja aineita tai esineitä. \n\nKehitysvammaisten erityishuollosta annetun lain 42 o §:n mukaan erityishuollossa olevan henkilön asiakasasiakirjoihin on kirjattava rajoitustoimenpiteen perusteet. Kenttään voidaan tarvittaessa kuvata myös ennaltaehkäiseviä toimia ja rajoitustoimenpidettä edeltänyttä tilannetta. Kehitysvammaisten erityishuollossa kirjaamista tähän ei tarvitse tehdä, jos asia on kirjattu jo yhteenveto jälkiselvittelystä -asiakirjaan."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Enligt 74 § i barnskyddslagen ska anteckningen om begränsningsåtgärden omfatta uppgift om grunden för begränsningsåtgärden. Om det är frågan om kroppsvisitation, antecknar man i fältet orsakerna, utifrån vilka det är motiverat att misstänka att barnet i sina kläder eller på annat sätt bär på sådana ämnen eller föremål som avses i 65 § 1 momentet i barnskyddslagen. Enligt 42 o § i lagen angående specialomsorger om utvecklingsstörda ska grunderna för en begränsningsåtgärd antecknas i klienthandlingarna för en person som ges specialomsorger. I fältet kan man vid behov också beskriva förebyggande åtgärder och en begränsningsåtgärd som har föregått situationen. Inom specialomsorger om utvecklingsstörda behöver anteckningar inte göras här, om ärendet redan har antecknats i handlingen sammanfattning av genomgång i efterhand."
+                        }
+                      ],
+                      "example": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Teksti"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Text"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 20
+                    }
+                  },
+                  "rajoitustoimenpiteen_ratkaisija": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Rajoitustoimenpiteen ratkaisija"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Person som fattat beslut om begränsningsåtgärden"
+                        }
+                      ],
+                      "title": [
+                        {
+                          "lang": "fi",
+                          "value": "Rajoitustoimenpidettä koskevan ratkaisun tehnyt henkilö"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Person som har fattat beslut om begränsningsåtgärden"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Kehitysvammaisten erityishuollosta annetun lain 42 o §:n mukaan erityishuollossa olevaa henkilöä koskeviin asiakasasiakirjoihin on kirjattava rajoitustoimenpidettä koskevan ratkaisun tehnyt henkilö. Kehitysvammaisten erityishuollossa kirjaamista tähän ei tarvitse tehdä, jos asia on kirjattu jo yhteenveto jälkiselvittelystä -asiakirjaan."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Enligt 42 o § i lagen angående specialomsorger om utvecklingsstörda ska den person som har avgjort frågan om en begränsningsåtgärd antecknas i klienthandlingarna för en person som ges specialomsorger. Inom specialomsorger om utvecklingsstörda behöver anteckningar inte göras här, om ärendet redan har antecknats i handlingen sammanfattning av genomgång i efterhand."
+                        }
+                      ],
+                      "implementationNote": [
+                        {
+                          "lang": "fi",
+                          "value": "Jos Palvelutehtävä-kenttään valitaan Lastensuojelu, tätä tietokokonaisuutta ei näytetä."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Jos Palvelutehtävä-kenttään valitaan Lastensuojelu, tätä tietokokonaisuutta ei näytetä."
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 21
+                    },
+                    "required": [
+                      "sukunimi",
+                      "etunimet"
+                    ],
+                    "properties": {
+                      "sukunimi": {
+                        "type": "string",
+                        "minLength": 1,
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Sukunimi"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Efternamn"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Nimi"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Namn"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": true,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 22
+                        }
+                      },
+                      "etunimet": {
+                        "type": "string",
+                        "minLength": 1,
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Etunimet"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Samtliga förnamn"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Nimi"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Namn"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": true,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 23
+                        }
+                      },
+                      "tehtavanimike": {
+                        "type": "string",
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Tehtävänimike"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Uppgiftsbeteckning"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Teksti"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Text"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 24
+                        }
+                      }
+                    }
+                  },
+                  "rajoitustoimenpiteen_suorittaja": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Rajoitustoimenpiteen suorittaja"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Person som genomför begränsningsåtgärden"
+                          }
+                        ],
+                        "title": [
+                          {
+                            "lang": "fi",
+                            "value": "Rajoitustoimenpiteen suorittanut henkilö"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Person som har utfört begränsningsåtgärden"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "Lastensuojelulain 74 §:n mukaan rajoitustoimenpiteestä on kirjattava sen käytännössä toteuttaneen henkilön nimi. Kehitysvammaisten erityishuollosta annetun lain 42 o §:n mukaan erityishuollossa olevaa henkilöä koskeviin asiakasasiakirjoihin on kirjattava rajoitustoimenpiteen suorittanut henkilö. Kehitysvammaisten erityishuollossa kirjaamista tähän ei tarvitse tehdä, jos asia on kirjattu jo yhteenveto jälkiselvittelystä -asiakirjaan."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Enligt 74 § i barnskyddslagen ska anteckningen om begränsningsåtgärden omfatta namnet på den person som har genomfört åtgärden i praktiken. Enligt 42 o § i lagen angående specialomsorger om utvecklingsstörda ska den person som har vidtagit begränsningsåtgärden antecknas i klienthandlingarna för en person som ges specialomsorger. Inom specialomsorger om utvecklingsstörda behöver anteckningar inte göras här, om ärendet redan har antecknats i handlingen sammanfattning av genomgång i efterhand."
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 25
+                      },
+                      "required": [
+                        "sukunimi",
+                        "etunimet"
+                      ],
+                      "properties": {
+                        "sukunimi": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Sukunimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Efternamn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 26
+                          }
+                        },
+                        "etunimet": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Etunimet"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Samtliga förnamn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 27
+                          }
+                        },
+                        "tehtavanimike": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Tehtävänimike"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Uppgiftsbeteckning"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Teksti"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Text"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 28
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "rajoitustoimenpiteessa_lasnaoleva": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Rajoitustoimenpiteessä läsnäoleva"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Närvarande vid begränsningsåtgärden"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "Lastensuojelulain 74 §:n perusteella rajoitustoimenpiteiden kirjaamisen tulee sisältää tieto rajoitustoimenpiteessä läsnä olleen henkilön nimestä."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Enligt 74 § i barnskyddslagen ska anteckningen om begränsningsåtgärden omfatta namnet på den person som har närvarat vid genomförandet."
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Jos Palvelutehtävä-kenttään valitaan Vammaispalvelut, tätä kenttää ei näytetä."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Jos Palvelutehtävä-kenttään valitaan Vammaispalvelut, tätä kenttää ei näytetä."
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 29
+                      },
+                      "required": [
+                        "sukunimi",
+                        "etunimet"
+                      ],
+                      "properties": {
+                        "sukunimi": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Sukunimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Efternamn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan ammattihenkilön sukunimi."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas den yrkesutbildade personens efternamn."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 30
+                          }
+                        },
+                        "etunimet": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Etunimet"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Samtliga förnamn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan ammattihenkilön etunimi."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas den yrkesutbildade personens förnamn."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 31
+                          }
+                        },
+                        "tehtavanimike": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Tehtävänimike"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Uppgiftsbeteckning"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan ammattihenkilön työtehtävän yksilöivä nimike. Koulutuksesta ja kelpoisuudesta sosiaalihuollon ammatillisiin tehtäviin säädetään lainsäädännössä."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas en beteckning som preciserar den yrkesutbildade personens arbetsuppgift. I lagstiftningen finns bestämmelser om utbildning och behörighet för yrkesuppgifter inom socialvården."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "Sosiaalityöntekijä"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Socialarbetare"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Teksti"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Text"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 32
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "vaikutus_hoito__ja_kasvatussuunnitelmaan": {
+                    "type": "string",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Vaikutus hoito- ja kasvatussuunnitelmaan"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Inverkan på planen för vård och fostran"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Lastensuojelulain 74 §:n mukaan rajoitustoimenpiteiden kirjaamisen tulee sisältää kuvauksen toimenpiteen mahdollisesta vaikutuksesta hoito- ja kasvatussuunnitelmaan."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Enligt 74 § i barnskyddslagen ska anteckningen om begränsningsåtgärden omfatta en beskrivning av åtgärdens eventuella inverkan på planen för vård och fostran."
+                        }
+                      ],
+                      "example": [
+                        {
+                          "lang": "fi",
+                          "value": "Hoito- ja kasvatussuunnitelman tavoitteet tarkastettu ja muutettu."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Målen i planen för vård och fostran har granskats och ändrats."
+                        }
+                      ],
+                      "implementationNote": [
+                        {
+                          "lang": "fi",
+                          "value": "Kenttää ei näytetä, jos Palvelutehtävä-kenttään on valittu Vammaispalvelut."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Kenttää ei näytetä, jos Palvelutehtävä-kenttään on valittu Vammaispalvelut."
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Teksti"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Text"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 33
+                    }
+                  },
+                  "asiakkaan_kuuleminen": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Asiakkaan kuuleminen"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Hörande av klienten"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 34
+                    },
+                    "required": [],
+                    "properties": {
+                      "mielipide": {
+                        "type": "string",
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Mielipide"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Åsikt"
+                            }
+                          ],
+                          "title": [
+                            {
+                              "lang": "fi",
+                              "value": "Asiakkaan näkemys rajoitustoimenpiteen käytöstä ja sen perusteista"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Klientens synpunkter på användningen av begränsningsåtgärden och motiveringar till detta"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "Kehitysvammaisten erityishuollosta annetun lain 42 o §:n mukaan Erityishuollossa olevaa henkilöä koskeviin asiakas- tai potilasasiakirjoihin on kirjattava henkilön näkemys rajoitustoimenpiteen käytöstä ja sen perusteista. \n\nLastensuojelulain 61 a §:n mukaan rajoituksia saadaan käyttää vain, jos muun muassa lapsen mielipide rajoituksesta on selvitetty. Lastensuojelulain 74 §:n mukaan on kuvattava, miten lasta on kuultu ennen rajoituksen toteuttamista ja kirjattava, mikä oli lapsen mielipide asiasta."
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Enligt 42 o § i lagen angående specialomsorger om utvecklingsstörda ska personens syn på användningen av och grunderna för en begränsningsåtgärden antecknas i klient- eller patienthandlingarna för en person som ges specialomsorger. Enligt 61 a § i barnskyddslagen får begränsningar tillgripas endast om bland annat barnets åsikt om begränsningen har utretts. Enligt 74 § i barnskyddslagen ska man beskriva sättet att höra barnet innan begränsningen genomförts och anteckna barnets åsikt om saken."
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Teksti"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Text"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 35
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "rajoituksen_aikainen_kirjaaminen": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Rajoituksen aikainen kirjaaminen"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Anteckningar under begränsningen"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Tätä tietokokonaisuutta käytetään sekä ilman päätöstä että päätöksen perusteella tehtyjen rajoitusten kohdalla. Tähän tietokokonaisuuteen kirjataan ne tiedot ja päivittäismerkinnät rajoituksen toteuttamisen aikana, joita ei kirjata muihin asiakasasiakirjoihin."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Denna informationshelhet används för både begränsningar utan beslut och begränsningar som grundar sig på beslut. I den här informationshelheten antecknas de uppgifter och dagliga anteckningar under genomförandet av begränsningen, som inte antecknas i andra klienthandlingar."
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Jos \"Millaista tilannetta kirjaaminen koskee?\" -kenttään on valittu luokituksesta 2, tämä tietokokonaisuus näytetään. Jos luokituksesta on valittu 1 tai 3, ei tätä tietokokonaisuutta näytetä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Jos \"Millaista tilannetta kirjaaminen koskee?\" -kenttään on valittu luokituksesta 2, tämä tietokokonaisuus näytetään. Jos luokituksesta on valittu 1 tai 3, ei tätä tietokokonaisuutta näytetä."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Otsikko"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Rubrik"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 36
+              },
+              "required": [],
+              "properties": {
+                "paatokseen_perustuva_rajoitustoimenpide": {
+                  "type": "array",
+                  "minItems": 0,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Päätökseen perustuva rajoitustoimenpide"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Beslutsbaserad begränsningsåtgärd"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Tähän tietokokonaisuuteen kirjataan tiedot rajoituksista silloin, kun rajoitukset perustuvat tietylle aikavälille tehtyyn päätökseen, jonka perusteella voidaan tehdä useita yksittäisiä rajoituksia.\nEsimerkiksi päätös rajoittavan välineen tai asusteen toistuvasta käytöstä päivittäisissä toiminnoissa voidaan tehdä enintään kuudeksi kuukaudeksi. Päätöksen voimassaolon aikana rajoittavien välineiden tai asusteiden käytöstä voidaan tehdä kirjaukset tähän tietokokonaisuuteen."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Den här informationshelheten innehåller uppgifter om begränsningar när de baseras på ett beslut för en viss tidsperiod, utifrån vilket flera individuella begränsningar kan göras. Till exempel kan ett beslut om återkommande användning av begränsande anordningar och klädesplagg i dagliga rutiner fattas för högst sex månader. Under beslutets giltighetstid kan anteckningar om användningen av begränsande anordningar och klädesplagg göras i den här informationshelheten."
+                        }
+                      ],
+                      "repeatable": true,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 37
+                    },
+                    "required": [],
+                    "properties": {
+                      "ajanjakso": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Ajanjakso"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Tidsperiod"
+                            }
+                          ],
+                          "title": [
+                            {
+                              "lang": "fi",
+                              "value": "Rajoitustoimenpiteen kesto"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Begränsningsåtgärdens varaktighet"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 38
+                        },
+                        "required": [],
+                        "properties": {
+                          "alkamishetki": {
+                            "type": "string",
+                            "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+                            "sosmeta": {
+                              "name": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Alkamishetki"
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "Inledningstidpunkt"
+                                }
+                              ],
+                              "description": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Kenttään kirjataan ajanjakson aloittava päivämäärä ja kellonaika."
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "I fältet antecknas datumet och klockslaget som inleder tidsperioden."
+                                }
+                              ],
+                              "example": [
+                                {
+                                  "lang": "fi",
+                                  "value": "2020-10-13T10:49:14+03:00"
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "2020-10-13T10:49:14+03:00"
+                                }
+                              ],
+                              "representation": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Hetki"
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "Datum och klockslag"
+                                }
+                              ],
+                              "repeatable": false,
+                              "required": false,
+                              "conditionalRequired": false,
+                              "nationwideRecordedInformation": false,
+                              "hiddenField": false,
+                              "hiddenTitle": false,
+                              "rowNumber": 39
+                            }
+                          },
+                          "paattymishetki": {
+                            "type": "string",
+                            "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+                            "sosmeta": {
+                              "name": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Päättymishetki"
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "Avslutningstidpunkt"
+                                }
+                              ],
+                              "description": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Kenttään kirjataan ajanjakson päättävä päivämäärä ja kellonaika."
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "I fältet antecknas datumet och klockslaget som avslutar tidsperioden."
+                                }
+                              ],
+                              "example": [
+                                {
+                                  "lang": "fi",
+                                  "value": "2020-10-13T10:49:14+03:00"
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "2020-10-13T10:49:14+03:00"
+                                }
+                              ],
+                              "representation": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Hetki"
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "Datum och klockslag"
+                                }
+                              ],
+                              "repeatable": false,
+                              "required": false,
+                              "conditionalRequired": false,
+                              "nationwideRecordedInformation": false,
+                              "hiddenField": false,
+                              "hiddenTitle": false,
+                              "rowNumber": 40
+                            }
+                          }
+                        }
+                      },
+                      "lastensuojelun_rajoitustoimenpiteen_laji": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Lastensuojelun rajoitustoimenpiteen laji"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Typ av begränsning inom barnskyddet"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "Kenttään kirjataan luokituksen avulla lastensuojelun asiakkaan itsemääräämisoikeuksia rajoittavan toimenpiteen laji."
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "I fältet antecknas åtgärdstypen för begränsningen av klientens självbestämmanderätt inom barnskyddet."
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "8 \u003d Liikkumisvapauden rajoittaminen (LsL 69 §)"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "8 \u003d Begränsning av rörelsefriheten (BsL 69 §)"
+                            }
+                          ],
+                          "classification": [
+                            {
+                              "lang": "fi",
+                              "value": "Koodistopalvelin: Sosiaalihuolto - Lastensuojelun rajoitustoimenpiteen laji 1.2.246.537.6.1218"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Kodtjänsten: Socialvård - Typ av begränsning i barnskyddssyfte 1.2.246.537.6.1218"
+                            }
+                          ],
+                          "classificationLink": [
+                            {
+                              "lang": "",
+                              "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d606\u0026versionKey\u003d706"
+                            }
+                          ],
+                          "classificationOid": [
+                            {
+                              "lang": "",
+                              "value": "1.2.246.537.6.1218"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Koodi"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Kod"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 41
+                        },
+                        "required": [
+                          "system",
+                          "code",
+                          "display"
+                        ],
+                        "properties": {
+                          "system": {
+                            "type": "string",
+                            "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1218(\\.\\d+)*$"
+                          },
+                          "code": {
+                            "type": "string"
+                          },
+                          "display": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "kehitysvammaisten_erityishuollon_rajoitustoimenpiteen_laji": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Kehitysvammaisten erityishuollon rajoitustoimenpiteen laji"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Typ av begränsning inom specialomsorger om personer med utvecklingsstörning"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "Kenttään kirjataan luokituksen avulla kehitysvammaisten erityishuollon asiakkaan itsemääräämisoikeuksia rajoittavan toimenpiteen laji."
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "I fältet antecknas åtgärdstypen för begränsningen av klientens självbestämmanderätt inom barnskyddet specialomsorger om personer med utvecklingsstörning."
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "6 \u003d Rajoittavien välineiden tai asusteiden käyttö päivittäisissä toiminnoissa"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "6 \u003d Användning av begränsande anordningar eller klädesplagg i dagliga rutiner"
+                            }
+                          ],
+                          "classification": [
+                            {
+                              "lang": "fi",
+                              "value": "Koodistopalvelin: Sosiaalihuolto - Rajoitustoimenpiteet kehitysvammaisten erityishuollossa 1.2.246.537.6.1266"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Kodtjänsten: Socialvård - Begränsningsåtgärder inom specialomsorger om utvecklingsstörda 1.2.246.537.6.1266"
+                            }
+                          ],
+                          "classificationLink": [
+                            {
+                              "lang": "",
+                              "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d2544\u0026versionKey\u003d2844"
+                            }
+                          ],
+                          "classificationOid": [
+                            {
+                              "lang": "",
+                              "value": "1.2.246.537.6.1266"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Koodi"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Kod"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 42
+                        },
+                        "required": [
+                          "system",
+                          "code",
+                          "display"
+                        ],
+                        "properties": {
+                          "system": {
+                            "type": "string",
+                            "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1266(\\.\\d+)*$"
+                          },
+                          "code": {
+                            "type": "string"
+                          },
+                          "display": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "rajoittava_valine_tai_asuste": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Rajoittava väline tai asuste"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Begränsande anordning eller klädesplagg"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "Kenttään kirjataan millaisen rajoittavan välineen tai asusteen käytöstä on kyse. Kehitysvammaisten erityishuollosta annetun lain 42 k §:n mukaan erityishuollossa olevalle henkilölle voidaan käyttää seuraavia rajoittavia asusteita tai välineitä, jos henkilön terveys tai turvallisuus muutoin todennäköisesti vaarantuisi: 1) sängystä putoamista estävää välinettä, joka ei rajoita henkilön raajojen tai kehon liikkeitä, henkilön yö- ja päiväaikaisen lepäämisen ajan ja lyhytaikaisesti muiden päivittäisten toimintojen ajan, 2) tuolista putoamista estävää välinettä lyhytaikaisesti henkilön ruokailun ja muiden vastaavien päivittäisten toimintojen ajan ja 3) itsensä vahingoittamista estävää tai turvallisuutta lisäävää välinettä tai asustetta, joka ei rajoita henkilön raajojen tai kehon liikkeitä tai vähäistä enempää henkilön toimintaa, välttämättömän ajan."
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "I fältet antecknas hurudan begränsande anordning eller hurudant begränsande klädesplagg det är fråga om. Enligt 42 k § i lagen angående specialomsorger om utvecklingsstörda får följande begränsande klädesplagg eller anordningar användas på en person som får specialomsorger, om personens hälsa eller säkerhet annars sannolikt skulle äventyras: 1) anordning som hindrar att personen ramlar ur sängen, men som inte hindrar personen att röra extremiteterna eller kroppen, den tid som personen vilar nattetid eller dagtid och kortvarigt vid andra dagliga rutiner, 2) anordning som hindrar att personen ramlar av stolen, kortvarigt vid måltider och andra liknande dagliga rutiner, och 3) anordning eller klädesplagg som hindrar personen att skada sig själv eller förbättrar säkerheten, men som inte begränsar personens möjligheter att röra extremiteterna eller kroppen eller inte mer än i ringa utsträckning hindrar honom eller henne att vara aktiv, den tid som det är nödvändigt."
+                            }
+                          ],
+                          "implementationNote": [
+                            {
+                              "lang": "fi",
+                              "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa."
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa."
+                            }
+                          ],
+                          "classification": [
+                            {
+                              "lang": "fi",
+                              "value": "Sisäinen luokitus: 1 \u003d Sängystä putoamista estävä väline, 2 \u003d Tuolista putoamista estävä väline, 3 \u003d Itsensä vahingoittamista estävä tai turvallisuutta lisäävä väline tai asuste"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Internt kodsystem: 1 \u003d Anordning som hindrar att personen ramlar ur sängen, 2 \u003d Anordning som hindrar att personen ramlar av stolen, 3 \u003d Anordning eller klädesplagg som hindrar personen att skada sig själv eller förbättrar säkerheten"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Koodi"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Kod"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "acceptedValues": [
+                            {
+                              "lang": "",
+                              "value": "1"
+                            },
+                            {
+                              "lang": "",
+                              "value": "2"
+                            },
+                            {
+                              "lang": "",
+                              "value": "3"
+                            }
+                          ],
+                          "rowNumber": 43
+                        },
+                        "required": [
+                          "system",
+                          "code",
+                          "display"
+                        ],
+                        "properties": {
+                          "system": {
+                            "type": "string"
+                          },
+                          "code": {
+                            "type": "string",
+                            "enum": [
+                              "1",
+                              "2",
+                              "3"
+                            ]
+                          },
+                          "display": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "muut_kehitysvammaisten_erityishuollon_rajoitukset": {
+                        "type": "array",
+                        "minItems": 0,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Muut kehitysvammaisten erityishuollon rajoitukset"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Andra begränsningar inom specialomsorger om personer med utvecklingsstörning"
+                              }
+                            ],
+                            "title": [
+                              {
+                                "lang": "fi",
+                                "value": "Muut kehitysvammaisten erityishuollon rajoitukset, joita on käytetty samaan aikaan"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Andra begränsningar inom specialomsorger om personer med utvecklingsstörning, som har använts samtidigt"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kehitysvammaisten erityishuollosta annetun lain 42 d §:n mukaan rajoitustoimenpiteiden yhteisvaikutukseen on kiinnitettävä erityistä huomiota, jos henkilöön kohdistetaan useampia rajoitustoimenpiteitä samanaikaisesti tai peräkkäin."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Enligt 42 d § i lagen angående specialomsorger om utvecklingsstörda ska särskild uppmärksamhet fästas vid de samfällda konsekvenserna om en person blir föremål för flera begränsningsåtgärder samtidigt eller efter varandra."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Jos Palvelutehtävä-kenttään on valittu Vammaispalvelut, näytetään tämä kenttä, ja Muut lastensuojelun rajoitukset, joita on käytetty samaan aikaan -kenttää ei näytetä."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Jos Palvelutehtävä-kenttään on valittu Vammaispalvelut, näytetään tämä kenttä, ja Muut lastensuojelun rajoitukset, joita on käytetty samaan aikaan -kenttää ei näytetä."
+                              }
+                            ],
+                            "classification": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodistopalvelin: Sosiaalihuolto - Rajoitustoimenpiteet kehitysvammaisten erityishuollossa 1.2.246.537.6.1266"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kodtjänsten: Socialvård - Begränsningsåtgärder inom specialomsorger om utvecklingsstörda 1.2.246.537.6.1266"
+                              }
+                            ],
+                            "classificationLink": [
+                              {
+                                "lang": "",
+                                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d2544\u0026versionKey\u003d2844"
+                              }
+                            ],
+                            "classificationOid": [
+                              {
+                                "lang": "",
+                                "value": "1.2.246.537.6.1266"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kod"
+                              }
+                            ],
+                            "repeatable": true,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 44
+                          },
+                          "required": [
+                            "system",
+                            "code",
+                            "display"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string",
+                              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1266(\\.\\d+)*$"
+                            },
+                            "code": {
+                              "type": "string"
+                            },
+                            "display": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      },
+                      "kuvaus": {
+                        "type": "string",
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Kuvaus"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Beskrivning"
+                            }
+                          ],
+                          "title": [
+                            {
+                              "lang": "fi",
+                              "value": "Kuvaus rajoitustoimenpiteestä ja siitä, kuinka se on toteutettu"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Beskrivning av begränsningsåtgärden och hur den har genomförts"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Teksti"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Text"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 45
+                        }
+                      },
+                      "rajoitustoimenpiteen_suorittaja": {
+                        "type": "array",
+                        "minItems": 0,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Rajoitustoimenpiteen suorittaja"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Person som genomför begränsningsåtgärden"
+                              }
+                            ],
+                            "title": [
+                              {
+                                "lang": "fi",
+                                "value": "Rajoitustoimenpiteen suorittanut henkilö"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Person som har utfört begränsningsåtgärden"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Lastensuojelulain 74 §:n mukaan rajoitustoimenpiteestä on kirjattava sen käytännössä toteuttaneen henkilön nimi. Kehitysvammaisten erityishuollosta annetun lain 42 o §:n mukaan erityishuollossa olevaa henkilöä koskeviin asiakasasiakirjoihin on kirjattava rajoitustoimenpiteen suorittanut henkilö. Kehitysvammaisten erityishuollossa kirjaamista tähän ei tarvitse tehdä, jos asia on kirjattu jo yhteenveto jälkiselvittelystä -asiakirjaan."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Enligt 74 § i barnskyddslagen ska anteckningen om begränsningsåtgärden omfatta namnet på den person som har genomfört åtgärden i praktiken. Enligt 42 o § i lagen angående specialomsorger om utvecklingsstörda ska den person som har vidtagit begränsningsåtgärden antecknas i klienthandlingarna för en person som ges specialomsorger. Inom specialomsorger om utvecklingsstörda behöver anteckningar inte göras här, om ärendet redan har antecknats i handlingen sammanfattning av genomgång i efterhand."
+                              }
+                            ],
+                            "repeatable": true,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 46
+                          },
+                          "required": [
+                            "sukunimi",
+                            "etunimet"
+                          ],
+                          "properties": {
+                            "sukunimi": {
+                              "type": "string",
+                              "minLength": 1,
+                              "sosmeta": {
+                                "name": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Sukunimi"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Efternamn"
+                                  }
+                                ],
+                                "description": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "-"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "-"
+                                  }
+                                ],
+                                "representation": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Nimi"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Namn"
+                                  }
+                                ],
+                                "repeatable": false,
+                                "required": true,
+                                "conditionalRequired": false,
+                                "nationwideRecordedInformation": false,
+                                "hiddenField": false,
+                                "hiddenTitle": false,
+                                "rowNumber": 47
+                              }
+                            },
+                            "etunimet": {
+                              "type": "string",
+                              "minLength": 1,
+                              "sosmeta": {
+                                "name": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Etunimet"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Samtliga förnamn"
+                                  }
+                                ],
+                                "description": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "-"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "-"
+                                  }
+                                ],
+                                "representation": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Nimi"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Namn"
+                                  }
+                                ],
+                                "repeatable": false,
+                                "required": true,
+                                "conditionalRequired": false,
+                                "nationwideRecordedInformation": false,
+                                "hiddenField": false,
+                                "hiddenTitle": false,
+                                "rowNumber": 48
+                              }
+                            },
+                            "tehtavanimike": {
+                              "type": "string",
+                              "sosmeta": {
+                                "name": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Tehtävänimike"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Uppgiftsbeteckning"
+                                  }
+                                ],
+                                "description": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "-"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "-"
+                                  }
+                                ],
+                                "example": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "-"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "-"
+                                  }
+                                ],
+                                "representation": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Teksti"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Text"
+                                  }
+                                ],
+                                "repeatable": false,
+                                "required": false,
+                                "conditionalRequired": false,
+                                "nationwideRecordedInformation": false,
+                                "hiddenField": false,
+                                "hiddenTitle": false,
+                                "rowNumber": 49
+                              }
+                            }
+                          }
+                        }
+                      },
+                      "rajoitustoimenpiteessa_lasnaoleva": {
+                        "type": "array",
+                        "minItems": 0,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Rajoitustoimenpiteessä läsnäoleva"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Närvarande vid begränsningsåtgärden"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Lastensuojelulain 74 §:n perusteella rajoitustoimenpiteiden kirjaamisen tulee sisältää tieto rajoitustoimenpiteessä läsnä olleen henkilön nimestä."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Enligt 74 § i barnskyddslagen ska anteckningen om begränsningsåtgärden omfatta namnet på den person som har närvarat vid genomförandet."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Jos Palvelutehtävä-kenttään valitaan Vammaispalvelut, tätä kenttää ei näytetä."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Jos Palvelutehtävä-kenttään valitaan Vammaispalvelut, tätä kenttää ei näytetä."
+                              }
+                            ],
+                            "repeatable": true,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 50
+                          },
+                          "required": [
+                            "sukunimi",
+                            "etunimet"
+                          ],
+                          "properties": {
+                            "sukunimi": {
+                              "type": "string",
+                              "minLength": 1,
+                              "sosmeta": {
+                                "name": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Sukunimi"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Efternamn"
+                                  }
+                                ],
+                                "description": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Kenttään kirjataan ammattihenkilön sukunimi."
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "I fältet antecknas den yrkesutbildade personens efternamn."
+                                  }
+                                ],
+                                "representation": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Nimi"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Namn"
+                                  }
+                                ],
+                                "repeatable": false,
+                                "required": true,
+                                "conditionalRequired": false,
+                                "nationwideRecordedInformation": false,
+                                "hiddenField": false,
+                                "hiddenTitle": false,
+                                "rowNumber": 51
+                              }
+                            },
+                            "etunimet": {
+                              "type": "string",
+                              "minLength": 1,
+                              "sosmeta": {
+                                "name": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Etunimet"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Samtliga förnamn"
+                                  }
+                                ],
+                                "description": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Kenttään kirjataan ammattihenkilön etunimi."
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "I fältet antecknas den yrkesutbildade personens förnamn."
+                                  }
+                                ],
+                                "representation": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Nimi"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Namn"
+                                  }
+                                ],
+                                "repeatable": false,
+                                "required": true,
+                                "conditionalRequired": false,
+                                "nationwideRecordedInformation": false,
+                                "hiddenField": false,
+                                "hiddenTitle": false,
+                                "rowNumber": 52
+                              }
+                            },
+                            "tehtavanimike": {
+                              "type": "string",
+                              "sosmeta": {
+                                "name": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Tehtävänimike"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Uppgiftsbeteckning"
+                                  }
+                                ],
+                                "description": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Kenttään kirjataan ammattihenkilön työtehtävän yksilöivä nimike. Koulutuksesta ja kelpoisuudesta sosiaalihuollon ammatillisiin tehtäviin säädetään lainsäädännössä."
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "I fältet antecknas en beteckning som preciserar den yrkesutbildade personens arbetsuppgift. I lagstiftningen finns bestämmelser om utbildning och behörighet för yrkesuppgifter inom socialvården."
+                                  }
+                                ],
+                                "example": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Sosiaalityöntekijä"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Socialarbetare"
+                                  }
+                                ],
+                                "representation": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Teksti"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Text"
+                                  }
+                                ],
+                                "repeatable": false,
+                                "required": false,
+                                "conditionalRequired": false,
+                                "nationwideRecordedInformation": false,
+                                "hiddenField": false,
+                                "hiddenTitle": false,
+                                "rowNumber": 53
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "huomiot_rajoituksen_aikana": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Huomiot rajoituksen aikana"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Observationer under begränsningen"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään tehdään tarvittavat kirjaukset rajoituksen aikana. Kenttään voidaan kirjata myös rajoituksen aikana mahdollisesti syntyneitä vammoja ja vahinkoja. \n\nLastensuojelulain 73 §:n mukaan erityisen huolenpidon aikana on kasvatuksellisen, sosiaalityön, psykologisen ja lääketieteellisen asiantuntemuksen omaavien henkilöiden tavattava säännöllisesti lasta sekä osallistuttava lapsen erityisen huolenpidon suunnitteluun, toimeenpanoon ja arviointiin. Erityisen huolenpidon aikana lapselle on lisäksi tehtävä tarvittavat lääkärintarkastukset. Niistä ja muista erityisen huolenpidon toteuttamista koskevista toimenpiteistä ja niiden vaikutuksesta lapseen ja hänen tilanteeseensa sekä lapsen vastaisen sijaishuollon järjestämiseen on erityisen huolenpidon aikana pidettävä kirjaa. Näitä kirjauksia voidaan tehdä tähän kenttään.\n\nTähän kenttään voidaan kirjata kehitysvammaisten erityishuollosta annetun lain perusteella eri rajoitustoimenpiteisiin liittyvää säännöllistä seurantaa ja arviointia koskevia tietoja."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet görs behövliga anteckningar under begränsningen. I fältet kan man också anteckna eventuella skador som har uppkommit under begränsningen. Under tiden för särskild omsorg ska enligt 73 § i barnskyddslagen personer med expertis inom fostran, socialarbete, psykologi och medicin träffa barnet regelbundet och delta i planeringen, genomförandet och utvärderingen av den särskilda omsorgen om barnet. Under tiden för särskild omsorg ska barnet dessutom genomgå behövliga läkarkontroller. Medan den särskilda omsorgen pågår ska bok föras över läkarkontrollerna och de andra åtgärderna i samband med genomförandet av särskild omsorg och deras inverkan på barnet och barnets situation samt på det framtida ordnandet av vård utom hemmet för barnet. Dessa anteckningar kan göras i det här fältet. I det här fältet kan man anteckna uppgifter om regelbunden uppföljning och bedömning i samband med olika begränsningsåtgärder enligt lagen angående specialomsorger om utvecklingsstörda."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 54
+                  }
+                },
+                "seuraaminen": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Seuraaminen"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Uppföljning"
+                      }
+                    ],
+                    "title": [
+                      {
+                        "lang": "fi",
+                        "value": "Asiakkaan terveyden ja turvallisuuden seuraaminen rajoitustoimenpiteen aikana"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Uppföljning av klientens hälsa och säkerhet under begränsningsåtgärden"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kehitysvammaisten erityishuollosta annetun lain 42 l §:n mukaan rajoittavaa välinettä tai asustetta käytettäessä erityishuollossa olevan henkilön tilaa on seurattava ja arvioitava hänen terveytensä ja turvallisuutensa edellyttämällä tavalla."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Enligt 42 l § i lagen angående specialomsorger om utvecklingsstörda ska tillståndet hos den person som får specialomsorger övervakas och bedömas på det sätt som är nödvändigt för hans eller hennes hälsa och säkerhet vid användning av en begränsande anordning eller ett begränsande klädesplagg."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 55
+                  }
+                },
+                "rajoituksen_lopettamisaika": {
+                  "type": "string",
+                  "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Rajoituksen lopettamisaika"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Avslutningstid för begräsningen"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään voidaan kirjata rajoituksen lopettamisaika, ellei lopettamisaikaa ole kirjattu mihinkään muuhun asiakirjaan. Kenttää voidaan siis käyttää silloin, kun rajoitustoimenpiteestä on tehty päätös, mutta sen lopettamisesta ei tarvitse tehdä päätöstä. Kenttää voidaan käyttää myös silloin, jos rajoitustoimenpide lopetetaan ennen päätökseen kirjattua lopettamisaikaa."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet kan man anteckna avslutningstiden för begränsningen, om avslutningstiden inte har antecknats i någon annan handling. Man kan alltså använda fältet då man har fattat ett beslut om begränsningsåtgärden, men inte behöver fatta beslut om dess avslutning. Man kan också använda fältet, om man avslutar begränsningsåtgärden före den avslutningstid som har antecknats i beslutet."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Hetki"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Datum och klockslag"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 56
+                  }
+                }
+              }
+            },
+            "lastensuojelun_eristamiseen_liittyva_kirjaaminen": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lastensuojelun eristämiseen liittyvä kirjaaminen"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Anteckning gällande isolering inom barnskyddet"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Lastensuojelulain 74 §:n 2 momentin mukaan sen lisäksi, mitä 74 §:n 1 momentissa säädetään, on lastensuojelulain 70 §:ssä tarkoitetun eristämisen aikana kirjattava lapsen eristämistä koskeviin asiakirjoihin eristämiseen johtanut tilanne, eristämisen toteuttamistapa sekä miten eristämisen jatkamisen perusteita on eristämisen aikana jatkuvasti arvioitu. Eristämistä koskeviin asiakirjoihin on lisäksi kirjattava eristämisen lopettamiseen johtaneet perusteet ja syy."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Enligt 74 § 2 mom. och 74 § 1 mom. i barnskyddslagen ska under den tid en i 70 § avsedd isolering pågår, i de handlingar som gäller isolering av barnet göras anteckningar om den situation som lett till isoleringen, hur isoleringen genomförts samt på vilket sätt grunderna för förlängning av isoleringen fortlöpande har bedömts under isoleringen. I handlingarna om isoleringen ska grunderna för och orsakerna till att isoleringen upphört dessutom antecknas."
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Tämä tietokokonaisuus näytetään, jos Palvelutehtävä-kenttään on valittu Lastensuojelu ja Rajoituksen laji-kenttään on valittu 9 Eristäminen \"Sosiaalihuolto - Lastensuojelun rajoitustoimenpiteen laji\" -luokituksesta.\n\nJos \"Millaista tilannetta kirjaaminen koskee?\" -kenttään on valittu luokituksesta 3, tämä tietokokonaisuus näytetään. Jos luokituksesta on valittu 1 tai 2, ei tätä tietokokonaisuutta näytetä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Tämä tietokokonaisuus näytetään, jos Palvelutehtävä-kenttään on valittu Lastensuojelu ja Rajoituksen laji-kenttään on valittu 9 Eristäminen \"Sosiaalihuolto - Lastensuojelun rajoitustoimenpiteen laji\" -luokituksesta.\n\nJos \"Millaista tilannetta kirjaaminen koskee?\" -kenttään on valittu luokituksesta 3, tämä tietokokonaisuus näytetään. Jos luokituksesta on valittu 1 tai 2, ei tätä tietokokonaisuutta näytetä."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Otsikko"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Rubrik"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 57
+              },
+              "required": [],
+              "properties": {
+                "eristamiseen_johtanut_tilanne": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Eristämiseen johtanut tilanne"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Den situation som har lett till isoleringen"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Lastensuojelulain 74 §:n mukaan on eristämisen aikana kirjattava lapsen eristämistä koskeviin asiakirjoihin eristämiseen johtanut tilanne."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Enligt 74 § i barnskyddslagen ska man under den tid isoleringen pågår göra anteckningar i de handlingar som gäller isolering av barnet om den situation som lett till isoleringen."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 58
+                  }
+                },
+                "eristamisen_toteuttamistapa": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Eristämisen toteuttamistapa"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Hur isoleringen har genomförts"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Lastensuojelulain 74 §:n mukaan on eristämisen aikana kirjattava lapsen eristämistä koskeviin asiakirjoihin  eristämisen toteuttamistapa."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Enligt 74 § i barnskyddslagen ska man under den tid isoleringen pågår göra anteckningar i de handlingar som gäller isolering av barnet om hur isoleringen har genomförts."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 59
+                  }
+                },
+                "arvio_eristamisen_jatkamisen_perusteista": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Arvio eristämisen jatkamisen perusteista"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Bedömning av grunderna för förlängning av isoleringen"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Lastensuojelulain 74 §:n mukaan on eristämisen aikana kirjattava lapsen eristämistä koskeviin asiakirjoihin miten eristämisen jatkamisen perusteita on eristämisen aikana jatkuvasti arvioitu."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Enligt 74 § i barnskyddslagen ska man under den tid isoleringen pågår göra anteckningar i de handlingar som gäller isolering av barnet om på vilket sätt grunderna för förlängning av isoleringen fortlöpande har bedömts under isoleringen."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 60
+                  }
+                },
+                "eristamisen_lopettamiseen_johtaneet_perusteet_ja_syy": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Eristämisen lopettamiseen johtaneet perusteet ja syy"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Grunderna för och orsakerna till att isoleringen har upphört"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Lastensuojelulain 74 §:n mukaan eristämistä koskeviin asiakirjoihin on kirjattava eristämisen lopettamiseen johtaneet perusteet ja syy."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Enligt 74 § i barnskyddslagen ska man i de handlingar som gäller isoleringen anteckna grunderna för och orsakerna till att isoleringen har upphört."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 61
+                  }
+                },
+                "eristamisen_lopettamisaika": {
+                  "type": "string",
+                  "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Eristämisen lopettamisaika"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Avslutningstid för isoleringen"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Lastensuojelulain 70 §:n mukaan eristämistä ei saa määrätä laajempana eikä pidemmäksi ajaksi kuin lapsen huolenpito ja hoito välttämättä edellyttävät. Eristämistä ei saa jatkaa yhtäjaksoisesti yli 12:ta tuntia tekemättä siitä uutta päätöstä. Eristäminen on lopetettava heti, kun se ei enää ole välttämätöntä."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Enligt 70 § i barnskyddslagen får isoleringen inte bestämmas vara vidsträcktare eller pågå längre än vården av och omsorgen om barnet nödvändigt förutsätter. Isoleringen får inte förlängas till längre än 12 timmar i ett sträck utan att det fattas ett nytt beslut om saken. Isoleringen ska avbrytas genast när den inte längre är nödvändig."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Hetki"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Datum och klockslag"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 62
+                  }
+                }
+              }
+            }
+          }
+        },
+        "jatkotoimenpiteet": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Jatkotoimenpiteet"
+              },
+              {
+                "lang": "sv",
+                "value": "Fortsatta åtgärder"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 63
+          }
+        },
+        "paivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Päivämäärä"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan asiakaskertomusmerkinnän laatimisen päivämäärä."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas datum för anteckningen i klientjournalen."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 64
+          }
+        },
+        "laatija": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Laatija"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Upprättare"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Laatija on asiakaskertomusmerkinnän laatinut ammattihenkilö."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Upprättare är den yrkesutbildade person som har upprättat anteckningen i klientjournalen."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 65
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 66
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 67
+                }
+              },
+              "tehtavanimike": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Tehtävänimike"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Uppgiftsbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 68
+                }
+              },
+              "palveluyksikko": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Palveluyksikkö"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Serviceenhet"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas namnet på serviceenheten enligt Organisationsregistret för social- och hälsovården."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Esbo centrums barnskydd, Esbo stad, social- och hälsovårdssektorn"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.6.202"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kod"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 69
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

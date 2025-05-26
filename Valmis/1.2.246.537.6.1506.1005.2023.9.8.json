@@ -1,0 +1,3368 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Lapsen ja perheen palvelutarpeen arvio\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Lapsen ja perheen palvelutarpeen arvio\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2023-09-08",
+    "dataComponentLibraryVersion": "2023-09-07",
+    "oid": "1.2.246.537.6.1506.1005.2023.9.8",
+    "documentType": "Arvio",
+    "documentAuthor": "Ammattihenkilö",
+    "documentSubject": "Lapsiperheiden palvelujen asiakasasiakirjat"
+  },
+  "required": [
+    "lapsen_ja_perheen_palvelutarpeen_arvio"
+  ],
+  "properties": {
+    "lapsen_ja_perheen_palvelutarpeen_arvio": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Lapsen ja perheen palvelutarpeen arvio"
+          },
+          {
+            "lang": "sv",
+            "value": "Bedömning av ett barns och en familjs servicebehov"
+          }
+        ]
+      },
+      "required": [
+        "asiakas",
+        "laatija"
+      ],
+      "properties": {
+        "asiakas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Klient"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Palvelutarve voidaan arvioida koko perheeltä yhteisesti, jolloin asiakirja liitetään perheenjäsenten yhteiseen asiaan. Tällöin asiakkaana ovat perheenjäsenet. Asiakirja voidaan laatia myös yhdelle henkilölle, joko lapselle tai vanhemmalle, jolloin asiakkaaksi merkitään tämä henkilö. Jos palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve, tämä asiakirja laaditaan jokaiselle lapselle erikseen. Asiakirja näytetään niiden henkilöiden Omakannassa, jotka on kirjattu asiakirjaan asiakkaiksi."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Servicebehovet kan bedömas gemensamt för hela familjen, varvid handlingen ansluts till familjemedlemmarnas gemensamma ärende. Då är familjemedlemmarna klient. Handlingen kan också upprättas för en person, för antingen barnet eller föräldern, varvid denna person antecknas som klient. Om behov av barnskydd utreds i samband med bedömningen av servicebehovet, upprättas denna handling separat för varje barn. Handlingen visas på Mina Kanta-sidorna för de personer, som har antecknats som klienter."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 1
+            },
+            "required": [
+              "sukunimi",
+              "etunimet",
+              "henkilotunnus"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 2
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 3
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Personbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 4
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "asian_vireilletuloa_koskevat_tiedot": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Asian vireilletuloa koskevat tiedot"
+              },
+              {
+                "lang": "sv",
+                "value": "Uppgifter om inledning av ett ärende"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 5
+          },
+          "required": [
+            "vireilletulopaiva"
+          ],
+          "properties": {
+            "vireilletulon_tapa": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Vireilletulon tapa"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Metod för inledande"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan luokituksen avulla millä tavalla asiakkaan asia on tullut vireille sosiaalihuollossa."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas med hjälp av klassificeringen på vilket sätt klientens ärende har inletts inom socialvården."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "Lastensuojeluilmoitus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Barnskyddsanmälan"
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: Sosiaalihuolto - Sosiaalihuollon asian vireilletulon tapa 1.2.246.537.6.1242"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kodtjänsten: Socialvård - Sätt för inledande av socialvårdsärende 1.2.246.537.6.1242"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1144\u0026versionKey\u003d1284"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.1242"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 6
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1242(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "vireilletulon_syyt": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Vireilletulon syyt"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Orsaker till inledning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Vireilletulon syynä on voinut olla esimerkiksi läheisen huoli asiakkaan asumisesta tai toimintakyvystä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Orsaken till att ärendet har inletts kan vara till exempel en närståendes oro över klientens boende eller funktionsförmåga."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 7
+              }
+            },
+            "vireilletulopaiva": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Vireilletulopäivä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum för inledande"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan päivämäärä, jolloin se asiakkaan asia, jonka johdosta palvelutarvetta arvioidaan, on tullut vireille sosiaalihuollossa. Vireilletulopäivä on esimerkiksi se päivä, kun sosiaalihuollossa on vastaanotettu asiakkaan tilanteesta tehty ilmoitus."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas det datum, då klientens ärende som förde till bedömning av servicebehovet inleddes inom socialvården. Datum för inledande är till exempel dagen då anmälan om klientens situation togs emot inom socialvården."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Pvm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 8
+              }
+            }
+          }
+        },
+        "palvelutarpeen_arviointia_koskevat_tiedot": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Palvelutarpeen arviointia koskevat tiedot"
+              },
+              {
+                "lang": "sv",
+                "value": "Uppgifter om bedömningen av servicebehovet"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 9
+          },
+          "required": [
+            "palvelutarpeen_arvioinnin_aloittamispaiva",
+            "asiakkaalla_on_oikeus_erityiseen_tukeen"
+          ],
+          "properties": {
+            "lastensuojelun_tarve": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lastensuojelun tarve"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Behov av barnskydd"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I samband med bedömningen av servicebehovet utreds behovet av barnskydd"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Lastensuojelulain 26 §:n mukaan lastensuojeluasian vireilletulon jälkeen on tehtävä palvelutarpeen arviointi, jollei arvioinnin tekeminen ole ilmeisen tarpeetonta. Palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve, ellei asia ole selvästi luonteeltaan sellainen, ettei lastensuojelun tukitoimia tarvita.\nKenttään kirjataan \"kyllä\", jos palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve. Jos kenttään kirjataan \"kyllä\", palvelutarpeen arvio tehdään jokaiselle lapselle erikseen, eikä sitä voi täten liittää perheen yhteiseen asiaan.\nJos lastensuojelun tarve selvitetään, lastensuojelun näkökulma huomioidaan koko asiakirjassa."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Enligt 26 § i barnskyddslagen ska en bedömning av servicebehovet göras efter att ett barnskyddsärende har inletts, om det inte är uppenbart onödigt att göra en bedömning. I samband med bedömningen av servicebehovet utreds behovet av barnskydd, om ärendet inte är av sådan karaktär att stödåtgärder inom barnskyddet inte behövs. I fältet antecknas \"ja\" om behovet av barnskydd utreds i samband med bedömningen av servicebehovet. Om \"ja\" antecknas i fältet görs bedömningen av servicebehovet separat för varje barn och det kan således inte kopplas till familjens gemensamma ärende. Om behovet av barnskydd utreds beaktas barnskyddets perspektiv i hela handlingen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 10
+              }
+            },
+            "perustelut_miksi_lastensuojelun_tarvetta_ei_selviteta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Perustelut miksi lastensuojelun tarvetta ei selvitetä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Motiveringar till varför behovet av barnskydd inte utreds"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Jos palvelutarpeen arvioinnin yhteydessä ei selvitetä lastensuojelun tarvetta, kenttään voidaan kirjata perustelut sille."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Om behovet av barnskydd inte utreds i samband med bedömningen av servicebehovet, kan man i fältet anteckna motiveringarna till detta."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 11
+              }
+            },
+            "palvelutarpeen_arvioinnin_aloittamispaiva": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Palvelutarpeen arvioinnin aloittamispäivä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Inledningsdatum för bedömning av servicebehovet"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan päivämäärä, jolloin palvelutarpeen arvointi on aloitettu. Sosiaalihuoltolain 36 §:n mukaan palvelutarpeen arviointi on aloitettava viipymättä ja saatettava loppuun ilman aiheetonta viivytystä. Arvioinnin tekeminen on aloitettava viimeistään seitsemäntenä arkipäivänä vireilletulosta, jos asiakas on yli 75-vuotias tai jos hän saa ylintä hoitotukea. Erityistä tukea tarvitsevan lapsen palvelutarpeen arviointi on aloitettava viimeistään seitsemäntenä arkipäivänä asian vireille tulosta ja arvioinnin on valmistuttava viimeistään kolmen kuukauden kuluessa vireille tulosta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas det datum då bedömningen av servicebehovet inleddes. Enligt 36 § i socialvårdslagen ska bedömningen av servicebehovet påbörjas utan dröjsmål och slutföras utan ogrundat dröjsmål. Bedömningen ska påbörjas senast den sjunde vardagen efter att ärendet har inletts om klienten är över 75 år eller om klienten får vårdbidrag med högsta belopp. Bedömningen av hurdant servicebehov ett barn som behöver särskilt stöd har ska inledas senast den sjunde vardagen efter det att ärendet har inletts, och bedömningen ska bli klar senast tre månader från inledningen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Pvm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 12
+              }
+            },
+            "kuvaus_arvioinnin_toteuttamisesta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuvaus arvioinnin toteuttamisesta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Beskrivning av genomförandet av bedömningen"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan miten palvelutarvetta on arvioitu yhteistyössä. Kenttään voidaan kuvata esimerkiksi pyydettyjä lausuntoja, tehtyjä selvityksiä, käytettyjä menetelmiä ja mittareita, asiakkaan kanssa käytyjä keskusteluja ja asiakkaan luo tehtyjä kotikäyntejä, sekä keneltä tai miltä tahoilta tietoja on hankittu. Muilta viranomaisilta on voitu saada tietoa esimerkiksi verkostoneuvotteluissa tai suullisissa konsultaatioissa. Lisäksi tietoa on voitu saada esimerkiksi seuraavista dokumenteista: neuvolakortti, terveystarkastuksen tiedot, lääkärintodistus, perheneuvolan, lasten-/nuorisopsykiatrian lausunto, varhaiskasvatussuunnitelma tai koulun lausunto. Kenttään voidaan tarvittaessa myös kirjata, onko arvioinnissa hyödynnetty aikaisemmin tehtyjä arviointeja. \nKenttään voidaan kirjata myös tieto mahdollisista peruuntuneista tapaamisista, poisjäänneistä ja niiden syyt.\nJos palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve, kenttään kirjataan selvityksen aikana tai ennen sitä mahdollisesti tehtyjen selvitysten kannalta oleellisten tutkimusten tiedot, esim. fyysiseen tai psyykkiseen terveydentilaan tai oppimiseen liittyvät tutkimukset. Myös rikostutkintaan liittyvät tutkimukset voidaan kuvata tässä (kaltoinkohteluepäily)."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskriver man hur servicebehovet har bedömts i samarbete. I fältet kan man beskriva till exempel utlåtanden som har begärts, utredningar som har gjorts, metoder och mätare som använts, diskussioner som har förts med klienten och hembesök hos klienten samt av vem eller av vilka aktörer uppgifter har inhämtats. Uppgifter har eventuellt erhållits av andra myndigheter till exempel vid nätverksförhandlingar eller muntliga konsultationer. Dessutom har man kunnat få uppgifter från till exempel följande dokument: rådgivningskort, uppgifter om hälsoundersökning, läkarintyg, utlåtande från familjerådgivningen, barn-/ungdomspsykiatrin, plan för småbarnspedagogik eller skolans utlåtande. I fältet kan man vid behov också anteckna om tidigare bedömningar har utnyttjats i bedömningen. I fältet kan man också anteckna uppgifter om eventuella annullerade besök, uteblivning från besök och orsakerna till dessa. Om man i samband med bedömningen av servicebehovet utreder behovet av barnskydd, antecknas i fältet uppgifter om undersökningar som är väsentliga med tanke på eventuella utredningar som gjorts under utredningen eller före den, till exempel undersökningar som rör det fysiska eller psykiska hälsotillståndet eller lärandet. Också undersökningar som har samband med en brottsutredning kan antecknas här (misstanke om misshandel)."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 13
+              }
+            },
+            "palvelutarpeen_arviointiin_osallistuneet_henkilot": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Palvelutarpeen arviointiin osallistuneet henkilöt"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Personer som deltagit i bedömningen av servicebehovet"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan palvelutarpeen arviointiin osallistuneiden yksityis- ja ammattihenkilöiden nimet ja tarvittaessa muut tiedot."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas namnen på och vid behov andra uppgifter om privatpersonerna och de yrkesutbildade personer som deltagit i bedömningen av servicebehovet."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 14
+              }
+            },
+            "arvioinnista_poisjaaneet_henkilot": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Arvioinnista poisjääneet henkilöt"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Personer som uteblivit från bedömningen"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan henkilöt, jotka jättivät osallistumatta palvelutarpeen arviointiin pyynnöstä huolimatta. Tämä koskee erityisesti viranomaistahoja, koska sosiaalihuoltolain 41 §:n mukaan sosiaalihuollon viranomaisen on huolehdittava siitä, että käytettävissä on henkilön yksilöllisiin tarpeisiin nähden riittävästi asiantuntemusta ja osaamista, ja tilanteissa, joissa henkilön tarpeiden arviointi ja niihin vastaaminen edellyttävät sosiaalitoimen tai muiden viranomaisten palveluja tai tukitoimia, on näiden tahojen osallistuttava toimenpiteestä vastaavan työntekijän pyynnöstä henkilön palvelutarpeen arvioinnin tekemiseen. Kenttään kuitenkin voidaan kirjata tarvittaessa myös ne yksityishenkilöt, jotka eivät osallistuneet palvelutarpeen arviointiin pyynnöstä huolimatta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas de personer som trots begäran inte har deltagit i bedömningen av servicebehovet. Detta gäller i synnerhet myndighetsaktörer, eftersom myndigheten inom socialvården i enlighet med 41 § i socialvårdslagen ska se till att tillräcklig sakkunskap och kompetens med hänsyn till en persons individuella behov finns att tillgå. Om bedömningen av personens behov och uppfyllandet av dem kräver service eller stödåtgärder av socialväsendet eller övriga myndigheter, ska dessa på begäran av den arbetstagare som ansvarar för åtgärden delta i bedömningen av personens servicebehov. I fältet kan man dock vid behov också anteckna de privatpersoner som trots begäran inte har deltagit i bedömningen av servicebehovet."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 15
+              }
+            },
+            "asiakkaalla_on_oikeus_erityiseen_tukeen": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Asiakkaalla on oikeus erityiseen tukeen"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Klienten har rätt till särskilt stöd"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan, onko asiakkaalla oikeus erityiseen tukeen sosiaalihuoltolain 3 §:n perusteella. Jos asiakirja laaditaan koko perheen yhteiseksi, tähän vastataan \"kyllä\", jos yhdelläkin asiakkaista on oikeus erityiseen tukeen. \n\nErityistä tukea tarvitseva henkilö on henkilö, jolla on erityisiä vaikeuksia hakea ja saada tarvitsemiaan sosiaali- ja terveyspalveluja kognitiivisen tai psyykkisen vamman tai sairauden, päihteiden ongelmakäytön, usean yhtäaikaisen tuen tarpeen tai muun vastaavan syyn vuoksi ja jonka tuen tarve ei liity korkeaan ikään (SHL 3 §). \n\nErityistä tukea tarvitseva lapsi on lapsi, jonka kasvuolosuhteet vaarantavat tai eivät turvaa lapsen terveyttä tai kehitystä tai joka itse käyttäytymisellään vaarantaa terveyttään tai kehitystään tai joka on erityisen tuen tarpeessa samoista syistä kuin edellä mainittu erityistä tukea tarvitseva henkilö. \n\nJos tähän vastataan \"kyllä\", eli asiakkaalla on erityisen tuen tarve, palvelutarpeen arvioinnista vastaa virkasuhteessa oleva sosiaalityöntekijä (SHL 36 §). Jos erityistä tukea tarvitseva henkilö on lapsi, palvelutarpeen arviointi on aloitettava viimeistään seitsemäntenä arkipäivänä asian vireille tulosta ja arvioinnin on valmistuttava viimeistään kolmen kuukauden kuluessa vireille tulosta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas, om klienten har rätt till särskilt stöd enligt 3 § i socialvårdslagen. Om man till exempel upprättar en gemensam handling för hela familjen, är svaret här ”ja”, om minst en av klienterna har rätt till särskilt stöd. En person som behöver särskilt stöd är en person som har särskilda svårigheter att söka och få behövliga social- och hälsovårdstjänster på grund av kognitiv eller psykisk funktionsnedsättning eller sjukdom, missbruk av berusningsmedel, samtidigt behov av flera stöd eller på grund av någon annan motsvarande orsak och vars stödbehov inte är förknippat med hög ålder (socialvårdslagen 3 §). Ett barn som behöver särskilt stöd är ett barn vars uppväxtförhållanden äventyrar eller inte tryggar barnets hälsa eller utveckling eller som genom sitt beteende äventyrar sin hälsa eller utveckling eller som på grund av samma orsaker behöver särskilt stöd som de som nämns ovan för personer som behöver särskilt stöd. Om svaret är ”ja” här, dvs. klienten har behov av särskilt stöd, svarar en socialarbetare i tjänsteförhållande för bedömningen av servicebehovet (socialvårdslagen 36 §). Om den person som behöver särskilt stöd är ett barn, ska bedömningen av servicebehovet inledas senast den sjunde vardagen efter det att ärendet har inletts, och bedömningen ska bli klar senast tre månader från inledningen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 16
+              }
+            },
+            "erityisen_tuen_perustelut": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Erityisen tuen perustelut"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Motiveringar till särskilt stöd"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan minkä asioiden perusteella asiakkaalla on katsottu olevan oikeus erityiseen tukeen. Jos asiakirja laaditaan koko perheen yhteiseksi, tähän kenttään voidaan selventää sitä, kenellä asiakkaista on oikeus erityiseen tukeen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas med anledning av vilka omständigheter klienten har ansetts ha rätt till särskilt stöd. Om man upprättar en gemensam handling för hela familjen, kan man i detta fält förklara vilken av klienterna som har rätt till särskilt stöd."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 17
+              }
+            }
+          }
+        },
+        "aikaisemmat_ja_nykyiset_palvelut": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Aikaisemmat ja nykyiset palvelut"
+              },
+              {
+                "lang": "sv",
+                "value": "Tidigare och nuvarande service"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan tiedot lapsiperheiden palvelutarpeen ja lastensuojelun tarpeen arvioimisen kannalta merkittävistä aikaisemmista ja nykyisistä sosiaali- ja terveydenhuollon palveluista ja muista mahdollisista palveluista."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas uppgifter om klientens tidigare och nuvarande tjänster inom social- och hälsovården och eventuella andra tjänster som är betydelsefulla med avseende på bedömningen av barnfamiljernas servicebehov och behovet av barnskydd."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 18
+          }
+        },
+        "lapsen_tarpeet_ja_arki": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lapsen tarpeet ja arki"
+              },
+              {
+                "lang": "sv",
+                "value": "Barnets behov och vardag"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kuvataan sekä myönteisiä asioita ja vahvuuksia että muutostarpeita ja huolenaiheita. Alla oleviin kenttiin kirjataan soveltuvin osin lapsen, huoltajien, lapselle läheisten henkilöiden sekä yhteistyötahojen ja asiantuntijoiden näkemykset erikseen. Jos palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve, asioita arvioidaan myös lastensuojelun tarpeen näkökulmasta."
+              },
+              {
+                "lang": "sv",
+                "value": "Man beskriver både positiva faktorer och styrkor samt förändringsbehov och bekymmer. I fälten nedan antecknas i tillämpliga delar åsikter hos barnet, vårdnadshavarna, närstående personer till barnet samt samarbetsparter och experter separat. Om behovet av barnskydd utreds i samband med bedömningen av servicebehovet, bedöms omständigheterna också med tanke på behovet av barnskydd."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 19
+          },
+          "required": [],
+          "properties": {
+            "lapsen_arki_ja_kasvuymparisto": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lapsen arki ja kasvuympäristö"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Barnets vardag och uppväxtmiljö"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan lapsen arjen sujumista kotona, päivähoidossa, koulussa tai vapaa-ajalla, lapsen kasvuympäristöä ja -ilmapiiriä, perheen olosuhteita, fyysistä ja henkistä turvallisuutta lapsen kannalta sekä muita lapsen kasvu- ja kehitysympäristöjä (koulu, harrastukset, vapaa-aika, naapurusto) ja niiden merkitystä lapselle. Jos asiakkaan tilanteessa on oleellista kirjata lähisuhdeväkivaltaa koskevia asioita, ne kirjataan tarkemmin lähisuhde- ja perheväkivallan ehkäisytyöhön liittyviin asiakirjoihin, eli vakavan parisuhdeväkivallan riskiarvioon, lähisuhdeväkivaltakokemusten arvioon, häirinnän ja vainon riskiarvioon ja turvasuunnitelmaan."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskrivs hur barnets vardag förlöper hemma, i dagvården, i skolan eller på fritiden, barnets uppväxtmiljö och -atmosfär, familjens förhållanden, fysiska och psykiska trygghet ur barnets synvinkel samt andra uppväxt- och utvecklingsmiljöer (skola, hobbyer, fritid, grannskap) och deras betydelse för barnet. Om det i klientens situation är väsentligt att anteckna sådant som rör våld i nära relationer, ska detta antecknas närmare i handlingar för förebyggande av våld i nära relationer och inom familjen, dvs. i riskbedömning gällande allvarligt våld i parförhållande, bedömning av upplevelser av våld i nära relation, riskbedömning gällande trakasserier och förföljelse och säkerhetsplan."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 20
+              }
+            },
+            "perhesuhteet_ja_muut_sosiaaliset_suhteet": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Perhesuhteet ja muut sosiaaliset suhteet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Familjerelationer och andra sociala relationer"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan lapsen näkemystä perheestään ja läheisistään ja näiden suhteiden pysyvyyttä ja merkitystä lapselle sekä lapsen suhteita ja yhteydenpitoa vanhempiin ja muihin lapselle tärkeisiin ihmisiin kuten lapsen sisaruksiin, sukulaisiin,  ystäviin, hoitajiin ja opettajiin."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskrivs barnets syn på sin familj och sina närstående och hur bestående dessa relationer är och deras betydelse för barnet samt barnets relationer och kontakt med föräldrarna och andra människor som är viktiga för barnet, såsom barnets syskon, släktingar, vänner, vårdare och lärare."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 21
+              }
+            },
+            "lapsen_hyvinvointi": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lapsen hyvinvointi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Barnets välbefinnande"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan lapsen fyysistä hyvinvointia ja terveyttä (tarvittaessa voidaan  kuvata myös lapsen terveystottumuksia esimerkiksi tupakointia, päihteiden käyttöä ja seksuaalikäyttäytymistä sekä niiden vaikutuksia lapseen), lapsen psyykkistä hyvinvointia ja tunne-elämää sekä niiden vaikutukset lapseen, lapsen näkemystä itsestään, kyvyistään, vahvuuksistaan ja yksilöllisyydestään. Kenttään voidaan kuvata myös  lapsen itsestä huolehtimisen ikätasoisia taitoja ja itsenäistymiskehitystä sekä tarvittaessa myös muita lapsen kasvua, kehitystä tai oppimista edistäviä tai estäviä tekijöitä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskrivs barnets fysiska välbefinnande och hälsa (vid behov kan man också beskriva barnets hälsovanor, till exempel rökning, användning av berusningsmedel och sexuellt beteende samt deras inverkan på barnet), barnets psykiska välbefinnande och känsloliv samt deras inverkan på barnet, barnets syn på sig själv, förmåga, styrkor och individualitet. I fältet kan man också beskriva barnets åldersbundna förmåga att ta hand om sig själv och självständighetsutvecklingen samt vid behov även andra faktorer som främjar eller förhindrar barnets uppväxt, utveckling eller lärande."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 22
+              }
+            },
+            "lapsen_osallisuus": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lapsen osallisuus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Barnets delaktighet"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan lapsen mahdollisuuksia esittää omia näkemyksiään, vaikuttaa asioihin omassa elämässään iän ja kehitystason mukaisesti sekä lapsen mahdollisuuksia ikä- ja kehitystasoiseen itsenäistymiseen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskrivs barnets möjligheter att framföra sina egna åsikter, påverka saker i sitt eget liv enligt ålder och utvecklingsnivå samt barnets möjligheter att bli självständigt enligt sin ålders- och utvecklingsnivå."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 23
+              }
+            }
+          }
+        },
+        "perheen_olosuhteet": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Perheen olosuhteet"
+              },
+              {
+                "lang": "sv",
+                "value": "Familjens förhållanden"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kuvataan sekä myönteisiä asioita ja vahvuuksia että muutostarpeita ja huolenaiheita perheen olosuhteista. Kirjataan soveltuvin osin lapsen, huoltajien, lapselle läheisten henkilöiden sekä yhteistyötahojen ja asiantuntijoiden näkemykset erikseen. Jos palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve, asioita arvioidaan myös lastensuojelun tarpeen näkökulmasta."
+              },
+              {
+                "lang": "sv",
+                "value": "Man beskriver både positiva faktorer och styrkor samt förändringsbehov och bekymmer gällande familjens förhållanden. Man antecknar i tillämpliga delar åsikter hos barnet, vårdnadshavarna, närstående personer till barnet samt samarbetsparter och experter separat. Om behovet av barnskydd utreds i samband med bedömningen av servicebehovet, bedöms omständigheterna också med tanke på behovet av barnskydd."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 24
+          },
+          "required": [],
+          "properties": {
+            "perheen_tausta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Perheen tausta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Familjens bakgrund"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan perheen historiasta esimerkiksi perheenjäsenten elämänkulun kannalta tärkeitä tapahtumia ja lapsen kannalta merkittäviä muutoksia perherakenteessa ja -suhteissa."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskriver man familjens historia till exempel viktiga händelser med tanke på familjemedlemmarnas levnadslopp och förändringar i familjestrukturen och familjerelationerna som är viktiga med tanke på barnet."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 25
+              }
+            },
+            "vanhempien_terveys_ja_hyvinvointi": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Vanhempien terveys ja hyvinvointi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Föräldrarnas hälsa och välfärd"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan vanhempien, huoltajien tai muiden lapsen hoidosta vastaavien terveyttä ja hyvinvointia kuten fyysistä terveyttä ja mielialaa tai väkivaltaa sekä näiden mahdollisia vaikutuksia lapsen hoitoon ja huolenpitoon."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskrivs hälsan och välbefinnandet hos föräldrarna, vårdnadshavarna eller andra personer som ansvarar för barnets vård, såsom fysisk hälsa och sinnesstämning eller våld samt den eventuella inverkan på barnets vård och omsorg."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 26
+              }
+            },
+            "vanhempien_paihteiden_kaytto_ja_riippuvuudet": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Vanhempien päihteiden käyttö ja riippuvuudet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Föräldrarnas användning av berusningsmedel och beroenden"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 27
+              },
+              "required": [],
+              "properties": {
+                "kayton_kuvaus": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Käytön kuvaus"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Beskrivning av användningen"
+                      }
+                    ],
+                    "title": [
+                      {
+                        "lang": "fi",
+                        "value": "Kuvaus vanhempien päihteiden käytöstä ja riippuvuuksista"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Beskrivning av föräldrarnas användning av berusningsmedel och beroenden"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kuvataan vanhempien, huoltajien tai muiden lapsen hoidosta vastaavien mahdollista päihteiden käyttöä sekä sen vaikutusta lapsen hoitoon ja huolenpitoon."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet beskrivs eventuell användning av berusningsmedel hos föräldrarna, vårdnadshavarna eller andra som ansvarar för barnets vård samt dess inverkan på barnets vård och omsorg."
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "Alkoholin kanssa tulee poltettua tupakkaa."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Personen röker i samband med att han dricker alkohol."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 28
+                  }
+                }
+              }
+            },
+            "asuminen": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Asuminen"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Boende"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan lapsen ja perheen asuinolosuhteita ja niiden pysyvyyttä ja soveltuvuutta lapselle."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskrivs barnets och familjens boendeförhållanden och deras varaktighet och lämplighet för barnet."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 29
+              }
+            },
+            "kotoutuminen": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Kotoutuminen"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Integration"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään voidaan tarvittaessa kuvata asiakkaan kotoutumiseen liittyviä asioita."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet kan man vid behov beskriva sådant som rör klientens integration."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 30
+              }
+            },
+            "tyollisyys_ja_toimeentulo": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Työllisyys ja toimeentulo"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Sysselsättning och utkomst"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tiedot perheenjäsenten työllisyydestä ja perheen käytettävissä olevista tuloista ja niiden riittävyydestä perheen tarpeisiin, perheenjäsenten opiskelusta, työssäkäynnistä ja muusta toiminnasta ja niiden vaikutuksista lapsen ja perheen arkeen ja toimeentuloon sekä perheen taloudellisista edellytyksistä vastata lapsen ja perheen tarpeisiin."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas uppgifter om familjemedlemmarnas sysselsättning och de inkomster som familjen har till sitt förfogande och deras tillräcklighet för familjens behov, familjemedlemmarnas studier, arbete och annan verksamhet och deras inverkan på barnets och familjens vardag och utkomst samt familjens ekonomiska förutsättningar att svara på barnets och familjens behov."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 31
+              }
+            }
+          }
+        },
+        "vanhempien_valmiudet": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Vanhempien valmiudet"
+              },
+              {
+                "lang": "sv",
+                "value": "Föräldrarnas beredskap"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kuvataan sekä myönteisiä asioita ja vahvuuksia että muutostarpeita ja huolenaiheita. Kirjataan soveltuvin osin lapsen, huoltajien, lapselle läheisten henkilöiden sekä yhteistyötahojen ja asiantuntijoiden näkemykset erikseen. Jos palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve, asioita arvioidaan myös lastensuojelun tarpeen näkökulmasta."
+              },
+              {
+                "lang": "sv",
+                "value": "Man beskriver både positiva faktorer och styrkor samt förändringsbehov och bekymmer. Man antecknar i tillämpliga delar åsikter hos barnet, vårdnadshavarna, närstående personer till barnet samt samarbetsparter och experter separat. Om behovet av barnskydd utreds i samband med bedömningen av servicebehovet, bedöms omständigheterna också med tanke på behovet av barnskydd."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 32
+          },
+          "required": [],
+          "properties": {
+            "huolenpito_ja_kasvatus": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Huolenpito ja kasvatus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Omsorg och fostran"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan vanhempien, huoltajien tai muiden lapsen hoidosta vastaavien henkilöiden valmiuksia vastata lapsen arjen sujumisesta, esimerkiksi kykyä huolehtia lapsen fyysisistä tarpeista (säännöllisestä vuorokausirytmistä, riittävästä unen saannista, ravinnosta, puhtaudesta, sopivasta pukeutumisesta, asianmukaisesta terveydenhoidosta ja tarvittaessa lapsen erityisestä tuesta sekä perheen asioiden hoitamisesta, esim. virastoissa niin kasvokkain kuin sähköisestikin) sekä vanhempien valmiuksia varmistaa lapsen fyysinen ja henkinen turvallisuus ja koskemattomuus, suojella ja valvoa lasta vahinkojen ja vaarojen varalta, kykyä ohjata lasta sekä asettaa ikä- ja kehitystasoisia rajoja ja pitää niistä kiinni."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskriver man färdigheterna hos föräldrarna, vårdnadshavarna eller andra personer som ansvarar för barnets vård att svara för barnets vardag, till exempel förmåga att tillgodose barnets fysiska behov (regelbunden dygnsrytm, tillräcklig sömn, näring, renhet, lämplig klädsel, ändamålsenlig hälsovård och vid behov särskilt stöd för barnet samt skötsel av familjens ärenden, t.ex. hos myndigheter såväl ansikte mot ansikte som elektroniskt) samt föräldrarnas färdigheter att säkerställa barnets fysiska och psykiska trygghet och integritet, skydda och övervaka barnet mot skador och risker samt förmåga att handleda barnet samt sätta gränser enligt barnets ålders- och utvecklingsnivå och hålla fast vid dessa."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 33
+              }
+            },
+            "laheisten_ihmissuhteiden_turvaaminen_ja_yhteistyokyky": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Läheisten ihmissuhteiden turvaaminen ja yhteistyökyky"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Trygga nära mänskliga relationer och samarbetsförmågan"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan vanhempien, huoltajien tai muiden lapsen hoidosta vastaavien kykyä ja mahdollisuuksia turvata ja edistää lapselle läheisiä ja pysyviä ihmissuhteita, vanhempien valmiuksia tehdä yhteistyötä lapselle tärkeiden ihmisten ja hänen kanssaan työskentelevien viranomaisten kanssa sekä vanhempien valmiutta hakea tarvittaessa apua ja sitoutua avoimeen yhteistyöhön."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskriver man förmågan och möjligheterna hos föräldrarna, vårdnadshavarna eller andra som ansvarar för barnets vård att trygga och främja nära och bestående människorelationer för barnet, föräldrarnas färdigheter att samarbeta med människor som är viktiga för barnet och med myndigheter som arbetar med barnet samt föräldrarnas beredskap att vid behov söka hjälp och förbinda sig till öppet samarbete."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 34
+              }
+            },
+            "lapsen_tasapainoisen_kehityksen_ja_hyvinvoinnin_turvaaminen": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lapsen tasapainoisen kehityksen ja hyvinvoinnin turvaaminen"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Trygga en balanserad utveckling och välbefinnande hos barnet"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan vanhempien, huoltajien tai muiden lapsen hoidosta vastaavien valmiuksia edistää lapsen kehitystä rohkaisemalla lasta, tarjoamalla leikkiä ja oppimista tukevia kasvu- ja kehitysympäristöjä, mahdollistamalla harrastuksia sekä luomalla sosiaalista vuorovaikutusta edistäviä tilanteita, tukea lapsen päivähoitoa, koulunkäyntiä, ystävyyssuhteita ja harrastuksia, tiedostaa lapsen emotionaalisia tarpeita, vastata niihin ja tarjota lapselle ymmärtämystä, hellyyttä ja myönteistä palautetta,  tukea lapsen myönteisen minäkuvan muodostumista, ohjata lasta tunnistamaan ja ilmaisemaan omia tunteitaan ja selviytymään erilaisten tunteidensa kanssa ymmärtämisen, lohdutuksen ja keskustelun avulla sekä vanhempien kykyä olla lapselle turvallinen, pysyvä, vakaa ja rakastava aikuinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskriver man färdigheterna hos föräldrarna, vårdnadshavarna eller andra som ansvarar för barnets vård att främja barnets utveckling genom att uppmuntra barnet, erbjuda uppväxt- och utvecklingsmiljöer som stöder leken och lärandet, möjliggöra hobbyer samt skapa situationer som främjar social växelverkan, stöda barnets dagvård, skolgång, vänskapsrelationer och hobbyer, vara medveten om barnets emotionella behov, svara på dem och erbjuda barnet förståelse, ömhet och positiv feedback, stöda utvecklingen av en positiv självbild hos barnet, lära barnet att identifiera och uttrycka sina känslor och att klara av sina olika känslor genom förståelse, tröst och diskussion samt föräldrarnas förmåga att vara en trygg, bestående, stabil och kärleksfull vuxen för barnet."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 35
+              }
+            },
+            "lapsen_osallisuuden_tukeminen": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lapsen osallisuuden tukeminen"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Främja barnets delaktighet"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan vanhempien, huoltajien tai muiden lapsen hoidosta vastaavien kykyä ymmärtää lapsi omana yksilönään, tukea lasta ilmaisemaan omia näkemyksiään ja huomioida lapsen näkemykset iän ja kehitystason mukaisesti sekä kykyä tukea lapsen itsenäistymistä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskriver man förmågan hos föräldrarna, vårdnadshavarna eller andra som ansvarar för barnets vård att förstå barnet som en egen individ, stöda barnet att uttrycka sina egna åsikter och beakta barnets åsikter enligt ålder och utvecklingsnivå samt förmågan att stöda barnets självständighet."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 36
+              }
+            }
+          }
+        },
+        "laheisverkoston_kartoittaminen": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Läheisverkoston kartoittaminen"
+              },
+              {
+                "lang": "sv",
+                "value": "Kartläggning av närståendenätverket"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Tähän kirjataan tiedot läheisverkoston kartoittamisesta. Läheisverkoston kartoittamisella tarkoitetaan sen selvittämistä, miten omaiset tai muut asiakkaalle läheiset henkilöt osallistuvat asiakkaan tukemiseen. Läheisverkoston kartoittaminen toteutetaan sosiaalihuoltolain 43 §:n mukaisesti palvelutarpeen arvioinnin yhteydessä."
+              },
+              {
+                "lang": "sv",
+                "value": "Här antecknas uppgifter om kartläggningen av närståendenätverket. Med en kartläggning av närståendenätverket avses en utredning av på vilket sätt anhöriga eller andra personer som står klienten nära deltar i att stöda klienten. Kartläggningen av närståendenätverket görs i enlighet med 43 § i socialvårdslagen i samband med att servicebehovet bedöms."
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 37
+          },
+          "required": [],
+          "properties": {
+            "laheisverkoston_antama_tuki": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Läheisverkoston antama tuki"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Stöd som ges av närståendenätverket"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan läheisverkostoon kuuluvat omaiset ja muut asiakkaalle läheiset henkilöt ja se, kuinka he osallistuvat asiakkaan tukemiseen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas de anhöriga och andra personer som står klienten nära och som hör till närståendenätverket samt på vilket sätt de stöder klienten."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 38
+              }
+            },
+            "laheisen_tuen_tarve_on_selvitetty": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Läheisen tuen tarve on selvitetty"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "De närståendes stödbehov har utretts"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Jos palvelutarpeen arvio tehdään vain yhden asiakkaan osalta, on selvitettävä tarvittaessa myös läheisten tuen tarve (sosiaalihuoltolaki 43 §). Kenttään kirjataan vain tieto siitä, onko asia huomioitu, ja mahdolliset tarkemmat tiedot kirjataan läheisen omiin asiakastietoihin."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Om bedömningen av servicebehovet görs endast för en klient ska man vid behov också utreda de närståendes stödbehov (socialvårdslagen 43 §). I fältet antecknas endast information om huruvida frågan har beaktats, och eventuella noggrannare uppgifter antecknas i den närståendes egna klientuppgifter."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "kyllä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ja"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 39
+              }
+            }
+          }
+        },
+        "johtopaatokset_ja_jatkotoimet": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Johtopäätökset ja jatkotoimet"
+              },
+              {
+                "lang": "sv",
+                "value": "Slutsatser och fortsatta åtgärder"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 40
+          },
+          "required": [
+            "asiakkuuden_jatko",
+            "ammattihenkilon_johtopaatokset_asiakkaan_tilanteesta_seka_sosiaalipalvelujen_ja_erityisen_tuen_tarpeesta",
+            "asiakas_tarvitsee_omatyontekijan"
+          ],
+          "properties": {
+            "lapsen_arvio_tuen_ja_palvelujen_tarpeesta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lapsen arvio tuen ja palvelujen tarpeesta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Barnets bedömning av behovet av stöd och service"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan lapsen näkemys tuen ja palvelujen tarpeesta sosiaalihuoltolain 37 §:n mukaisesti. Jos palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve, kenttään kirjataan lapsen näkemys myös lastensuojelun tarpeesta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas barnets åsikt om sitt behov av stöd och service i enlighet med 37 § i socialvårdslagen. Om behovet av barnskydd utreds i samband med bedömningen av servicebehovet, antecknas i fältet också barnets åsikt om behovet av barnskydd."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 41
+              }
+            },
+            "vanhemman_arvio_tuen_ja_palvelujen_tarpeesta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Vanhemman arvio tuen ja palvelujen tarpeesta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Förälderns bedömning av behovet av stöd och service"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan vanhempien, huoltajien tai muiden lapsen hoidosta vastanneiden henkilöiden näkemys tuen ja palvelujen tarpeesta sosiaalihuoltolain 37 §:n mukaisesti. Jos palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve, kenttään kirjataan vanhemman, huoltajan tai muun lapsen hoidosta vastaavan näkemys myös lastensuojelun tarpeesta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskriver man åsikterna hos föräldrarna, vårdnadshavarna eller andra personer som ansvarar för barnets vård om behovet av stöd och service i enlighet med 37 § i socialvårdslagen. Om behovet av barnskydd utreds i samband med bedömningen av servicebehovet, antecknas i fältet också åsikterna hos föräldrarna, vårdnadshavarna eller andra personer som ansvarar för barnets vård om behovet av barnskydd."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 42
+              }
+            },
+            "muun_laheisen_arvio_tuen_ja_palvelujen_tarpeesta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Muun läheisen arvio tuen ja palvelujen tarpeesta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Andra personers bedömning av behovet av stöd och service"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan asiakkaan laillisen edustajan (pl. lapsen huoltaja, jonka näkemys kirjataan edelliseen kenttään), omaisen, läheisen, lapselle tärkeän henkilön tai muun henkilön näkemys asiakkaan tuen ja palvelujen tarpeesta sosiaalihuollon asiakasasiakirjoista annetun lain 16 §:n mukaisesti. Jos palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve, kenttään kirjataan muun läheisen näkemys myös lastensuojelun tarpeesta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas i enlighet med 16 § i lagen om klienthandlingar inom socialvården åsikterna hos klientens lagliga företrädare (utom barnets vårdnadshavare, vars åsikter antecknas i ett separat fält), en anhörig, närstående, en viktig person för barnet eller någon annan person om klientens behov av stöd och service. Om behovet av barnskydd utreds i samband med bedömningen av servicebehovet, antecknas i fältet också en annan närstående persons åsikt om behovet av barnskydd."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 43
+              }
+            },
+            "muiden_yhteistyotahojen_arvio_tuen_ja_palvelujen_tarpeesta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Muiden yhteistyötahojen arvio tuen ja palvelujen tarpeesta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Andra samarbetsaktörers bedömning av behovet av stöd och service"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan muiden lapsen hoitoon ja kasvatukseen osallistuneiden yhteistyötahojen ja asiantuntijoiden näkemys tuen ja palvelujen tarpeesta. Jos palvelutarpeen arvioinnin yhteydessä selvitetään lastensuojelun tarve, kenttään kirjataan heidän näkemys myös lastensuojelun tarpeesta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknar man åsikterna hos andra samarbetsparter och experter om behovet av stöd och service. Om behovet av barnskydd utreds i samband med bedömningen av servicebehovet, antecknas i fältet också deras åsikter om behovet av barnskydd."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 44
+              }
+            },
+            "ammattihenkilon_arvio_tuen_tarpeesta": {
+              "type": "array",
+              "minItems": 0,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Ammattihenkilön arvio tuen tarpeesta"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "En yrkesutbildad persons bedömning av stödbehovet"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan luokituksen avulla ammattihenkilön arvio asiakkaan tuen tarpeesta."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas en yrkesutbildad persons bedömning av klientens stödbehov med hjälp av klassificeringen."
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: Sosiaalihuolto - Tuen tarve 1.2.246.537.6.1282"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kodtjänsten: Socialvård - Stödbehov 1.2.246.537.6.1282"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d3043\u0026versionKey\u003d3403"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.6.1282"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kod"
+                    }
+                  ],
+                  "repeatable": true,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": true,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 45
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1282(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "asiakkuuden_jatko": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Asiakkuuden jatko"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Klientrelationens fortsättning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Tähän kirjataan tieto siitä, jatkuuko sosiaalihuollon asiakkuus lapsiperheiden palveluissa tai vaihtoehtoisesti asiakkuuden päättymispäivämäärä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Här antecknas uppgifter om huruvida klientrelationen inom socialvården fortsätter inom service för barnfamiljer eller alternativt det datum då klientrelationen avslutas."
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 46
+              },
+              "required": [
+                "asiakkuus_jatkuu"
+              ],
+              "properties": {
+                "asiakkuus_jatkuu": {
+                  "type": "boolean",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Asiakkuus jatkuu"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Klientrelationen fortsätter"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan jatkuuko asiakkuus."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet antecknas om klientrelationen fortsätter."
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "Kyllä"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Ja"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Kytkin"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Brytare"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": true,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": true,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 47
+                  }
+                }
+              }
+            },
+            "ammattihenkilon_johtopaatokset_asiakkaan_tilanteesta_seka_sosiaalipalvelujen_ja_erityisen_tuen_tarpeesta": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Ammattihenkilön johtopäätökset asiakkaan tilanteesta sekä sosiaalipalvelujen ja erityisen tuen tarpeesta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Den yrkesutbildade personens slutsatser om klientens situation samt om behovet av socialservice och särskilt stöd"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan sosiaalihuollon ammattihenkilön johtopäätökset ja yhteenveto asiakkaan tilanteesta, sosiaalipalvelujen ja erityisen tuen tarpeesta ja asiakkuuden edellytyksistä sosiaalihuoltolain 37 §:n mukaisesti. Kenttään kirjataan perustelut asiakkuuden päättymiselle, jos se päättyy palvelutarpeen arvioinnin jälkeen. Kenttään voidaan myös perustella omatyöntekijän tarvetta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas slutsatserna som den yrkesutbildade personen inom socialvården har dragit om klientens situation och en sammanfattning av dem, om behovet av socialservice och särskilt stöd samt om förutsättningarna för en klientrelation i enlighet med 37 § i socialvårdslagen. I fältet antecknas motiveringarna till att klientrelationen avslutas, om den avslutas efter bedömningen av servicebehovet. I fältet kan också motiveringar till behovet av en egen kontaktperson antecknas."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 48
+              }
+            },
+            "lastensuojelun_tarve": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lastensuojelun tarve"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Behov av barnskydd"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Tämän otsikon alla olevia kenttiä käytetään vain silloin, kun palvelutarpeen arvioinnin lisäksi selvitetään lastensuojelun tarve. Jos kenttään \"Palvelutarpeen yhteydessä selvitetään lastensuojelun tarve\" on vastattu \"ei\", ei tätä tietokokonaisuutta näytetä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Tämän otsikon alla olevia kenttiä käytetään vain silloin, kun palvelutarpeen arvioinnin lisäksi selvitetään lastensuojelun tarve. Jos kenttään \"Palvelutarpeen yhteydessä selvitetään lastensuojelun tarve\" on vastattu \"ei\", ei tätä tietokokonaisuutta näytetä."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Otsikko"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Rubrik"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 49
+              },
+              "required": [],
+              "properties": {
+                "sosiaalityontekijan_yhteenveto_ja_johtopaatokset_lastensuojelun_tarpeesta": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Sosiaalityöntekijän yhteenveto ja johtopäätökset lastensuojelun tarpeesta"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Socialarbetarens sammanfattning och slutsatser om behovet av barnskydd"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan sosiaalityöntekijän yhteenveto ja hänen arvion pohjalta tehdyt johtopäätökset ja näkemys lapsen ja perheen tilanteesta, voimavaroista ja tarvittavista lastensuojelutoimenpiteistä."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet antecknas socialarbetarens sammanfattning och slutsatser utifrån socialarbetarens bedömning och åsikt om barnets och familjens situation, resurser och behövliga barnskyddsåtgärder."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 50
+                  }
+                },
+                "lastensuojeluasiakkuus_alkaa": {
+                  "type": "boolean",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Lastensuojeluasiakkuus alkaa"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Klientrelationen inom barnskyddet inleds"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan \"kyllä\", jos lastensuojeluasiakkuus alkaa palvelutarpeen arvioinnin jälkeen."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet antecknas ”ja”, om klientrelationen inom barnskyddet inleds efter bedömningen av servicebehovet."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Kytkin"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Brytare"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": true,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 51
+                  }
+                },
+                "lastensuojeluasiakkuuden_alkamisen_syy": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Lastensuojeluasiakkuuden alkamisen syy"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Orsaken till att en klientrelation inom barnskyddet inleddes"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Jos lastensuojeluasiakkuus alkaa, kenttään kirjataan luokituksen avulla lastensuojeluasiakkuuden alkamisen syy."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Om en klientrelation inom barnskyddet inleds, antecknas i fältet med hjälp av klassificeringen orsaken till att klientrelationen inom barnskyddet inleds."
+                      }
+                    ],
+                    "implementationNote": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttä näytetään, jos lastensuojeluasiakkuus alkaa, eli  Lastensuojeluasiakkuus alkaa -kenttään on kirjattu \"kyllä\". Luokituksesta käytetään vain lehtisolmuja, eli tarkimman tason koodeja. Asiakirjan laatijalle voidaan näyttää yläluokat."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kenttä näytetään, jos lastensuojeluasiakkuus alkaa, eli  Lastensuojeluasiakkuus alkaa -kenttään on kirjattu \"kyllä\". Luokituksesta käytetään vain lehtisolmuja, eli tarkimman tason koodeja. Asiakirjan laatijalle voidaan näyttää yläluokat."
+                      }
+                    ],
+                    "classification": [
+                      {
+                        "lang": "fi",
+                        "value": "Koodistopalvelin: Sosiaalihuolto - Lastensuojeluasian syy 1.2.246.537.6.1251"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kodtjänsten: Socialvård - Orsak till barnskyddsärende 1.2.246.537.6.1251"
+                      }
+                    ],
+                    "classificationLink": [
+                      {
+                        "lang": "",
+                        "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1804\u0026versionKey\u003d2044"
+                      }
+                    ],
+                    "classificationOid": [
+                      {
+                        "lang": "",
+                        "value": "1.2.246.537.6.1251"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Koodi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kod"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": true,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 52
+                  },
+                  "required": [
+                    "system",
+                    "code",
+                    "display"
+                  ],
+                  "properties": {
+                    "system": {
+                      "type": "string",
+                      "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1251(\\.\\d+)*$"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "display": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "arvio_tuen_tarpeen_luonteesta": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Arvio tuen tarpeen luonteesta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Bedömning av typen av stödbehov"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Sosiaalihuoltolain 37 §:n mukaan on arvioitava onko asiakkaan tuen tarve luonteeltaan tilapäistä, toistuvaa tai pitkäaikaista silloin, kun asiakas tarvitsee tukea. \n\nTilapäinen tuen tarve tarkoittaa hetkellistä ja lyhytkestoista tuen tarvetta. Tällöin asiakkaalle ei tarvitse nimetä omatyöntekijää eikä hänelle ole välttämätöntä laatia asiakassuunnitelmaa. Tilapäiseen tuen tarpeeseen liittyvät palvelut tulee järjestää niin, että ehkäistään pidempiaikaisen tuen tarpeen syntyminen. \n\nToistuva tuen tarve on jatkuvaa, ja tällöin asiakkaalle nimetään omatyöntekijä ja hänelle laaditaan tarvittaessa asiakassuunnitelma. Asiakkuuden alkuvaiheessa myös huolellisesti laadittu palvelutarpeen arvio voi olla riittävä. Toistuvaan tuen tarpeseen liittyvät palvelut tulee järjestää niin, että tavoitteena on asiakkaan itsenäinen selviytyminen ja tuen tarpeen päättyminen asiakkaan kanssa yhdessä asetetun tavoiteajan jälkeen. \n\nJos asiakkaalla on pitkäaikainen (tai pysyvä) tuen tarve, asiakkaalle on nimettävä omatyöntekijä ja hänelle on laadittava asiakassuunnitelma. Pitkäaikaiseen tuen tarpeeseen liittyvät palvelut on pyrittävä järjestämään siten, että turvataan palvelujen jatkuvuus, ellei palvelujen muuttaminen ole asiakkaan edun mukaista. Asiakkaalla voi olla useita erilaisia tuen tarpeita, ja jos yksikin niistä on pitkäaikainen, niin valitaan luokka 3) Pitkäaikainen tuen tarve."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Enligt 37 § i socialvårdslagen ska man när klienten behöver stöd bedöma om stödbehovet är av tillfällig, återkommande eller långvarig karaktär. Med tillfälligt stöd avses behov av tillfälligt eller kortvarigt stöd. Då behöver man inte utse en egen kontaktperson för klienten och det är inte nödvändigt att upprätta en klientplan för klienten. Tjänster förknippade med behovet av tillfälligt stöd ska ordnas så att uppkomsten av ett långvarigt stödbehov kan förebyggas. Återkommande stödbehov är fortlöpande, och då utses en egen kontaktperson för klienten och vid behov upprättas en klientplan för klienten. I början av klientrelationen kan det också räcka med en noggrant upprättad bedömning av servicebehovet. Tjänster förknippade med återkommande stödbehov ska ordnas så att målet är att klienten klarar sig själv och att stödbehovet upphör efter den tid som tillsammans med klienten uppställts som mål. Om klienten har eller långvarigt (eller permanent) stödbehov, ska en egen kontaktperson utses för klienten och en klientplan upprättas för klienten. Tjänster i anslutning till ett långvarigt stödbehov ska om möjligt ordnas så att servicens kontinuitet tryggas, dvs. om det inte ligger i klientens intresse att ändra servicen. Klienten kan ha många olika stödbehov, och även om endast ett av dem är långvarigt, ska man välja 3) Långvarigt stödbehov."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: Sosiaalihuolto - Asiakkaan tuen tarpeen kesto 1.2.246.537.6.1294"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kodtjänsten: Socialvård - Varaktigheten av klientens stödbehov 1.2.246.537.6.1294"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d3604\u0026versionKey\u003d4085"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.1294"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 53
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1294(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "asiakkaalle_laaditaan_asiakassuunnitelma": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Asiakkaalle laaditaan asiakassuunnitelma"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "En klientplan upprättas för klienten"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan \"kyllä\", jos asiakkaalle asiakassuunnitelma. Joissakin tilanteissa, esimerkiksi silloin kun kyseessä on tilapäinen tuen tarve, asiakassuunnitelman laatiminen voidaan katsoa tarpeettomaksi."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Anteckna ”ja” i fältet, om en klientplan upprättas för klienten. I vissa situationer, till exempel när det är frågan om ett tillfälligt stödbehov, kan det anses onödigt att upprätta en klientplan"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttää ei näytetä, jos kenttään \"Asiakkuus jatkuu\" on vastattu \"Ei\"."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kenttää ei näytetä, jos kenttään \"Asiakkuus jatkuu\" on vastattu \"Ei\"."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 54
+              }
+            },
+            "perustelut_miksi_asiakassuunnitelmaa_ei_laadita": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Perustelut miksi asiakassuunnitelmaa ei laadita"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Motiveringar till att ingen klientplan upprättas"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään perustellaan miksi asiakassuunitelman laatiminen on katsottu tarpeettomaksi."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas motiveringar till att det har setts som onödigt att utarbeta en klientplan."
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttää ei näytetä, jos Asiakkuus jatkuu -kenttään on vastattu \"Ei\". Kenttä näytetään, jos \"Asiakkaalle laaditaan asiakassuunnitelma\" -kenttään on vastattu \"Ei\"."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kenttää ei näytetä, jos Asiakkuus jatkuu -kenttään on vastattu \"Ei\". Kenttä näytetään, jos \"Asiakkaalle laaditaan asiakassuunnitelma\" -kenttään on vastattu \"Ei\"."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 55
+              }
+            },
+            "asiakas_tarvitsee_omatyontekijan": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Asiakas tarvitsee omatyöntekijän"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Klienten behöver en egen kontaktperson"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan \"kyllä\", jos asiakas sosiaalihuoltolain 42 §:n mukaisen omatyöntekijän."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas ”ja”, om klienten behöver en egen kontaktperson i enlighet med 42 § i socialvårdslagen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 56
+              }
+            },
+            "omatyontekija": {
+              "type": "array",
+              "minItems": 0,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Omatyöntekijä"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Egen kontaktperson"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Mikäli asiakkaalle nimetään omatyöntekijä tai lapsen asioista vastaava sosiaalityöntekijä, hänen nimensä ja tehtävänimikkeensä kirjataan tähän kohtaan."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Om en egen kontaktperson eller en socialarbetare som ansvarar för barnets angelägenheter utses för klienten, antecknas dennes namn och uppgiftsbeteckning här."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Nämä kentät näytetään vain, jos Asiakas tarvitsee omatyöntekijän -kenttään on vastattu kyllä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Nämä kentät näytetään vain, jos Asiakas tarvitsee omatyöntekijän -kenttään on vastattu kyllä."
+                    }
+                  ],
+                  "repeatable": true,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 57
+                },
+                "required": [
+                  "sukunimi",
+                  "etunimet"
+                ],
+                "properties": {
+                  "sukunimi": {
+                    "type": "string",
+                    "minLength": 1,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Sukunimi"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Efternamn"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Nimi"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Namn"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": true,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 58
+                    }
+                  },
+                  "etunimet": {
+                    "type": "string",
+                    "minLength": 1,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Etunimet"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Samtliga förnamn"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Nimi"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Namn"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": true,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 59
+                    }
+                  },
+                  "tehtavanimike": {
+                    "type": "string",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Tehtävänimike"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Uppgiftsbeteckning"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "example": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Teksti"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Text"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 60
+                    }
+                  }
+                }
+              }
+            },
+            "jatkosuunnitelma": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Jatkosuunnitelma"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Plan för fortsatta åtgärder"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Jos asiakkuus jatkuu, kenttään voidaan kirjata suunnitelma asiakkuuden jatkumisesta. Kenttää voidaan käyttää silloin, kun asiakkaalle ei laadita asiakassuunnitelmaa lainkaan (kun kyseessä on tilapäinen tuen tarve) tai silloin, kun asiakassuunnitelmaa ei laadita heti palvelutarpeen arvioinnin jälkeen. Kenttään voi tarpeen mukaan kirjata esim. tavoitteita, tietoja haettavista palveluista, tiedot seuraavasta neuvotteluajankohdasta sekä tiedot asiakkaan kanssa sovituista konkreettisista toimenpiteistä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Om klientrelationen fortsätter, kan man i fältet anteckna en plan om fortsatt klientrelation. Man kan använda fältet, då man inte alls upprättar någon klientplan för klienten (då det är frågan om tillfälligt stöd) och då klientplanen inte upprättas direkt efter bedömningen av servicebehovet. I fältet kan man vid behov anteckna till exempel mål, uppgifter om den service som söks, uppgifter om följande tidpunkt för rådgivning samt uppgifter om konkreta åtgärder som har överenskommits med klienten."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 61
+              }
+            }
+          }
+        },
+        "henkilot_joille_asiakirja_toimitetaan": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Henkilöt, joille asiakirja toimitetaan"
+              },
+              {
+                "lang": "sv",
+                "value": "Personer som handlingen ska ges till"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan henkilöt, joille asiakirja toimitetaan."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas de personer som handlingen ska ges till."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 62
+          }
+        },
+        "lakiselostus": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lakiselostus"
+              },
+              {
+                "lang": "sv",
+                "value": "Lagförklaring"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä voidaan käyttää automaattitekstiä, jonka organisaatio yhdessä tietojärjestelmätoimittajan kanssa laatii. THL ei laadi kentässä näytettäviä tekstejä."
+              },
+              {
+                "lang": "sv",
+                "value": "Kentässä voidaan käyttää automaattitekstiä, jonka organisaatio yhdessä tietojärjestelmätoimittajan kanssa laatii. THL ei laadi kentässä näytettäviä tekstejä."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 63
+          }
+        },
+        "paivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Päivämäärä"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan asiakirjan laatimisen päivämäärä."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas datum för upprättandet av handlingen."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": true,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 64
+          }
+        },
+        "laatija": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Laatija"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Upprättare"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                },
+                {
+                  "lang": "sv",
+                  "value": "-"
+                }
+              ],
+              "example": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                },
+                {
+                  "lang": "sv",
+                  "value": "-"
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 65
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 66
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 67
+                }
+              },
+              "tehtavanimike": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Tehtävänimike"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Uppgiftsbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 68
+                }
+              },
+              "palveluyksikko": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Palveluyksikkö"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Serviceenhet"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas namnet på serviceenheten enligt Organisationsregistret för social- och hälsovården."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Esbo centrums barnskydd, Esbo stad, social- och hälsovårdssektorn"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.6.202"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kod"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": true,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 69
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

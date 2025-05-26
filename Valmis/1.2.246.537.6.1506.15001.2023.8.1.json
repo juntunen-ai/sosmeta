@@ -1,0 +1,3504 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Aktivointisuunnitelma\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Aktivointisuunnitelma\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2023-08-01",
+    "dataComponentLibraryVersion": "2023-07-28",
+    "oid": "1.2.246.537.6.1506.15001.2023.8.1",
+    "documentType": "Suunnitelma",
+    "documentAuthor": "ammattihenkilö",
+    "documentSubject": "Työikäisten palvelujen asiakasasiakirjat"
+  },
+  "required": [
+    "aktivointisuunnitelma"
+  ],
+  "properties": {
+    "aktivointisuunnitelma": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Aktivointisuunnitelma"
+          },
+          {
+            "lang": "sv",
+            "value": "Aktiveringsplan"
+          }
+        ]
+      },
+      "required": [
+        "asiakas",
+        "tiedot_neuvottelusta_jossa_tama_suunnitelma_on_tehty",
+        "laatija",
+        "allekirjoitus"
+      ],
+      "properties": {
+        "asiakas": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Asiakas"
+              },
+              {
+                "lang": "sv",
+                "value": "Klient"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "-"
+              },
+              {
+                "lang": "sv",
+                "value": "-"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 1
+          },
+          "required": [
+            "sukunimi",
+            "etunimet",
+            "henkilotunnus"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 2
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 3
+              }
+            },
+            "henkilotunnus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Henkilötunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Tunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Identifierare"
+                  }
+                ],
+                "systemUri": [
+                  {
+                    "lang": "",
+                    "value": "urn:oid:1.2.246.21"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 4
+              },
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "palvelutehtava": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Palvelutehtävä"
+              },
+              {
+                "lang": "sv",
+                "value": "Serviceuppgift"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan luokituksen avulla palvelutehtävä, johon asiakirja kuuluu."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas med hjälp av klassificeringen den serviceuppgift till vilken handlingen hör."
+              }
+            ],
+            "classification": [
+              {
+                "lang": "fi",
+                "value": "Koodistopalvelin: Sosiaalihuolto - Palvelutehtävä 1.2.246.537.6.1221"
+              },
+              {
+                "lang": "sv",
+                "value": "Kodtjänsten: Socialvård - Serviceuppgift 1.2.246.537.6.1221"
+              }
+            ],
+            "classificationLink": [
+              {
+                "lang": "",
+                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d704\u0026versionKey\u003d2563"
+              }
+            ],
+            "classificationOid": [
+              {
+                "lang": "",
+                "value": "1.2.246.537.6.1221"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Koodi"
+              },
+              {
+                "lang": "sv",
+                "value": "Kod"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": true,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 5
+          },
+          "required": [
+            "system",
+            "code",
+            "display"
+          ],
+          "properties": {
+            "system": {
+              "type": "string",
+              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1221(\\.\\d+)*$"
+            },
+            "code": {
+              "type": "string"
+            },
+            "display": {
+              "type": "string"
+            }
+          }
+        },
+        "tiedot_neuvottelusta_jossa_tama_suunnitelma_on_tehty": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Tiedot neuvottelusta jossa tämä suunnitelma on tehty"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Uppgifter om den överläggning där denna plan har upprättats"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                },
+                {
+                  "lang": "sv",
+                  "value": "-"
+                }
+              ],
+              "implementationNote": [
+                {
+                  "lang": "fi",
+                  "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 6
+            },
+            "required": [
+              "osallistujat"
+            ],
+            "properties": {
+              "paivamaara": {
+                "type": "string",
+                "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Päivämäärä"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan neuvottelun päivämäärä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas datum för överläggningen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Pvm"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": true,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 7
+                }
+              },
+              "paikka": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Paikka"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Plats"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan neuvottelupaikka."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas platsen för överläggningen."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 8
+                }
+              },
+              "osallistujat": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Osallistujat"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Deltagare"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan suunnitelmaneuvotteluun osallistuneiden yksityis- ja ammattihenkilöiden tiedot. Kenttään kirjataan osallistujien nimet ja kuvataan osallistujan suhde asiakkaaseen tai rooli asiassa. Ammattihenkilöltä kirjataan organisaatio ja tehtävänimike. Aktivointisuunnitelman laadintaan voi osallistua esimerkiksi sosiaalityöntekijä, sosiaaliohjaaja, työvoimahallinnon asiantuntija, Kelan virkailija tai terveydenhoitaja."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas uppgifter om privatpersonerna och de yrkesutbildade personerna som deltog i överläggningen. I fältet antecknas deltagarnas namn och deras relation till klienten eller roll i ärendet. För en yrkesutbildad person antecknas organisationen och uppgiftsbeteckningen. I upprättandet av aktiveringsplanen kan till exempel en socialarbetare, socialhandledare, expert inom arbetskraftsförvaltningen, tjänsteman vid FPA eller hälsovårdare delta."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttä on pakollinen TK Tapahtuman määrityksestä poiketen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kenttä on pakollinen TK Tapahtuman määrityksestä poiketen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 9
+                }
+              }
+            }
+          }
+        },
+        "kuvaus_asiakkaan_tilanteesta": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Kuvaus asiakkaan tilanteesta"
+              },
+              {
+                "lang": "sv",
+                "value": "Beskrivning av klientens situation"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kuvataan asiakkaan nykyinen tilanne ennen suunnitelman toteuttamista. Kenttään voidaan kirjata tietoja muun muassa henkilön työnhakuaktiivisuudesta sekä ammatinvalinta-, työttömyys-, perhe-, terveys- ja taloudellisesta tilanteesta."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet beskrivs klientens nuvarande situation innan planen genomförs. I fältet kan man anteckna uppgifter om bland annat personens jobbsökningsaktivitet samt situation gällande yrkesval, arbetslöshet, familj, hälsa och ekonomi."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 10
+          }
+        },
+        "koulutus": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Koulutus"
+              },
+              {
+                "lang": "sv",
+                "value": "Utbildning"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Lain kuntouttavasta työtoiminnasta 8 §:n mukaan aktivointisuunnitelmaan merkitään henkilön koulutusta koskevat tiedot."
+              },
+              {
+                "lang": "sv",
+                "value": "Enligt 8 § i lagen om arbetsverksamhet i rehabiliteringssyfte antecknas uppgifter om personens utbildning i aktiveringsplanen."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 11
+          }
+        },
+        "tyoura": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Työura"
+              },
+              {
+                "lang": "sv",
+                "value": "Yrkeskarriär"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Lain kuntouttavasta työtoiminnasta 8 §:n mukaan aktivointisuunnitelmaan merkitään henkilön työuraa koskevat tiedot."
+              },
+              {
+                "lang": "sv",
+                "value": "Enligt 8 § i lagen om arbetsverksamhet i rehabiliteringssyfte antecknas uppgifter om personens yrkeskarriär i aktiveringsplanen."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 12
+          }
+        },
+        "nykyiset_palvelut": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Nykyiset palvelut"
+              },
+              {
+                "lang": "sv",
+                "value": "Nuvarande service"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Työllistymistä tukevat palvelut joita asiakas tällä hetkellä saa tai on aiemmin saanut"
+              },
+              {
+                "lang": "sv",
+                "value": "Service som klienten får för närvarande eller fått tidigare och som stöder sysselsättningen"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 13
+          }
+        },
+        "arvio_aikaisemmista_tyovoimapalveluista": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Arvio aikaisemmista työvoimapalveluista"
+              },
+              {
+                "lang": "sv",
+                "value": "Bedömning av tidigare arbetskraftsservice"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Arvio aikaisempien julkisten työvoimapalveluiden vaikuttavuudesta"
+              },
+              {
+                "lang": "sv",
+                "value": "Bedömning av effekterna av tidigare offentliga arbetskraftsservice"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Lain kuntouttavasta työtoiminnasta 8 §:n mukaan aktivointisuunnitelmaan merkitään arvio aikaisempien julkisten työvoimapalvelujen vaikuttavuudesta."
+              },
+              {
+                "lang": "sv",
+                "value": "Enligt 8 § i lagen om arbetsverksamhet i rehabiliteringssyfte antecknas i aktiveringsplanen en bedömning av effekterna av tidigare offentlig arbetskraftsservice."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 14
+          }
+        },
+        "arvio_aikaisemmista_suunnitelmista": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Arvio aikaisemmista suunnitelmista"
+              },
+              {
+                "lang": "sv",
+                "value": "Bedömning av tidigare planer"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Arvio aikaisempien työllistymissuunnitelmien ja sosiaalihuollossa tehtyjen suunnitelmien toteutumisesta"
+              },
+              {
+                "lang": "sv",
+                "value": "Bedömning av genomförandet av tidigare sysselsättningsplaner och planer som gjorts inom socialvården"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Lain kuntouttavasta työtoiminnasta 8 §:n mukaan aktivointisuunnitelmaan merkitään arvio aikaisempien työllistymissuunnitelmien ja hyvinvointialueen tekemien henkilöä koskevien suunnitelmien toteutumisesta."
+              },
+              {
+                "lang": "sv",
+                "value": "Enligt 8 § i lagen om arbetsverksamhet i rehabiliteringssyfte antecknas i aktiveringsplanen en bedömning av i vilken mån tidigare sysselsättningsplaner och planer som välfärdsområdet utarbetat för personen i fråga har genomförts."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 15
+          }
+        },
+        "tyonhaun_edellytykset": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Työnhaun edellytykset"
+              },
+              {
+                "lang": "sv",
+                "value": "Förutsättningar för jobbsökning"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 16
+          },
+          "required": [],
+          "properties": {
+            "vahvuudet_ja_voimavarat": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Vahvuudet ja voimavarat"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Styrkor och resurser"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 17
+              }
+            },
+            "syyt_rajoituksiin": {
+              "type": "array",
+              "minItems": 0,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Syyt rajoituksiin"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Orsaker till begränsningar"
+                    }
+                  ],
+                  "title": [
+                    {
+                      "lang": "fi",
+                      "value": "Rajoitukset työn tai koulutuksen vastaanottamiseen"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Begränsningar i mottagandet av arbete eller utbildning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Jos asiakkaalla on rajoituksia ottaa vastaan työtä tai koulutusta, pääasiallisimmat syyt ovat hänen mielestään:"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Om klienten har begränsningar gällande att ta emot arbete eller utbildning, anser klienten att de huvudsakliga orsakerna är:"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: Sosiaalihuolto - Työn tai koulutuksen vastaanottamisen rajoite 1.2.246.537.6.1238"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kodtjänsten: Socialvård - Begränsning för att ta emot arbete eller utbildning 1.2.246.537.6.1238"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1148\u0026versionKey\u003d1288"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.6.1238"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kod"
+                    }
+                  ],
+                  "repeatable": true,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": true,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 18
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1238(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              }
+            },
+            "kuvaus": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuvaus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Beskrivning"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Rajoitusten tarkempi kuvaus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Noggrannare beskrivning av begränsningarna"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Jos luokituksesta valitaan luokka Vamman tai sairauden vuoksi alentunut työkyky, tähän kuvataan millaisesta lääkärin toteamasta vammasta tai sairaudesta on kyse, ja kuinka se vaikeuttaa asiakkaan työhön tai koulutukseen hakeutumista tai jokapäiväistä elämää."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Om man i klassificeringen väljer klassen Nedsatt arbetsförmåga på grund av skada eller sjukdom, beskrivs här vilken typ av skada eller sjukdom som läkaren konstaterat och hur den försvårar klientens sökande av arbete eller utbildning eller dagliga liv."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 19
+              }
+            },
+            "asiantuntijalausunnot": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Asiantuntijalausunnot"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Expertutlåtanden"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Asiantuntijalausunnot työ- ja toimintakyvystä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Expertutlåtanden om arbets- och funktionsförmågan"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 20
+              }
+            },
+            "yhteinen_arvio_mahdollisuudesta_osallistua_julkisiin_tyovoimapalveluihin_tai_tyohon": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Yhteinen arvio mahdollisuudesta osallistua julkisiin työvoimapalveluihin tai työhön"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Gemensam bedömning av möjligheten att delta i offentlig arbetskraftsservice eller arbete"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan työ- ja elinkeinotoimiston ja hyvinvointialueen edustajien ja asiakkaan yhteinen arvio siitä, onko asiakkaalla mahdollisuutta työ- ja toimintakyvyn asettamien rajoitusten takia osallistua työhön tai julkisiin työvoimapalveluihin. Lain kuntouttavasta työtoiminnasta 8 §:n mukaan aktivointisuunnitelmaa laadittaessa on 1 momentissa tarkoitetuista toimenpiteistä ensiksi selvitettävä mahdollisuus tarjota työtä tai julkisia työvoimapalveluja. Jos työ- ja elinkeinotoimisto, hyvinvointialue ja henkilö yhdessä arvioivat, että henkilö ei työ- ja toimintakykynsä asettamien rajoitusten vuoksi voi osallistua julkisiin työvoimapalveluihin tai työhön, aktivointisuunnitelmaan tulee sisältyä kuntouttava työtoiminta tai erityislakien mukaisesti sellaisia sosiaali-, terveys- ja kuntoutuspalveluja, jotka parantavat henkilön työ- ja toimintakykyä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas arbets- och näringsbyråns och välfärdsområdets representanters och kundens gemensamma bedömning av om klienten på grund av begränsningar i arbets- och funktionsförmågan har möjlighet att delta i arbete eller offentlig arbetskraftsservice. Enligt 8 § i lagen om arbetsverksamhet i rehabiliteringssyfte ska de åtgärder som avses i 1 mom. om möjligheten att erbjuda arbete eller offentlig arbetskraftsservice utredas först när en aktiveringsplan utarbetas. Om arbets- och näringsbyrån, välfärdsområdet och personen tillsammans bedömer att personen till följd av begränsningar i arbets- och funktionsförmågan inte kan delta i offentlig arbetskraftsservice eller arbete, ska arbetsverksamhet i rehabiliteringssyfte eller i enlighet med speciallagar sådan socialservice, samt sådana hälso- och sjukvårdstjänster och rehabiliteringstjänster som förbättrar personens arbets- och funktionsförmåga ingå i aktiveringsplanen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 21
+              }
+            }
+          }
+        },
+        "muut_tiedot": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Muut tiedot"
+              },
+              {
+                "lang": "sv",
+                "value": "Andra uppgifter"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Muut asiakkaan palvelutarvetta koskevat tiedot"
+              },
+              {
+                "lang": "sv",
+                "value": "Andra uppgifter om klientens servicebehov"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan esimerkiksi asiakkaan halukkuus hankkiutua omaehtoiseen koulutukseen."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas till exempel klientens vilja att söka sig till frivillig utbildning."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 22
+          }
+        },
+        "aktivoinnin_tavoitteet": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Aktivoinnin tavoitteet"
+              },
+              {
+                "lang": "sv",
+                "value": "Mål för aktiveringen"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Tavoitteisiin kirjataan asiakkaan, TE-toimiston ja sosiaalitoimen yhteinen käsitys siitä, mikä on seuraava konkreettinen askel kohti työmarkkinoita ja parempaa elämänhallintaa."
+              },
+              {
+                "lang": "sv",
+                "value": "I målen antecknas klientens, arbets- och näringsbyråns och socialväsendes gemensamma uppfattning om vad som är följande konkreta steg mot arbetsmarknaden och en bättre livskompetens."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 23
+          },
+          "required": [],
+          "properties": {
+            "edellisen_suunnitelman_tavoitteiden_saavuttaminen": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Edellisen suunnitelman tavoitteiden saavuttaminen"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Uppnående av målen i föregående plan"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Tavoitteiden saavuttamisen arvioinnilla tarkoitetaan suunnitelmassa asetettujen tavoitteiden toteutumisen tarkastelemista sekä päätelmien tekemistä siitä. Tavoitteiden saavuttamisen arvioinnin tekee ammattihenkilö yhdessä sosiaalihuollon asiakkaan kanssa."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Med en bedömning av hur målen har uppnåtts avses en granskning av hur de mål som har fastställts i planen har uppnåtts samt slutledningar utifrån detta. En yrkesutbildad person gör bedömningen av hur målen har uppnåtts i samråd med klienten inom socialvården."
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 24
+              },
+              "required": [],
+              "properties": {
+                "arvio": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Arvio"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Bedömning"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan luokituksen avulla arvio edellisessä suunnitelmassa asetettujen tavoitteiden saavuttamisesta."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet antecknas en bedömning av hur målen som fastställts i tidigare planen har uppnåtts med hjälp av klassificeringen."
+                      }
+                    ],
+                    "classification": [
+                      {
+                        "lang": "fi",
+                        "value": "Koodistopalvelin: Sosiaalihuolto - Tavoitteen saavuttamisen arvio 1.2.246.537.6.1253"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kodtjänsten: Socialvård - Bedömning av hur mål har uppnåtts 1.2.246.537.6.1253"
+                      }
+                    ],
+                    "classificationLink": [
+                      {
+                        "lang": "",
+                        "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1806\u0026versionKey\u003d2046"
+                      }
+                    ],
+                    "classificationOid": [
+                      {
+                        "lang": "",
+                        "value": "1.2.246.537.6.1253"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Koodi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kod"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": true,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 25
+                  },
+                  "required": [
+                    "system",
+                    "code",
+                    "display"
+                  ],
+                  "properties": {
+                    "system": {
+                      "type": "string",
+                      "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1253(\\.\\d+)*$"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "display": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "sanallinen_arvio": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Sanallinen arvio"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Verbal bedömning"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kuvataan ja arvioidaan tekstinä edellisessä suunnitelmassa asetettujen tavoitteiden saavuttamista."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet beskrivs hur målen som fastställts i tidigare planen har uppnåtts med fri text."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 26
+                  }
+                }
+              }
+            },
+            "asetettavat_tavoitteet": {
+              "type": "array",
+              "minItems": 0,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Asetettavat tavoitteet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Mål som ska fastställas"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Yhteisesti sovittujen tavoitteiden lisäksi voidaan kirjata tarvittaessa myös asiakkaan omia tavoitteita."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Utöver de gemensamt överenskomna målen kan man vid behov också anteckna klientens egna mål."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                    }
+                  ],
+                  "repeatable": true,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 27
+                },
+                "required": [],
+                "properties": {
+                  "nimi": {
+                    "type": "string",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Nimi"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Namn"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Kenttään kirjataan tavoitteen nimi."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "I fältet antecknas namnet på målet."
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Nimi"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Namn"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 28
+                    }
+                  },
+                  "kuvaus": {
+                    "type": "string",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Kuvaus"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Beskrivning"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Kenttään kuvataan tavoitetta. Yhteisesti sovittujen tavoitteiden lisäksi voidaan kirjata tarvittaessa myös asiakkaan omia tavoitteita."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "I fältet beskrivs målet. Utöver de gemensamt överenskomna målen kan man vid behov också anteckna klientens egna mål."
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Teksti"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Text"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 29
+                    }
+                  },
+                  "keinot_ja_aikataulu_tavoitteen_saavuttamiseksi": {
+                    "type": "string",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Keinot ja aikataulu tavoitteen saavuttamiseksi"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Metoder och tidtabell för uppnåendet av målet"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Kenttään kuvataan keinoja, joiden avulla tavoite pyritään saavuttamaan sekä aikataulu tavoitteen saavuttamiselle."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "I fältet beskrivs metoder, med vars hjälp man försöker uppnå målet och en tidtabell för att uppnå målet."
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Teksti"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Text"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 30
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "toimenpiteet": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Toimenpiteet"
+              },
+              {
+                "lang": "sv",
+                "value": "Åtgärder"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Lain kuntouttavasta työtoiminnasta 8 §:n mukaan aktivointisuunnitelmaan merkitään toimenpiteet, jotka voivat olla työtarjouksia, muita julkisia työvoimapalveluja, kuntouttavaa työtoimintaa, muita sosiaalipalveluja sekä terveys-, kuntoutus- ja koulutuspalveluja. Jos henkilölle suunnitellaan kuntouttavaa työtoimintaa, tähän kenttään kuvataan lain kuntouttavasta työtoiminnasta 9 §:n mukaisesti henkilölle kuntouttavan työtoiminnan ohella tarjottavat muut sosiaalipalvelut sekä terveys-, kuntoutus- ja koulutuspalvelut."
+              },
+              {
+                "lang": "sv",
+                "value": "Enligt 8 § i lagen om arbetsverksamhet i rehabiliteringssyfte antecknas i aktiveringsplanen uppgifter om åtgärder såsom arbetsplatsanvisningar, annan offentlig arbetskraftsservice, arbetsverksamhet i rehabiliteringssyfte, annan socialservice samt hälsovårds-, rehabiliterings- och utbildningsservice. Om arbetsverksamhet i rehabiliteringssyfte planeras för personen, beskrivs i detta fält i enlighet med 9 § i lagen om arbetsverksamhet i rehabiliteringssyfte annan socialservice samt hälso-, rehabiliterings- och utbildningstjänster som erbjuds personen vid sidan av arbetsverksamhet i rehabiliteringssyfte."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 31
+          }
+        },
+        "asiakkaan_tehtavat": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Asiakkaan tehtävät"
+              },
+              {
+                "lang": "sv",
+                "value": "Klientens uppgifter"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan tieto siitä, mitä asiakas tekee tavoitteiden saavuttamiseksi."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas uppgifter om vad klienten gör för att uppnå målen."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 32
+          }
+        },
+        "sosiaalihuollon_tehtavat": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Sosiaalihuollon tehtävät"
+              },
+              {
+                "lang": "sv",
+                "value": "Socialvårdens uppgifter"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan tieto siitä, mitä sosiaalihuollossa tehdään tavoitteiden saavuttamiseksi."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas uppgifter om vad som görs inom socialvården för att målen ska uppnås."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 33
+          }
+        },
+        "te_toimiston_tehtavat": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "TE-toimiston tehtävät"
+              },
+              {
+                "lang": "sv",
+                "value": "Arbets- och näringsbyråns uppgifter"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan tieto siitä, mitä työ- ja elinkeinotoimisto tekee tavoitteiden saavuttamiseksi."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas uppgifter om vad som görs inom arbets- och näringsbyrån för att målen ska uppnås."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 34
+          }
+        },
+        "muu_tuki": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Muu tuki"
+              },
+              {
+                "lang": "sv",
+                "value": "Annat stöd"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään voidaan kuvata muiden mahdollisten tahojen tehtävät."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet kan man beskriva uppgifter hos eventuella andra aktörer."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 35
+          }
+        },
+        "kuntouttava_tyotoiminta": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Kuntouttava työtoiminta"
+              },
+              {
+                "lang": "sv",
+                "value": "Arbetsverksamhet i rehabiliteringssyfte"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Tietokokonaisuutta käytetään vain jos aktivointisuunnitelmaa laadittaessa siihen sisällytetään kuntouttava työtoiminta."
+              },
+              {
+                "lang": "sv",
+                "value": "Informationshelheten används endast om arbetsverksamhet i rehabiliteringssyfte inkluderas i aktiveringsplanen vid utarbetandet av planen."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 36
+          },
+          "required": [],
+          "properties": {
+            "tavoitteisiin_vastaaminen": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Tavoitteisiin vastaaminen"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Att uppfylla målen"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuvaus siitä, kuinka aktivoinnin tavoitteisiin vastataan kuntouttavassa työtoiminnassa"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Beskrivning av hur målen för aktiveringen uppfylls i arbetsverksamheten i rehabiliteringssyfte"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan miten asiakas voi kuntouttavassa työtoiminnassa edetä kohti niitä tavoitteita, joita edellä aktivointisuunnitelmassa määritellään aktivoinnin tavoitteiksi."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskriver man hur klienten kan gå framåt i arbetsverksamheten i rehabiliteringssyfte mot de mål som i aktiveringsplanen ovan definieras som mål för aktiveringen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 37
+              }
+            },
+            "kuntouttavan_tyotoiminnan_sisalto": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuntouttavan työtoiminnan sisältö"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Innehåll i arbetsverksamhet i rehabiliteringssyfte"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kuvataan suunniteltua kuntouttavaa työtoimintaa. Kuntouttavan työtoiminnan sisältö on jokaisessa tapauksessa mitoitettava asiakkaan toimintakyvyn mukaisesti siten, että se parantaa asiakkaan elämänhallintaa ja edellytyksiä osallistumiselle työ- ja elinkeinohallinnon palveluihin, koulutukseen tai työhön. Kuntouttavalla työtoiminnalla ei saa korvata työ- tai virkasuhteista työtä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet beskriver man den planerade arbetsverksamheten i rehabiliteringssyfte. Innehållet i arbetsverksamhet i rehabiliteringssyfte ska i varje enskilt fall dimensioneras enligt klientens funktionsförmåga så att den förbättrar klientens livskompetens och förutsättningar för att delta i arbets- och näringsförvaltningens tjänster, utbildning eller arbete. Arbetsverksamhet i rehabiliteringssyfte får inte ersätta arbete som utförs i arbets- eller tjänsteförhållande."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 38
+              }
+            },
+            "kuntouttavan_tyotoiminnan_jarjestamispaikka": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuntouttavan työtoiminnan järjestämispaikka"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Plats där arbetsverksamhet i rehabiliteringssyfte ordnas"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Tähän kirjataan tiedot suunnitellun kuntouttavan työtoiminnan järjestämispaikasta, joka voi olla hyvinvointialue, kunta, kuntayhtymä, yhdistys, säätiö, valtion virasto tai uskonnollinen yhdyskunta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Här antecknar man uppgifter om platsen för den planerade arbetsverksamheten i rehabiliteringssyfte, som kan vara ett välfärdsområde, en kommun, en samkommun, en förening, en stiftelse, ett statligt ämbetsverk eller ett religionssamfund."
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 39
+              },
+              "required": [],
+              "properties": {
+                "organisaation_nimi": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Organisaation nimi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Organisationens namn"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Nimi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Namn"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 40
+                  }
+                }
+              }
+            },
+            "jakson_kesto": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Jakson kesto"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Periodens längd"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuntouttavan työtoiminnan jakson kesto"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Längd på perioden för arbetsverksamhet i rehabiliteringssyfte"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Tähän kirjataan suunnitellun kuntouttavan työtoiminnan jakson kesto. Kuntouttavaa työtoimintaa järjestetään 3–24 kuukauden mittaiseksi jaksoksi kerrallaan. Jakson aikana henkilön tulee osallistua kuntouttavaan työtoimintaan vähintään yhden ja enintään neljän päivän aikana kalenteriviikossa. Yhden päivän aikana kuntouttavan työtoiminnan tulee kestää vähintään 4 tuntia. Kalenterivuoden aikana jaksossa on oltava 30 vrk:n tauko, mikäli asiakas on työtoiminnassa viitenä päivänä viikossa."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Här antecknas längden på den planerade perioden för arbetsverksamhet i rehabiliteringssyfte. Arbetsverksamhet i rehabiliteringssyfte ordnas för perioder på 3–24 månader åt gången. Under perioden ska personen delta i arbetsverksamhet i rehabiliteringssyfte under minst en och högst fyra dagar i kalenderveckan. Arbetsverksamhet i rehabiliteringssyfte ska pågå i minst 4 timmar per dag. Under kalenderåret ska perioden innefatta en paus på 30 dygn om klienten är i arbetsverksamhet fem dagar i veckan."
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 41
+              },
+              "required": [],
+              "properties": {
+                "alkamispaiva": {
+                  "type": "string",
+                  "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Alkamispäivä"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Inledningsdatum"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "21.4.2020"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "21.4.2020"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Pvm"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Datum"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": true,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 42
+                  }
+                },
+                "paattymispaiva": {
+                  "type": "string",
+                  "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Päättymispäivä"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Avslutningsdatum"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "22.4.2020"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "22.4.2020"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Pvm"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Datum"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": true,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 43
+                  }
+                },
+                "kuvaus": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Kuvaus"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Beskrivning"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttää käytetään mikäli tarkka alkamis- ja päätymispäivä eivät ole vielä tiedossa."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Fältet används om det exakta start- och slutdatum inte ännu är känt."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 44
+                  }
+                }
+              }
+            },
+            "toiminnan_paivittainen_kesto_tunteina": {
+              "type": "number",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Toiminnan päivittäinen kesto tunteina"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Verksamhetens längd i timmar per dag"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuntouttavan työtoiminnan päivittäinen kesto tunteina"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Daglig längd i timmar för arbetsverksamhet i rehabiliteringssyfte"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan lain kuntouttavasta työtoiminnasta 9 §:n mukaisesti työtoiminnan päivittäinen kesto ilmoittamalla, kuinka monta tuntia päivässä kuntouttava työtoiminta kestää."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas i enlighet med 9 § i lagen om arbetsverksamhet i rehabiliteringssyfte daglig längd för arbetsverksamheten, genom att ange hur många timmar per dag arbetsverksamheten i rehabiliteringssyfte pågår."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Lkm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Antal"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 45
+              }
+            },
+            "toiminnan_viikoittainen_kesto_paivina": {
+              "type": "number",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Toiminnan viikoittainen kesto päivinä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Verksamhetens längd i dagar per vecka"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuntouttavan työtoiminnan viikoittainen kesto päivinä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Längd i dagar per vecka för arbetsverksamhet i rehabiliteringssyfte"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan lain kuntouttavasta työtoiminnasta 9 §:n mukaisesti työtoiminnan viikoittainen kesto ilmoittamalla, kuinka monta päivää viikossa kuntouttava työtoiminta kestää."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas i enlighet med 9 § i lagen om arbetsverksamhet i rehabiliteringssyfte längd per vecka, genom att ange hur många dagar per vecka arbetsverksamheten i rehabiliteringssyfte pågår."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Lkm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Antal"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 46
+              }
+            },
+            "toiminnan_kestoon_liittyvat_muut_sovitut_asiat": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Toiminnan kestoon liittyvät muut sovitut asiat"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Annat som överenskommits om verksamhetens längd"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuntouttavan työtoiminnan päivittäiseen ja viikoittaiseen kestoon liittyvät muut sovitut asiat"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Annat som överenskommits om längd per dag eller vecka för arbetsverksamheten i rehabiliteringssyfte"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään voidaan kirjata mahdolliset päiväkohtaiset ajankohdat sekä kuinka monena päivänä viikossa asiakas osallistuu kuntouttavaan työtoimintaan. Kenttään voidaan myös kirjata mitkä päivät viikosta asiakas on työtoiminnassa."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet kan man anteckna eventuella dagspecifika tidpunkter samt hur många dagar i veckan klienten deltar i arbetsverksamheten i rehabiliteringssyfte. I fältet kan man också anteckna vilka dagar i veckan klienten är i arbetsverksamhet."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "Neljänä päivänä viikossa maanantaista torstaihin. Maanantaista keskiviikkoon klo 10-14 ja torstaisin klo 9-12."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Fyra dagar per vecka från måndag till torsdag. Från måndag till onsdag kl. 10–14 och på torsdagar kl. 9–12."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 47
+              }
+            },
+            "tuki_ja_ohjaus_kuntouttavan_tyotoiminnan_aikana": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Tuki ja ohjaus kuntouttavan työtoiminnan aikana"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Stöd och handledning under arbetsverksamheten i rehabiliteringssyfte"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan lain kuntouttavasta työtoiminnasta 9 §:n mukaisesti henkilölle annettava tuki ja ohjaus kuntouttavan työtoiminnan aikana."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas i enlighet med 9 § i lagen om arbetsverksamhet i rehabiliteringssyfte det stöd och den handledning som ges till personen under arbetsverksamheten i rehabiliteringssyfte."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 48
+              }
+            },
+            "etuudet": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etuudet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Förmåner"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Tähän kirjataan asiakkaan saamat etuudet ja mahdolliset etuuden korotukset kuntouttavan työtoiminnan aikana."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Här antecknas de förmåner som klienten får och eventuella förmånsförhöjningar under arbetsverksamheten i rehabiliteringssyfte."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 49
+              }
+            },
+            "ajankohta_vaikutusten_arvioimiseksi": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Ajankohta vaikutusten arvioimiseksi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Tidpunkt för bedömning av effekterna"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan lain kuntouttavasta työtoiminnasta 9 §:n mukaisesti ajankohta, jolloin viimeistään arvioidaan kuntouttavan työtoiminnan vaikutuksia henkilön työllistymismahdollisuuksille ja päätetään jatkotoimista."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas i enlighet med 9 § i lagen om arbetsverksamhet i rehabiliteringssyfte tidpunkten då man senast bedömer den rehabiliterande arbetsverksamhetens effekter på personens sysselsättningsmöjligheter och beslutar om fortsatta åtgärder."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Pvm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 50
+              }
+            }
+          }
+        },
+        "sovitut_jatkotoimet": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Sovitut jatkotoimet"
+              },
+              {
+                "lang": "sv",
+                "value": "Avtalade fortsatta åtgärder"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kuvataan kuinka asiakkuus jatkuu suunnitelman tekemisen jälkeen ja mitä käytännössä seuraavaksi tehdään. Kenttään voidaan esimerkiksi kirjata asiakkaan kanssa sovittuja konkreettisia toimenpiteitä ja niihin liittyviä aikatauluja."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet beskriver man hur klientrelationen fortsätter efter att planen har utarbetats och vad man härnäst ska göra i praktiken. I fältet kan man till exempel anteckna konkreta åtgärder som man har kommit överens om med klienten och tidsschema för dessa."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 51
+          }
+        },
+        "eriavat_nakemykset": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Eriävät näkemykset"
+              },
+              {
+                "lang": "sv",
+                "value": "Avvikande åsikter"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Suunnitelman tekoon osallistuneiden henkilöiden eriävät näkemykset suunnitelman sisällöstä"
+              },
+              {
+                "lang": "sv",
+                "value": "Avvikande åsikter om planens innehåll bland de personer som har medverkat i utarbetandet av planen"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kuvataan suunnitelmaan tekoon osallistuneiden henkilöiden eriäviä näkemyksiä tai mielipiteitä suunnitelman sisällön suhteen."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas avvikande åsikter om planens innehåll bland de personer som har medverkat i utarbetandet av planen."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 52
+          }
+        },
+        "aktivointisuunnitelman_tarkistaminen": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Aktivointisuunnitelman tarkistaminen"
+              },
+              {
+                "lang": "sv",
+                "value": "Granskning av aktiveringsplanen"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Tähän kirjataan suunnitelman tarkistusaika ja -paikka. Käytetään joko Päivämäärä ja kellonaika -kenttää tai Ajankohta-kenttää sen mukaan, miten tarkkaan seuraava neuvotteluaika tiedetään."
+              },
+              {
+                "lang": "sv",
+                "value": "Här antecknas datum och plats för granskning av planen. Man använder antingen fältet Datum och klockslag eller fältet Tidpunkt beroende på hur exakt man vet tidpunkten för följande överläggning."
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 53
+          },
+          "required": [],
+          "properties": {
+            "paivamaara_ja_kellonaika": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Päivämäärä ja kellonaika"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum och klockslag"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan seuraavan neuvottelun päivämäärä ja kellonaika, jos ne tiedetään."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas datum och klockslag för följande överläggning, om detta redan är känt."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Hetki"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum och klockslag"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 54
+              }
+            },
+            "ajankohta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Ajankohta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Tidpunkt"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tekstinä tapahtuman suunniteltu ajankohta silloin, kun tarkkaa päivämäärää ja kellonaikaa ei sovita."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas i textform den planerade tidpunkten för händelsen, om exakt datum och klockslag inte avtalas."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "Joulukuussa 2020."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "December 2020."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 55
+              }
+            },
+            "paikka": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Paikka"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Plats"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan neuvottelupaikka."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas platsen för överläggningen."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 56
+              }
+            }
+          }
+        },
+        "jakelu": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Jakelu"
+              },
+              {
+                "lang": "sv",
+                "value": "Sändlista"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Henkilöt joille tämä aktivointisuunnitelma toimitetaan"
+              },
+              {
+                "lang": "sv",
+                "value": "Personer som denna aktiveringsplan ska ges till"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 57
+          }
+        },
+        "lakiselostus": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lakiselostus"
+              },
+              {
+                "lang": "sv",
+                "value": "Lagförklaring"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Selvitys oikeuksista ja velvollisuuksista"
+              },
+              {
+                "lang": "sv",
+                "value": "Redogörelse över rättigheter och skyldigheter"
+              }
+            ],
+            "example": [
+              {
+                "lang": "fi",
+                "value": "Asiakkaalle on selvitetty, että hänellä on velvollisuus osallistua aktivointisuunnitelman laatimiseen yhdessä työ- ja elinkeinotoimiston ja kunnan kanssa. Aktivointisuunnitelman laatimistilaisuuteen saapumatta jäämiseen sekä kieltäytymiseen osallistumasta aktivointisuunnitelman laatimiseen ja siihen merkittyyn kuntouttavaan työtoimintaan, ei ole oikeutta työttömyysetuuteen 15 päivän ajalta tai toimeentulotuen perusosan voidaan alentaa enintään 20 prosenttia saapumatta jäämisestä lukien paitsi jos saapumatta jääminen johtuu sairaudesta, tapaturmasta tai henkilöstä itsestään riippumattomasta syystä taikka jos saapumatta jäämiselle on muu hyväksyttävä syy. Asiakkaalle on myös selvitetty, että hänellä on oikeus oikeus saada korvaus kuntouttavaan työtoimintaan osallistumisesta aiheutuvista matkakustannuksista sekä oikeus ylläpitokorvaukseen tai toimintarahaan kuntouttavan työtoiminnan ajalta. Laki kuntouttavasta työtoiminnasta 189/2001 § 10 ja § 18; työttömyysturvalaki laki 2. luku § 18 ja 10. luku § 6; laki toimeentulotuesta § 10 ja § 10a"
+              },
+              {
+                "lang": "sv",
+                "value": "Man har förklarat för klienten att han eller hon är skyldig att delta i utarbetandet av aktiveringsplanen tillsammans med arbets- och näringsbyrån och kommunen. Den som inte infinner sig till mötet för utarbetande av aktiveringsplanen eller att vägrar att delta i utarbetandet av aktiveringsplanen och i den rehabiliterande arbetsverksamhet som anges i den, har inte rätt till arbetslöshetsförmån under 15 dagar eller kan få utkomststödets grunddel sänkt med högst 20 procent räknat från utebliven ankomst, utom om uteblivandet beror på sjukdom, olycksfall eller skäl som inte beror på personen själv eller om det finns någon annan godtagbar orsak till uteblivelsen. Man har också förklarat för klienten att han eller hon har rätt till ersättning för resekostnader som orsakas av deltagande i arbetsverksamhet i rehabiliteringssyfte samt rätt till ersättning för uppehälle eller sysselsättningspenning för tiden för arbetsverksamhet i rehabiliteringssyfte. Lag om arbetsverksamhet i rehabiliteringssyfte 189/2001 § 10 och § 18; lag om utkomstskydd för arbetslösa 2 kap. § 18 och 10 kap. § 6; lag om utkomststöd § 10 och § 10 a"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä voidaan käyttää automaattitekstiä, jonka organisaatio itse yhdessä tietojärjestelmätoimittajan kanssa laativat. THL ei vastaa kentän automaattitekstien tuottamisesta."
+              },
+              {
+                "lang": "sv",
+                "value": "Kentässä voidaan käyttää automaattitekstiä, jonka organisaatio itse yhdessä tietojärjestelmätoimittajan kanssa laativat. THL ei vastaa kentän automaattitekstien tuottamisesta."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 58
+          }
+        },
+        "paivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Päivämäärä"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan asiakirjan laatimispäivämäärä."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas datum för upprättandet av handlingen."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": true,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 59
+          }
+        },
+        "laatija": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Laatija"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Upprättare"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                },
+                {
+                  "lang": "sv",
+                  "value": "-"
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 60
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 61
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 62
+                }
+              },
+              "tehtavanimike": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Tehtävänimike"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Uppgiftsbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 63
+                }
+              },
+              "palveluyksikko": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Palveluyksikkö"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Serviceenhet"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas namnet på serviceenheten enligt Organisationsregistret för social- och hälsovården."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Esbo centrums barnskydd, Esbo stad, social- och hälsovårdssektorn"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.6.202"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kod"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": true,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 64
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "allekirjoitus": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Allekirjoitus"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Underskrift"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Aktivointisuunnitelman allekirjoittavat työ- ja elinkeinotoimisto, hyvinvointialue ja henkilö (Laki kuntouttavasta työtoiminnasta  8 §)."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Aktiveringsplanen undertecknas av arbets- och näringsbyrån, välfärdsområdet och personen (Lag om arbetsverksamhet i rehabiliteringssyfte 8 §)."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 65
+            },
+            "required": [
+              "allekirjoituksen_tyyppi"
+            ],
+            "properties": {
+              "allekirjoituksen_tyyppi": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoituksen tyyppi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Typ av underskrift"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan luokituksen avulla allekirjoituksen tyyppi."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas underskriftens typ med hjälp av klassificeringen."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "1 \u003d Asiakirja on allekirjoitettu sähköisesti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "1 \u003d Handlingen har undertecknats elektroniskt"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: eArkisto - Allekirjoitus 1.2.246.537.5.40161"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kodtjänsten: eArkiv - Underskrift 1.2.246.537.5.40161"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d252\u0026versionKey\u003d329"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.5.40161"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kod"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 66
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.5\\.40161(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              },
+              "paikka": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Paikka"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Plats"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoituspaikka. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa silloin, kun asiakirja allekirjoitetaan käsin eli Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas orten för underskriften. Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand dvs. kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ. Fältet kan ifyllas i klientdatasystemet samtidigt som handlingen upprättas, om handlingen undertecknas i samband med upprättandet."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "Helsinki"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Helsingfors"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 67
+                }
+              },
+              "paivamaara": {
+                "type": "string",
+                "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Päivämäärä"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoituksen päivämäärä. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas datum för underskriften. Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand och kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ. Fältet kan ifyllas i klientdatasystemet samtidigt som handlingen upprättas, om handlingen undertecknas i samband med upprättandet."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "29.05.2020"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "29.05.2020"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Pvm"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 68
+                }
+              },
+              "allekirjoitus": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoitus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Underskrift"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand och kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoitus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Underskrift"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 69
+                }
+              },
+              "nimi": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoittajan nimi tai nimenselvennys. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas undertecknarens namn eller namnförtydligande. Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand och kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ. Fältet kan ifyllas i klientdatasystemet samtidigt som handlingen upprättas, om handlingen undertecknas i samband med upprättandet."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 70
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

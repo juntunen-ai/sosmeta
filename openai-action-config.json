@@ -1,0 +1,214 @@
+{
+  "name": "Finnish Social Services Schema Assistant",
+  "description": "Comprehensive assistant for Finnish social services documentation using SOSMETA schemas. Provides schema validation, document templates, and expert guidance for standardized social services documentation.",
+  "schema": {
+    "openapi": "3.1.0",
+    "info": {
+      "title": "Finnish Social Services Schema API",
+      "version": "1.0.0"
+    },
+    "servers": [
+      {
+        "url": "https://your-api-domain.com/api/v1"
+      }
+    ],
+    "paths": {
+      "/schemas": {
+        "get": {
+          "operationId": "listSchemas",
+          "summary": "List available schemas",
+          "parameters": [
+            {
+              "name": "documentType",
+              "in": "query",
+              "schema": {
+                "type": "string",
+                "enum": ["Päätös", "Suunnitelma", "Arvio", "Ilmoitus", "Asiakaskertomusmerkintä", "Hakemus", "Pyyntö", "Lausunto", "Yhteenveto", "Suostumus", "Selvitys", "Sopimus", "Kuulemisasiakirja", "Laskelma", "Lähete", "Maksusitoumus", "Luovutuslupa-asiakirja", "Kieltoasiakirja", "Asiakkuusasiakirja", "Asia-asiakirja"]
+              }
+            },
+            {
+              "name": "documentSubject",
+              "in": "query",
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "List of schemas",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "object",
+                    "properties": {
+                      "schemas": {
+                        "type": "array",
+                        "items": {
+                          "type": "object",
+                          "properties": {
+                            "oid": {"type": "string"},
+                            "title": {"type": "string"},
+                            "documentType": {"type": "string"},
+                            "documentSubject": {"type": "string"}
+                          }
+                        }
+                      },
+                      "total": {"type": "integer"}
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "/schemas/{oid}": {
+        "get": {
+          "operationId": "getSchema",
+          "summary": "Get specific schema",
+          "parameters": [
+            {
+              "name": "oid",
+              "in": "path",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Schema details"
+            }
+          }
+        }
+      },
+      "/generate-template": {
+        "post": {
+          "operationId": "generateTemplate",
+          "summary": "Generate document template",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["schemaOid"],
+                  "properties": {
+                    "schemaOid": {"type": "string"},
+                    "includeOptional": {"type": "boolean", "default": false},
+                    "language": {"type": "string", "enum": ["fi", "sv"], "default": "fi"}
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Generated template"
+            }
+          }
+        }
+      },
+      "/validate": {
+        "post": {
+          "operationId": "validateDocument",
+          "summary": "Validate document",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["schemaOid", "document"],
+                  "properties": {
+                    "schemaOid": {"type": "string"},
+                    "document": {"type": "object"}
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Validation result"
+            }
+          }
+        }
+      },
+      "/search": {
+        "get": {
+          "operationId": "searchSchemas",
+          "summary": "Search schemas",
+          "parameters": [
+            {
+              "name": "q",
+              "in": "query",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            },
+            {
+              "name": "language",
+              "in": "query",
+              "schema": {
+                "type": "string",
+                "enum": ["fi", "sv"],
+                "default": "fi"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Search results"
+            }
+          }
+        }
+      },
+      "/assistant/help": {
+        "post": {
+          "operationId": "getDocumentAssistance",
+          "summary": "Get document assistance",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "required": ["question"],
+                  "properties": {
+                    "question": {"type": "string"},
+                    "context": {
+                      "type": "object",
+                      "properties": {
+                        "documentType": {"type": "string"},
+                        "subject": {"type": "string"},
+                        "currentDocument": {"type": "object"}
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "responses": {
+            "200": {
+              "description": "Assistant response"
+            }
+          }
+        }
+      }
+    }
+  },
+  "auth": {
+    "type": "service_http",
+    "authorization_type": "bearer",
+    "verification_tokens": {
+      "openai": "your-verification-token-here"
+    }
+  },
+  "privacy_policy_url": "https://your-domain.com/privacy",
+  "contact_email": "support@your-domain.com"
+}

@@ -1,0 +1,3322 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Sosiaalisen luototuksen tarpeen arvio\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Sosiaalisen luototuksen tarpeen arvio\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2023-09-08",
+    "dataComponentLibraryVersion": "2023-09-07",
+    "oid": "1.2.246.537.6.1506.1010.2023.9.8",
+    "documentType": "Arvio",
+    "documentAuthor": "ammattihenkilö",
+    "documentSubject": "Sosiaalisen luototuksen asiakasasiakirjat"
+  },
+  "required": [
+    "sosiaalisen_luototuksen_tarpeen_arvio"
+  ],
+  "properties": {
+    "sosiaalisen_luototuksen_tarpeen_arvio": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Sosiaalisen luototuksen tarpeen arvio"
+          },
+          {
+            "lang": "sv",
+            "value": "Bedömning av behovet av social kreditgivning"
+          }
+        ]
+      },
+      "required": [
+        "asiakas",
+        "sosiaalisen_luoton_kayttotarkoitus",
+        "laatija"
+      ],
+      "properties": {
+        "asiakas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Klient"
+                }
+              ],
+              "title": [
+                {
+                  "lang": "fi",
+                  "value": "Hakija"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Sökande"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakkaan perustiedot (kuten esimerkiksi huollettavien/lasten, puolison ja edunvalvojan tiedot, siviilisääty ja ammatti) kirjataan asiakkuusasiakirjaan."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Klientens basuppgifter (till exempel uppgifter om försörjningsberättigade/barn, make/maka och intressebevakare, civilstånd och yrke) antecknas i klientrelationshandlingen."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 1
+            },
+            "required": [
+              "sukunimi",
+              "etunimet",
+              "henkilotunnus"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 2
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 3
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Personbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 4
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "luototukseen_ohjannut_taho": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Luototukseen ohjannut taho"
+              },
+              {
+                "lang": "sv",
+                "value": "Aktör som hänvisat till utkomststöd"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 5
+          }
+        },
+        "osallistujat": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Osallistujat"
+              },
+              {
+                "lang": "sv",
+                "value": "Deltagare"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 6
+          }
+        },
+        "sosiaaliseen_luototukseen_vaikuttavat_asiakkuudet": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Sosiaaliseen luototukseen vaikuttavat asiakkuudet"
+              },
+              {
+                "lang": "sv",
+                "value": "Klientrelationer som påverkar social kreditgivning"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 7
+          },
+          "required": [],
+          "properties": {
+            "hakija_on_velkajarjestelyssa": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Hakija on velkajärjestelyssä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Sökande har skuldsanering"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tieto siitä, onko henkilö tuomioistuimen vahvistamassa velkajärjestelyssä. Seuraavaan kenttään kuvataan tarvittaessa velkajärjestelystä tarkempia lisätietoja."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas uppgift om, huruvida personen har skuldsanering som fastställts av domstol. I följande fält ges vid behov preciserande tilläggsuppgifter om skuldsaneringen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 8
+              }
+            },
+            "kuvaus_velkajarjestelysta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Kuvaus velkajärjestelystä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Beskrivning av skuldsanering"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 9
+              }
+            },
+            "hakija_on_talous__ja_velkaneuvonnan_asiakkaana": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Hakija on talous- ja velkaneuvonnan asiakkaana"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Sökande är klient hos ekonomi- och skuldrådgivningen"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tieto siitä, onko henkilö asiakkaana talous- ja velkaneuvonnassa."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas uppgift om, huruvida personen är klient hos ekonomi- och skuldrådgivningen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 10
+              }
+            },
+            "hakija_on_toimeentuloen_asiakkaana": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Hakija on toimeentuloen asiakkaana"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Sökande är klient för utkomststöd"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tieto siitä, onko henkilö toimeentulotuen asiakkaana."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas uppgift om, huruvida personen är klient för utkomststöd."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 11
+              }
+            },
+            "lisatiedot_toimeentulotuesta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lisätiedot toimeentulotuesta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Tilläggsuppgifter om utkomststöd"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Jos hakija on toimeentulotuen asiakkaana, kenttään voidaan kuvata, onko kyse perus-, täydentävästä tai ehkäisevästä toimeentulotuesta, tai annetaan muuta tarpeellista lisätietoa."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Om sökande är klient för utkomststöd, kan man i fältet beskriva om det är frågan om grundläggande, kompletterande eller förebyggande utkomststöd, eller anteckna andra behövliga tilläggsuppgifter."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 12
+              }
+            },
+            "asiakkuus_muissa_palveluissa": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Asiakkuus muissa palveluissa"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Klientrelation inom andra tjänster"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "Välitystiliasiakkaana"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Klient för förmedlingskonto"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 13
+              }
+            }
+          }
+        },
+        "maksuhairiot": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Maksuhäiriöt"
+              },
+              {
+                "lang": "sv",
+                "value": "Betalningsstörningar"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 14
+          },
+          "required": [],
+          "properties": {
+            "hakijalla_on_maksuvaikeuksia": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Hakijalla on maksuvaikeuksia"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Klienten har betalningsproblem"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Maksuvaikeuksilla voidaan tarkoittaa maksamattomia ja erääntyneitä laskuja."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Med betalningsproblem kan man avse obetalade eller förfallna fakturor."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 15
+              }
+            },
+            "hakijalla_on_maksuhairiomerkintoja": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Hakijalla on maksuhäiriömerkintöjä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Sökande har anmärkningar om betalningsstörning"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 16
+              }
+            },
+            "hakijalla_on_velkoja_perinnassa": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Hakijalla on velkoja perinnässä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Sökande har skulder som är föremål för indrivning"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 17
+              }
+            },
+            "hakijalla_on_velkoja_ulosotossa": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Hakijalla on velkoja ulosotossa"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Sökande har skulder som är föremål för utsökning"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 18
+              }
+            },
+            "lisatiedot": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lisätiedot"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Tilläggsuppgifter"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään voidaan kirjata tarvittavia lisätietoja, esimerkiksi maksuhäiriömerkintöjen syyt."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet kan man vid behov anteckna tilläggsuppgifter, till exempel orsaker till anmärkningar om betalningsstörning."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 19
+              }
+            }
+          }
+        },
+        "sosiaalisen_luoton_kayttotarkoitus": {
+          "type": "string",
+          "minLength": 1,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Sosiaalisen luoton käyttötarkoitus"
+              },
+              {
+                "lang": "sv",
+                "value": "Användningssyfte för social kredit"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kuvataan sosiaalisen luoton käyttökohde. Sosiaalisen luoton käyttötarkoitus on yksi luoton tarpeen arvioinnin kriteeri. Kenttään kirjataan myös tieto niistä vaihtoehdoista, joilla henkilö on yrittänyt ratkaista velkaongelmaansa ennen sosiaalista luototusta."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas den sociala kreditens användningsändamål. Användningssyftet för den social krediten är ett kriterium i bedömningen av behovet av krediten. I fältet antecknas också uppgifter om de alternativ, med vilka personen har försökt lösa sina skuldproblem innan social kreditgivning."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 20
+          }
+        },
+        "hakijan_ja_hanen_puolisonsa_elamantilanne": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Hakijan ja hänen puolisonsa elämäntilanne"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Livssituationen för sökande och maken eller makan"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Tähän kirjataan tiedot asiakkaan tai asiakkaiden työ- ja taloudellisesta tilanteesta. Tarvittaessa tähän voidaan kirjata myös asiakkaan puolison tiedot niiltä osin, kuin se on tarpeellista (esimerkiksi vain tiedot tuloista ja menoista)."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Här antecknas uppgifter om klienten eller klienternas arbetssituation och ekonomiska situation. Vid behov kan man här också anteckna uppgifter om klientens make eller maka till den del det behövs (till exempel endast uppgifter om inkomster och utgifter)."
+                }
+              ],
+              "implementationNote": [
+                {
+                  "lang": "fi",
+                  "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                }
+              ],
+              "repeatable": true,
+              "required": false,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 21
+            },
+            "required": [],
+            "properties": {
+              "yksityishenkilo": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Yksityishenkilö"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Privatperson"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": true,
+                  "hiddenTitle": false,
+                  "rowNumber": 22
+                },
+                "required": [
+                  "sukunimi",
+                  "etunimet"
+                ],
+                "properties": {
+                  "sukunimi": {
+                    "type": "string",
+                    "minLength": 1,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Sukunimi"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Efternamn"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Kenttään kirjataan sen henkilön sukunimi, jonka elämäntilanne on kyseessä."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "I fältet antecknas efternamnet på den person, vars livssituation det gäller."
+                        }
+                      ],
+                      "example": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Nimi"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Namn"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": true,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 23
+                    }
+                  },
+                  "etunimet": {
+                    "type": "string",
+                    "minLength": 1,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Etunimet"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Samtliga förnamn"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Kenttään kirjataan sen henkilön etunimi, jonka elämäntilanne on kyseessä."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "I fältet antecknas förnamnen på den person, vars livssituation det gäller."
+                        }
+                      ],
+                      "example": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Nimi"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Namn"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": true,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 24
+                    }
+                  }
+                }
+              },
+              "kuvaus": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Kuvaus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Beskrivning"
+                    }
+                  ],
+                  "title": [
+                    {
+                      "lang": "fi",
+                      "value": "Kuvaus elämäntilanteesta"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Beskrivning av livssituationen"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kuvataan hakijan tai puolison elämäntilannetta sekä hakijan ansaintamahdollisuuksia ottaen huomioon hänen ikänsä, hänen elatuksensa varassa olevat perheenjäsenensä, työkykynsä ja muut olosuhteet."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet beskrivs sökandens eller makens/makans livssituation samt sökandens förtjänstmöjligheter med hänsyn till ålder, de familjemedlemmar som han eller hon försörjer, arbetsförmåga och andra omständigheter."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 25
+                }
+              },
+              "tyotilanne": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Työtilanne"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Arbetssituation"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Jos puoliso ei ole hakija, työtilannetietoja ei kerätä hänestä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Om maken eller makan inte är sökande, samlas inte uppgifter om arbetssituationen för honom eller henne."
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 26
+                },
+                "required": [],
+                "properties": {
+                  "tyo": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Työ"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Arbete"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": true,
+                      "hiddenTitle": false,
+                      "rowNumber": 27
+                    },
+                    "required": [],
+                    "properties": {
+                      "tyosuhde": {
+                        "type": "array",
+                        "minItems": 0,
+                        "items": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Työsuhde"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Anställningsförhållande"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "repeatable": true,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 28
+                          },
+                          "required": [],
+                          "properties": {
+                            "tyonantaja": {
+                              "type": "string",
+                              "sosmeta": {
+                                "name": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Työnantaja"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Arbetsgivaren"
+                                  }
+                                ],
+                                "description": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Kenttään kirjataan työnantajana toimivan henkilön tai yhteisön nimi."
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "I fältet antecknas namnet på personen eller samfundet som fungerar som arbetsgivare."
+                                  }
+                                ],
+                                "example": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Matti Meikäläinen"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Sven Svensson"
+                                  }
+                                ],
+                                "representation": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Nimi"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Namn"
+                                  }
+                                ],
+                                "repeatable": false,
+                                "required": false,
+                                "conditionalRequired": false,
+                                "nationwideRecordedInformation": false,
+                                "hiddenField": false,
+                                "hiddenTitle": false,
+                                "rowNumber": 29
+                              }
+                            },
+                            "osa_aikainen": {
+                              "type": "boolean",
+                              "sosmeta": {
+                                "name": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Osa-aikainen"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Deltidsanställning"
+                                  }
+                                ],
+                                "description": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Kenttään kirjataan onko työsuhde osa-aikainen."
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "I fältet antecknas om anställningsförhållandet gäller en deltidsanställning."
+                                  }
+                                ],
+                                "example": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Kyllä"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Ja"
+                                  }
+                                ],
+                                "representation": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Kytkin"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Brytare"
+                                  }
+                                ],
+                                "repeatable": false,
+                                "required": false,
+                                "conditionalRequired": false,
+                                "nationwideRecordedInformation": false,
+                                "hiddenField": false,
+                                "hiddenTitle": false,
+                                "rowNumber": 30
+                              }
+                            },
+                            "maaraaikainen": {
+                              "type": "boolean",
+                              "sosmeta": {
+                                "name": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Määräaikainen"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Visstidsanställning"
+                                  }
+                                ],
+                                "description": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Kenttään kirjataan onko työsuhde määräaikainen."
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "I fältet antecknas om anställningsförhållandet gäller en visstidsanställning."
+                                  }
+                                ],
+                                "example": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Kyllä"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Ja"
+                                  }
+                                ],
+                                "representation": [
+                                  {
+                                    "lang": "fi",
+                                    "value": "Kytkin"
+                                  },
+                                  {
+                                    "lang": "sv",
+                                    "value": "Brytare"
+                                  }
+                                ],
+                                "repeatable": false,
+                                "required": false,
+                                "conditionalRequired": false,
+                                "nationwideRecordedInformation": false,
+                                "hiddenField": false,
+                                "hiddenTitle": false,
+                                "rowNumber": 31
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "tyottomyys": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Työttömyys"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Arbetslöshet"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": true,
+                      "hiddenTitle": false,
+                      "rowNumber": 32
+                    },
+                    "required": [],
+                    "properties": {
+                      "alkamispaiva": {
+                        "type": "string",
+                        "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Alkamispäivä"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Inledningsdatum"
+                            }
+                          ],
+                          "title": [
+                            {
+                              "lang": "fi",
+                              "value": "Hakijan työttömyyden alkamispäivä"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Inledningsdatum för sökandes arbetslöshet"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "Kenttään kirjataan päivämäärä, jolloin työttömyys on alkanut."
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "I fältet antecknas datumet då arbetslösheten började."
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Pvm"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Datum"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 33
+                        }
+                      }
+                    }
+                  },
+                  "yrittajyys": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Yrittäjyys"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Företagande"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 34
+                    },
+                    "required": [],
+                    "properties": {
+                      "yritys": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Yritys"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Företag"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": true,
+                          "hiddenTitle": false,
+                          "rowNumber": 35
+                        },
+                        "required": [],
+                        "properties": {
+                          "toimiala": {
+                            "type": "string",
+                            "sosmeta": {
+                              "name": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Toimiala"
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "Näringsgren"
+                                }
+                              ],
+                              "title": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Yrityksen toimiala"
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "Företagets bransch"
+                                }
+                              ],
+                              "description": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Jos hakija on yrittäjä, kenttään kirjataan ala, jolla yritys toimii."
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "Om sökande är företagare, antecknas den bransch där företaget verkar i fältet."
+                                }
+                              ],
+                              "example": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Metalliteollisuus"
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "Metallindustri"
+                                }
+                              ],
+                              "representation": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Teksti"
+                                },
+                                {
+                                  "lang": "sv",
+                                  "value": "Text"
+                                }
+                              ],
+                              "repeatable": false,
+                              "required": false,
+                              "conditionalRequired": false,
+                              "nationwideRecordedInformation": false,
+                              "hiddenField": false,
+                              "hiddenTitle": false,
+                              "rowNumber": 36
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "taloudellinen_tilanne": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Taloudellinen tilanne"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Ekonomisk situation"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 37
+                },
+                "required": [],
+                "properties": {
+                  "tulo": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Tulo"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Inkomst"
+                          }
+                        ],
+                        "title": [
+                          {
+                            "lang": "fi",
+                            "value": "Tulot"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Inkomster"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "Tähän kirjataan hakijan tulot yksitellen. Tietokokonaisuus toistuu niin monta kertaa kuin eri tuloja kirjataan."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Här antecknas sökandes inkomster var för sig. Uppgiftshelheten upprepas så många gånger som olika inkomster antecknas."
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 38
+                      },
+                      "required": [],
+                      "properties": {
+                        "tulolaji": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Tulolaji"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Inkomstslag"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "2 \u003d Palkka"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "2 \u003d Lön"
+                              }
+                            ],
+                            "classification": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodistopalvelin: Sosiaalihuolto - Asiakkaan tulon laji 1.2.246.537.6.1254"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kodtjänsten: Socialvård - Klientens inkomstslag 1.2.246.537.6.1254"
+                              }
+                            ],
+                            "classificationLink": [
+                              {
+                                "lang": "",
+                                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1823\u0026versionKey\u003d2063"
+                              }
+                            ],
+                            "classificationOid": [
+                              {
+                                "lang": "",
+                                "value": "1.2.246.537.6.1254"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kod"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 39
+                          },
+                          "required": [
+                            "system",
+                            "code",
+                            "display"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string",
+                              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1254(\\.\\d+)*$"
+                            },
+                            "code": {
+                              "type": "string"
+                            },
+                            "display": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "kuvaus": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Kuvaus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Beskrivning"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kuvataan tekstinä tulolajia tai annetaan luokituksesta valittuun luokkaan liittyvää lisätietoa."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet beskrivs inkomstslaget med fri text eller också ges ytterligare information utifrån klassificeringen om den klass som har valts."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Teksti"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Text"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 40
+                          }
+                        },
+                        "maara": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Määrä"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Mängd"
+                              }
+                            ],
+                            "title": [
+                              {
+                                "lang": "fi",
+                                "value": "Nettomäärä euroina"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Nettobelopp i euro"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "500"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "500"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Määrä"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Mängd"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 41
+                          },
+                          "required": [
+                            "value",
+                            "code"
+                          ],
+                          "properties": {
+                            "value": {
+                              "type": "number"
+                            },
+                            "code": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "varallisuus": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Varallisuus"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Förmögenhet"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "-"
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 42
+                      },
+                      "required": [],
+                      "properties": {
+                        "varallisuuslaji": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Varallisuuslaji"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Förmögenhetsslag"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan luokituksen avulla varallisuuslaji, joka voi olla esimerkiksi tontti, auto tai osake."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas förmögenhetsslaget, till exempel en tomt, bil eller aktie, med hjälp av klassificeringen."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "12 \u003d Henkilöauto"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "12 \u003d Personbil"
+                              }
+                            ],
+                            "classification": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodistopalvelin: Sosiaalihuolto - Asiakkaan varallisuuden laji 1.2.246.537.6.1255"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kodtjänsten: Socialvård - Klientens förmögenhetsslag 1.2.246.537.6.1255"
+                              }
+                            ],
+                            "classificationLink": [
+                              {
+                                "lang": "",
+                                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1807\u0026versionKey\u003d2047"
+                              }
+                            ],
+                            "classificationOid": [
+                              {
+                                "lang": "",
+                                "value": "1.2.246.537.6.1255"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kod"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 43
+                          },
+                          "required": [
+                            "system",
+                            "code",
+                            "display"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string",
+                              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1255(\\.\\d+)*$"
+                            },
+                            "code": {
+                              "type": "string"
+                            },
+                            "display": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "meno": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Meno"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Utgift"
+                          }
+                        ],
+                        "title": [
+                          {
+                            "lang": "fi",
+                            "value": "Menot"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Utgifter"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "Tähän kirjataan menojen tiedot."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Här antecknas uppgifter om utgifterna."
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 44
+                      },
+                      "required": [],
+                      "properties": {
+                        "menolaji": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Menolaji"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Utgiftsslag"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan luokituksen avulla menon laji."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas utgiftsslaget med hjälp av klassificeringen."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "49 \u003d Elatusapumaksu"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "49 \u003d Avgift för underhållsbidrag"
+                              }
+                            ],
+                            "classification": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodistopalvelin: Sosiaalihuolto - Asiakkaan menon laji 1.2.246.537.6.1256"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kodtjänsten: Socialvård - Klientens utgiftsslag 1.2.246.537.6.1256"
+                              }
+                            ],
+                            "classificationLink": [
+                              {
+                                "lang": "",
+                                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1824\u0026versionKey\u003d2064"
+                              }
+                            ],
+                            "classificationOid": [
+                              {
+                                "lang": "",
+                                "value": "1.2.246.537.6.1256"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kod"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 45
+                          },
+                          "required": [
+                            "system",
+                            "code",
+                            "display"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string",
+                              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1256(\\.\\d+)*$"
+                            },
+                            "code": {
+                              "type": "string"
+                            },
+                            "display": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "kuvaus": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Kuvaus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Beskrivning"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kuvataan tekstinä menoa tai annetaan luokituksesta valittuun luokkaan liittyvää lisätietoa."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet beskrivs utgiften med fri text eller också ges ytterligare information utifrån klassificeringen om den klass som har valts."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "Elatusapumaksu koskee kahta lasta."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Avgiften för underhållsbidrag gäller två barn."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Teksti"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Text"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 46
+                          }
+                        },
+                        "maara": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Määrä"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Mängd"
+                              }
+                            ],
+                            "title": [
+                              {
+                                "lang": "fi",
+                                "value": "Määrä euroina"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Belopp i euro"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan menon euromäärä."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas utgiftens eurobelopp."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "400"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "400"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Määrä"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Mängd"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 47
+                          },
+                          "required": [
+                            "value",
+                            "code"
+                          ],
+                          "properties": {
+                            "value": {
+                              "type": "number"
+                            },
+                            "code": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "velka": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Velka"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Skuld"
+                          }
+                        ],
+                        "title": [
+                          {
+                            "lang": "fi",
+                            "value": "Velat"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Skulder"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "Tähän kirjataan velkojen tiedot."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Här antecknas uppgifter om skulderna."
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 48
+                      },
+                      "required": [],
+                      "properties": {
+                        "velkalaji": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Velkalaji"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Skuldslag"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan luokituksen avulla mikä velkalaji on kyseessä."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas vilket skuldslag det är fråga om med hjälp av klassificeringen."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "4 \u003d Opintolaina"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "4 \u003d Studieskuld"
+                              }
+                            ],
+                            "classification": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodistopalvelin: Sosiaalihuolto - Asiakkaan velan laji 1.2.246.537.6.1257"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kodtjänsten: Socialvård - Klientens skuldslag 1.2.246.537.6.1257"
+                              }
+                            ],
+                            "classificationLink": [
+                              {
+                                "lang": "",
+                                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1808\u0026versionKey\u003d2048"
+                              }
+                            ],
+                            "classificationOid": [
+                              {
+                                "lang": "",
+                                "value": "1.2.246.537.6.1257"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kod"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 49
+                          },
+                          "required": [
+                            "system",
+                            "code",
+                            "display"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string",
+                              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1257(\\.\\d+)*$"
+                            },
+                            "code": {
+                              "type": "string"
+                            },
+                            "display": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "kuvaus": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Kuvaus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Beskrivning"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kuvataan tekstinä velkalajia tai annetaan luokituksesta valittuun luokkaan liittyvää lisätietoa."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet beskrivs skuldslaget med fri text eller också ges ytterligare information utifrån klassificeringen om den klass som har valts."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "Valtion takaama opintolaina"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Statsgaranterat studielån"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Teksti"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Text"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 50
+                          }
+                        },
+                        "maara": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Määrä"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Mängd"
+                              }
+                            ],
+                            "title": [
+                              {
+                                "lang": "fi",
+                                "value": "Määrä euroina"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Belopp i euro"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan velan euromäärä."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas skuldens eurobelopp."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "2500"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "2500"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Määrä"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Mängd"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 51
+                          },
+                          "required": [
+                            "value",
+                            "code"
+                          ],
+                          "properties": {
+                            "value": {
+                              "type": "number"
+                            },
+                            "code": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "elakkeelle_siirtyminen": {
+                "type": "string",
+                "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Eläkkeelle siirtyminen"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Pensionering"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan henkilön eläkkeelle siirtymisen ajankohta."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas tidpunkten för personens pensionering."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Pvm"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 52
+                }
+              }
+            }
+          }
+        },
+        "palveluohjaus": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Palveluohjaus"
+              },
+              {
+                "lang": "sv",
+                "value": "Servicehandledning"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 53
+          },
+          "required": [
+            "hakija_hakee_sosiaalista_luottoa",
+            "ohjattu_velkaneuvontaan",
+            "ohjattu_muihin_sosiaalipalveluihin",
+            "ohjattu_takuu_saatioon"
+          ],
+          "properties": {
+            "hakija_hakee_sosiaalista_luottoa": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Hakija hakee sosiaalista luottoa"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Sökande ansöker om social kredit"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tieto siitä, aikooko henkilö laittaa luottohakemuksen vireille."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas uppgift om, huruvida personen ämnar anhängiggöra kreditansökan."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 54
+              }
+            },
+            "ohjattu_velkaneuvontaan": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Ohjattu velkaneuvontaan"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Hänvisad till skuldrådgivning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tieto siitä, ohjattiinko henkilö velkaneuvontaan."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas uppgift om, huruvida personen hänvisades till skuldrådgivning."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 55
+              }
+            },
+            "ohjattu_muihin_sosiaalipalveluihin": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Ohjattu muihin sosiaalipalveluihin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Hänvisad till annan socialservice"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tieto siitä, ohjattiinko henkilö asioimaan muualla hyvinvointialueen sosiaalitoimessa."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas uppgift om, huruvida personen hänvisades för ärendeskötsel på annat ställe inom välfärdsområdets socialväsende."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 56
+              }
+            },
+            "ohjattu_takuu_saatioon": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Ohjattu Takuu-säätiöön"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Hänvisad till Garanti-Stiftelsen"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tieto siitä, ohjattiinko henkilö asioimaan Takuu-säätiössä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas uppgift om, huruvida personen hänvisades för ärendeskötsel hos Garanti-Stiftelsen"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 57
+              }
+            },
+            "ohjattu_muualle": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Ohjattu muualle"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Hänvisad till annat ställe"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tieto siitä, ohjattiinko asiakas muiden palveluiden piiriin ja jos ohjattiin, mihin."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas uppgift om, huruvida klienten hänvisades till andra tjänster och i så fall till vilka."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 58
+              }
+            }
+          }
+        },
+        "lisatiedot": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lisätiedot"
+              },
+              {
+                "lang": "sv",
+                "value": "Tilläggsuppgifter"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 59
+          }
+        },
+        "lakiselostus": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lakiselostus"
+              },
+              {
+                "lang": "sv",
+                "value": "Lagförklaring"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä voidaan käyttää automaattitekstiä, jonka organisaatio yhdessä tietojärjestelmätoimittajan kanssa laatii. THL ei laadi kentässä näytettäviä tekstejä."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet kan man använda automattext, som organisationen upprättar tillsammans med datasystemleverantören. THL ansvarar inte för produktion av automattext i fältet."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 60
+          }
+        },
+        "paivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Päivämäärä"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan arvion laatimisen päivämäärä."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas den uppskattade tidpunkten för upprättande."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 61
+          }
+        },
+        "laatija": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Laatija"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Upprättare"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                },
+                {
+                  "lang": "sv",
+                  "value": "-"
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 62
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 63
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 64
+                }
+              },
+              "tehtavanimike": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Tehtävänimike"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Uppgiftsbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "Sosiaalityöntekijä"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Socialarbetare"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 65
+                }
+              },
+              "palveluyksikko": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Palveluyksikkö"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Serviceenhet"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas namnet på serviceenheten enligt Organisationsregistret för social- och hälsovården."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Esbo centrums barnskydd, Esbo stad, social- och hälsovårdssektorn"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.6.202"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kod"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 66
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
