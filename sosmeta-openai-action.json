@@ -27,7 +27,7 @@
               "type": "string",
               "enum": [
                 "Päätös",
-                "Suunnitelma", 
+                "Suunnitelma",
                 "Arvio",
                 "Ilmoitus",
                 "Asiakaskertomusmerkintä",
@@ -150,7 +150,10 @@
                     "description": "The JSON document to validate"
                   }
                 },
-                "required": ["schemaOid", "document"]
+                "required": [
+                  "schemaOid",
+                  "document"
+                ]
               }
             }
           }
@@ -193,12 +196,17 @@
                   },
                   "language": {
                     "type": "string",
-                    "enum": ["fi", "sv"],
+                    "enum": [
+                      "fi",
+                      "sv"
+                    ],
                     "description": "Language for field descriptions",
                     "default": "fi"
                   }
                 },
-                "required": ["schemaOid"]
+                "required": [
+                  "schemaOid"
+                ]
               }
             }
           }
@@ -239,7 +247,10 @@
             "description": "Search language",
             "schema": {
               "type": "string",
-              "enum": ["fi", "sv"],
+              "enum": [
+                "fi",
+                "sv"
+              ],
               "default": "fi"
             }
           }
@@ -303,7 +314,9 @@
                     }
                   }
                 },
-                "required": ["question"]
+                "required": [
+                  "question"
+                ]
               }
             }
           }
@@ -315,6 +328,36 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/AssistanceResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "description": "Service status",
+        "operationId": "healthCheck",
+        "responses": {
+          "200": {
+            "description": "Service status",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    },
+                    "schemas_loaded": {
+                      "type": "integer"
+                    },
+                    "timestamp": {
+                      "type": "string"
+                    }
+                  }
                 }
               }
             }

@@ -7,17 +7,41 @@ from flask import Flask, request, jsonify
 import json
 import os
 import glob
-from jsonschema import validate, ValidationError, Draft7Validator
+from jsonschema import Draft7Validator
 from datetime import datetime
-import re
+from functools import wraps
+import logging
+from flask_limiter import Limiter
+from flask_limiter.util import get_remote_address
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app, origins=os.getenv("CORS_ORIGINS", "*"))
+logging.basicConfig(
+    level=os.getenv("LOG_LEVEL", "INFO"),
+    format="%(asctime)s %(levelname)s: %(message)s"
+)
+limiter = Limiter(app, key_func=get_remote_address, default_limits=["100 per hour"])
 
 # Load all schemas on startup
 SCHEMAS_DIR = "./Valmis"
 schemas_cache = {}
 metadata_cache = {}
 
+def require_api_key(f):
+    """Require Authorization header with Bearer token matching API_KEY"""
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        expected = os.getenv("API_KEY")
+        token = request.headers.get("Authorization", "")
+        if not expected or token != f"Bearer {expected}":
+            return jsonify({'error': 'Invalid API key'}), 401
+        return f(*args, **kwargs)
+    return decorated
+
+@app.before_request
+def log_request():
+    app.logger.info(f"{request.method} {request.path} from {request.remote_addr}")
 def load_schemas():
     """Load all schemas from the Valmis directory"""
     schema_files = glob.glob(f"{SCHEMAS_DIR}/*.json")
@@ -47,6 +71,8 @@ def load_schemas():
 load_schemas()
 
 @app.route('/api/v1/schemas', methods=['GET'])
+@require_api_key
+@limiter.limit("100 per minute")
 def list_schemas():
     """List all available schemas with filtering"""
     document_type = request.args.get('documentType')
@@ -69,6 +95,8 @@ def list_schemas():
     })
 
 @app.route('/api/v1/schemas/<oid>', methods=['GET'])
+@require_api_key
+@limiter.limit("100 per minute")
 def get_schema(oid):
     """Get specific schema by OID"""
     if oid not in schemas_cache:
@@ -87,6 +115,8 @@ def get_schema(oid):
     })
 
 @app.route('/api/v1/validate', methods=['POST'])
+@require_api_key
+@limiter.limit("50 per minute")
 def validate_document():
     """Validate a document against a schema"""
     data = request.get_json()
@@ -125,6 +155,8 @@ def validate_document():
     })
 
 @app.route('/api/v1/generate-template', methods=['POST'])
+@require_api_key
+@limiter.limit("20 per minute")
 def generate_template():
     """Generate a document template from a schema"""
     data = request.get_json()
@@ -147,6 +179,8 @@ def generate_template():
     })
 
 @app.route('/api/v1/search', methods=['GET'])
+@require_api_key
+@limiter.limit("100 per minute")
 def search_schemas():
     """Search schemas by title, description, or field names"""
     query = request.args.get('q', '').lower()
@@ -201,6 +235,8 @@ def search_schemas():
     })
 
 @app.route('/api/v1/assistant/help', methods=['POST'])
+@require_api_key
+@limiter.limit("10 per minute")
 def get_document_assistance():
     """Get AI assistance for document creation"""
     data = request.get_json()
@@ -389,6 +425,18 @@ def generate_examples(question, context):
             }
         }
     ]
+
+
+@app.route('/health', methods=['GET'])
+@require_api_key
+@limiter.limit("60 per minute")
+def health_check():
+    """Health check endpoint"""
+    return jsonify({
+        'status': 'healthy',
+        'schemas_loaded': len(schemas_cache),
+        'timestamp': datetime.utcnow().isoformat()
+    })
 
 if __name__ == '__main__':
     app.run(debug=True, port=5000)
