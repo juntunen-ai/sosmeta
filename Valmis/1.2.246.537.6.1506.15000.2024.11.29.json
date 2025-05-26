@@ -1,0 +1,811 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Adoptioneuvonnan suunnitelma\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Adoptioneuvonnan suunnitelma\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2024-11-29",
+    "dataComponentLibraryVersion": "2024-11-13",
+    "oid": "1.2.246.537.6.1506.15000.2024.11.29",
+    "documentType": "Suunnitelma",
+    "documentAuthor": "ammattihenkilö",
+    "documentSubject": "Adoptioneuvonnan asiakasasiakirjat"
+  },
+  "required": [
+    "adoptioneuvonnan_suunnitelma"
+  ],
+  "properties": {
+    "adoptioneuvonnan_suunnitelma": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Adoptioneuvonnan suunnitelma"
+          }
+        ]
+      },
+      "required": [
+        "asiakas",
+        "tavoite",
+        "laatija"
+      ],
+      "properties": {
+        "asiakas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 1
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 2
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 3
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Tilapäinen yksilöintitunnus -kentistä toinen on pakollinen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 4
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "tilapainen_yksilointitunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Tilapäinen yksilöintitunnus"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan henkilön tilapäiseen yksilöintiin annettu tunnus."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "112233-445a"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Tilapäinen yksilöintitunnus -kentistä toinen on pakollinen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 5
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "neuvotteluun_osallistujat": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Neuvotteluun osallistujat"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 6
+          }
+        },
+        "tavoite": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Tavoite"
+                }
+              ],
+              "title": [
+                {
+                  "lang": "fi",
+                  "value": "Adoptioneuvonnassa käsiteltävät keskeiset teemat"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Lapsensa adoptioon antamista harkitsevien vanhempien adoptioneuvonnassa vanhempia autetaan pohtimaan elämäntilannettaan ja harkitsemaan eri vaihtoehtoja.\n\nAdoptiovanhemmiksi haluavien adoptioneuvonnassa keskusteluteemoja ovat mm. hakijoiden motiivit, nykyinen elämäntilanne, parisuhde ja kasvatuskysymykset.\n\nLapsen adoptioneuvonnassa varmistetaan lapsen etu ja lapsen mielipiteen selvittäminen sekä valmistellaan lasta adoptioon."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 7
+            },
+            "required": [
+              "kuvaus"
+            ],
+            "properties": {
+              "nimi": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan käsiteltävän teeman (tai tavoitteen) nimi."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 8
+                }
+              },
+              "kuvaus": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Kuvaus"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kuvataan tekstinä tavoitetta."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttä on pakollinen TK Tavoitteen määrityksestä poiketen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 9
+                }
+              }
+            }
+          }
+        },
+        "menetelmat": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Menetelmät"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 10
+          }
+        },
+        "suunnitelma_on_voimassa_alkaen": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Suunnitelma on voimassa alkaen"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 11
+          }
+        },
+        "adoptioneuvonnan_arvioitu_kesto": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Adoptioneuvonnan arvioitu kesto"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 12
+          }
+        },
+        "seuranta_ja_arvio": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Seuranta ja arvio"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 13
+          }
+        },
+        "jakelu": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Jakelu"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Henkilöt joille tämä suunnitelma toimitetaan"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 14
+          }
+        },
+        "lisatiedot": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lisätiedot"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 15
+          }
+        },
+        "lakiselostus": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lakiselostus"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä voidaan käyttää automaattitekstiä, jonka organisaatio yhdessä tietojärjestelmätoimittajan kanssa laatii. THL ei laadi kentässä näytettäviä tekstejä."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 16
+          }
+        },
+        "paivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Päivämäärä"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan suunnitelman laatimisen päivämäärä."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 17
+          }
+        },
+        "laatija": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Laatija"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 18
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 19
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 20
+                }
+              },
+              "tehtavanimike": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Tehtävänimike"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 21
+                }
+              },
+              "palveluyksikko": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Palveluyksikkö"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.6.202"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 22
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

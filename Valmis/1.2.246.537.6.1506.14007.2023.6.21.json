@@ -1,0 +1,1190 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Suostumus sosiaalihuollon lausuntopyyntöön\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Suostumus sosiaalihuollon lausuntopyyntöön\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2023-06-21",
+    "dataComponentLibraryVersion": "2023-06-21",
+    "oid": "1.2.246.537.6.1506.14007.2023.6.21",
+    "documentType": "Suostumus",
+    "documentAuthor": "ammattihenkilö",
+    "documentSubject": "Sosiaalihuollon  palvelutehtäville yhteiset asiakasasiakirjat"
+  },
+  "required": [
+    "suostumus_sosiaalihuollon_lausuntopyyntoon"
+  ],
+  "properties": {
+    "suostumus_sosiaalihuollon_lausuntopyyntoon": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Suostumus sosiaalihuollon lausuntopyyntöön"
+          },
+          {
+            "lang": "sv",
+            "value": "Samtycke till socialvårdens begäran om utlåtande"
+          }
+        ]
+      },
+      "required": [
+        "asiakas",
+        "suostumuksen_antaja",
+        "suostumus",
+        "allekirjoitus"
+      ],
+      "properties": {
+        "asiakas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Klient"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas on henkilö, jonka asiaan lausuntopyyntö liittyy. Asiakas antaa yleensä itse suostumuksensa lausuntopyyntöön, mutta suostumuksen antaja voi olla myös hänen laillinen edustajansa."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Klienten är den person, vars ärende begäran om utlåtande gäller. Klienten ger i allmänhet själv sitt samtycke till begäran om utlåtande, men samtyckesgivaren kan också vara klientens lagliga företrädare."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 1
+            },
+            "required": [
+              "sukunimi",
+              "etunimet",
+              "henkilotunnus"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 2
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 3
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Personbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 4
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "suostumuksen_antaja": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Suostumuksen antaja"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Laglig företrädare"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Suostumuksen antaja on asiakas, jonka asiaan lausuntopyyntö liittyy, tai asiakkaan huoltaja tai muu laillinen edustaja."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Samtyckesgivaren är den klient, vars ärende begäran om utlåtande gäller, eller klientens vårdnadshavare eller någon annan laglig företrädare."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 5
+            },
+            "required": [
+              "sukunimi",
+              "etunimet",
+              "henkilotunnus"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 6
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 7
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Personbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 8
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "palvelutehtava": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Palvelutehtävä"
+              },
+              {
+                "lang": "sv",
+                "value": "Serviceuppgift"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan luokituksen avulla palvelutehtävä, johon asiakirja kuuluu."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas med hjälp av klassificeringen den serviceuppgift till vilken handlingen hör."
+              }
+            ],
+            "classification": [
+              {
+                "lang": "fi",
+                "value": "Koodistopalvelin: Sosiaalihuolto - Palvelutehtävä 1.2.246.537.6.1221"
+              },
+              {
+                "lang": "sv",
+                "value": "Kodtjänsten: Socialvård - Serviceuppgift 1.2.246.537.6.1221"
+              }
+            ],
+            "classificationLink": [
+              {
+                "lang": "",
+                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d704\u0026versionKey\u003d2563"
+              }
+            ],
+            "classificationOid": [
+              {
+                "lang": "",
+                "value": "1.2.246.537.6.1221"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Koodi"
+              },
+              {
+                "lang": "sv",
+                "value": "Kod"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 9
+          },
+          "required": [
+            "system",
+            "code",
+            "display"
+          ],
+          "properties": {
+            "system": {
+              "type": "string",
+              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1221(\\.\\d+)*$"
+            },
+            "code": {
+              "type": "string"
+            },
+            "display": {
+              "type": "string"
+            }
+          }
+        },
+        "sosiaalipalvelu": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Sosiaalipalvelu"
+              },
+              {
+                "lang": "sv",
+                "value": "Socialservice"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan luokituksen avulla sosiaalipalvelu, jonka antamiseen asiakirja liittyy."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas med hjälp av klassificeringen den socialservice, vars tillhandahållande handlingen anknyter till."
+              }
+            ],
+            "classification": [
+              {
+                "lang": "fi",
+                "value": "Koodistopalvelin: Sosiaalihuolto - Sosiaalipalvelut 1.2.246.537.6.1222"
+              },
+              {
+                "lang": "sv",
+                "value": "Kodtjänsten: Socialvård - Socialservice 1.2.246.537.6.1222"
+              }
+            ],
+            "classificationLink": [
+              {
+                "lang": "",
+                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d703\u0026versionKey\u003d2683"
+              }
+            ],
+            "classificationOid": [
+              {
+                "lang": "",
+                "value": "1.2.246.537.6.1222"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Koodi"
+              },
+              {
+                "lang": "sv",
+                "value": "Kod"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 10
+          },
+          "required": [
+            "system",
+            "code",
+            "display"
+          ],
+          "properties": {
+            "system": {
+              "type": "string",
+              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1222(\\.\\d+)*$"
+            },
+            "code": {
+              "type": "string"
+            },
+            "display": {
+              "type": "string"
+            }
+          }
+        },
+        "suostumus": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Suostumus"
+              },
+              {
+                "lang": "sv",
+                "value": "Samtycke"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "-"
+              },
+              {
+                "lang": "sv",
+                "value": "-"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": true,
+            "hiddenTitle": false,
+            "rowNumber": 11
+          },
+          "required": [
+            "asiasisalto"
+          ],
+          "properties": {
+            "asiasisalto": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Asiasisältö"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Sakinnehåll"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Suostumus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtycke"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan tiedot lausunnosta, jonka pyytämistä varten asiakas antaa suostumuksensa (esim. miltä taholta ja mitä tarkoitusta varten lausunto pyydetään, ja mikä palveluyksikkö lausuntoa pyytää). Tarvittaessa voidaan kirjata myös tieto siitä, kuinka kauan suostumus on voimassa, eli missä ajassa lausuntoa on pyydettävä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas uppgifter om det utlåtande, för vilket klienten ger sitt samtycke till begäran (till exempel av vilken aktör eller i vilket syfte utlåtandet begärs, och vilken serviceenhet som begär utlåtandet). Vid behov kan man också anteckna information om, hur länge samtycket är giltigt, dvs. inom vilken tidsfrist utlåtandet ska begäras."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "Annamme suostumuksen siihen, että Pelastakaa Lapset ry pyytää adoptiovanhemmuutta varten lausunnon perheemme olosuhteista asuinpaikkamme sosiaalitoimelta. Sosiaalitoimi hankkii lausuntoa varten tarvitsemansa tiedot sosiaalitoimen omista rekistereistä sekä mahdollisesti vero- ja poliisiviranomaisilta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Vi ger vårt samtycke till att Rädda Barnen rf begär ett utlåtande av socialverket på vår bostadsort om omständigheterna i vår familj för utredning av adoptivföräldraskap. Socialväsendet skaffar för utlåtandet de uppgifter som det behöver från socialväsendets egna register samt eventuellt från skatte- och polismyndigheterna."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 12
+              }
+            }
+          }
+        },
+        "lisatiedot": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lisätiedot"
+              },
+              {
+                "lang": "sv",
+                "value": "Mer information"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 13
+          }
+        },
+        "lakiselostus": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lakiselostus"
+              },
+              {
+                "lang": "sv",
+                "value": "Lagförklaring"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kenttää ei ole tarkoitettu suostumuksen antajan täytettäväksi. Esim. asiointipalvelussa kentässä voidaan näyttää automaattiteksti. THL ei laadi kentässä näytettäviä tekstejä."
+              },
+              {
+                "lang": "sv",
+                "value": "Kenttää ei ole tarkoitettu suostumuksen antajan täytettäväksi. Esim. asiointipalvelussa kentässä voidaan näyttää automaattiteksti. THL ei laadi kentässä näytettäviä tekstejä."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 14
+          }
+        },
+        "paivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Päivämäärä"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan suostumuksen laatimispäivämäärä."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas datum för upprättandet av samtycket."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 15
+          }
+        },
+        "allekirjoitus": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Allekirjoitus"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Underskrift"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakirjan allekirjoittaa suostumuksen antaja eli asiakas tai asiakkaan laillinen edustaja."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Fullmaktsgivaren, dvs. klienten eller klientens lagliga företrädare, undertecknar handlingen."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 16
+            },
+            "required": [
+              "allekirjoituksen_tyyppi"
+            ],
+            "properties": {
+              "allekirjoituksen_tyyppi": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoituksen tyyppi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Typ av underskrift"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan luokituksen avulla allekirjoituksen tyyppi."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas underskriftens typ med hjälp av klassificeringen."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "1 \u003d Asiakirja on allekirjoitettu sähköisesti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "1 \u003d Handlingen har undertecknats elektroniskt"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: eArkisto - Allekirjoitus 1.2.246.537.5.40161"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kodtjänsten: eArkiv - Underskrift 1.2.246.537.5.40161"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d252\u0026versionKey\u003d329"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.5.40161"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kod"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 17
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.5\\.40161(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              },
+              "paikka": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Paikka"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Plats"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoituspaikka. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa silloin, kun asiakirja allekirjoitetaan käsin eli Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas orten för underskriften. Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand dvs. kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ. Fältet kan ifyllas i klientdatasystemet samtidigt som handlingen upprättas, om handlingen undertecknas i samband med upprättandet."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "Helsinki"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Helsingfors"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 18
+                }
+              },
+              "paivamaara": {
+                "type": "string",
+                "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Päivämäärä"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoituksen päivämäärä. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas datum för underskriften. Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand och kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ. Fältet kan ifyllas i klientdatasystemet samtidigt som handlingen upprättas, om handlingen undertecknas i samband med upprättandet."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "29.05.2020"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "29.05.2020"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Pvm"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 19
+                }
+              },
+              "allekirjoitus": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoitus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Underskrift"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand och kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoitus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Underskrift"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 20
+                }
+              },
+              "nimi": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoittajan nimi tai nimenselvennys. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas undertecknarens namn eller namnförtydligande. Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand och kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ. Fältet kan ifyllas i klientdatasystemet samtidigt som handlingen upprättas, om handlingen undertecknas i samband med upprättandet."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 21
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

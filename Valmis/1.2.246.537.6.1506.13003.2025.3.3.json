@@ -1,0 +1,1575 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Puolison elatussopimus\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Puolison elatussopimus\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2025-03-03",
+    "dataComponentLibraryVersion": "2025-02-27R04",
+    "oid": "1.2.246.537.6.1506.13003.2025.3.3",
+    "documentType": "Sopimus",
+    "documentAuthor": "ammattihenkilö",
+    "documentSubject": "Puolison elatusavun turvaamisen asiakasasiakirjat"
+  },
+  "required": [
+    "puolison_elatussopimus"
+  ],
+  "properties": {
+    "puolison_elatussopimus": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Puolison elatussopimus"
+          }
+        ]
+      },
+      "required": [
+        "asiakas",
+        "laatija",
+        "allekirjoitus"
+      ],
+      "properties": {
+        "asiatunnus": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Asiatunnus"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Asiatunnus voidaan näyttää asiakirjan ylätunnisteessa. Asiatunnuksen tulee olla sama kuin asiakirjan metatiedoissa oleva asiatunnus."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Tunnus"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 1
+          },
+          "required": [
+            "value"
+          ],
+          "properties": {
+            "system": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          }
+        },
+        "sopimuksen_asiakirjatunnus": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Sopimuksen asiakirjatunnus"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Asiakirjatunnus voidaan näyttää asiakirjan ylätunnisteessa."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Tunnus"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 2
+          },
+          "required": [
+            "value"
+          ],
+          "properties": {
+            "system": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          }
+        },
+        "asiakas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakirja voi kuulua elatusavun saajan ja elatusavun maksajan yhteiseen asiaan. Asiakkaaksi kirjataan tällöin molemmat heistä ja asiakirja näytetään molempien puolisoiden asiakastiedoissa ja OmaKannassa. Elatusavun saaja ja maksaja ovat myös sopimuksen sopijapuolia."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 3
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 4
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 5
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Tilapäinen yksilöintitunnus -kentistä toinen on pakollinen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 6
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "tilapainen_yksilointitunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Tilapäinen yksilöintitunnus"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Tilapäinen yksilöintitunnus -kentistä toinen on pakollinen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 7
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "sopimuksen_sisalto": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Sopimuksen sisältö"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 8
+          },
+          "required": [],
+          "properties": {
+            "elatusapu": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Elatusapu"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 9
+              },
+              "required": [],
+              "properties": {
+                "elatusavun_nostaja": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Elatusavun nostaja"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan sen henkilön nimi, jolle elatusapu on suoritettava."
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "Maija Meikäläinen"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 10
+                  },
+                  "required": [],
+                  "properties": {
+                    "yksityishenkilo": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Yksityishenkilö"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": true,
+                        "hiddenTitle": false,
+                        "rowNumber": 11
+                      },
+                      "required": [
+                        "sukunimi",
+                        "etunimet"
+                      ],
+                      "properties": {
+                        "sukunimi": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Sukunimi"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 12
+                          }
+                        },
+                        "etunimet": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Etunimet"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 13
+                          }
+                        }
+                      }
+                    }
+                  }
+                },
+                "elatusavun_suorittaja": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Elatusavun suorittaja"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Tähän kohtaan kirjataan elatusapua puolisolleen maksavan henkilön nimi."
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 14
+                  },
+                  "required": [
+                    "sukunimi",
+                    "etunimet"
+                  ],
+                  "properties": {
+                    "sukunimi": {
+                      "type": "string",
+                      "minLength": 1,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Sukunimi"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Nimi"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": true,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 15
+                      }
+                    },
+                    "etunimet": {
+                      "type": "string",
+                      "minLength": 1,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Etunimet"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Nimi"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": true,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 16
+                      }
+                    }
+                  }
+                },
+                "elatusavun_maara": {
+                  "type": "array",
+                  "minItems": 0,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Elatusavun määrä"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "Kenttään kirjataan tiedot euromäärästä, jonka elatusavun suorittaja maksaa elatusta varten kuukaudessa tietyn ajanjakson aikana. Tarvittaessa voidaan kirjata tiedot euromääristä usealle ajanjaksolle."
+                        }
+                      ],
+                      "repeatable": true,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 17
+                    },
+                    "required": [],
+                    "properties": {
+                      "ajanjakso": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Ajanjakso"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "Tähän kirjataan ajanjakso, jolta elatusapua maksetaan. Toistaiseksi voimassa olevaa sopimusta laadittaessa voidaan merkitä vain alkamispäivä."
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 18
+                        },
+                        "required": [],
+                        "properties": {
+                          "alkamispaiva": {
+                            "type": "string",
+                            "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                            "sosmeta": {
+                              "name": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Alkamispäivä"
+                                }
+                              ],
+                              "description": [
+                                {
+                                  "lang": "fi",
+                                  "value": "-"
+                                }
+                              ],
+                              "example": [
+                                {
+                                  "lang": "fi",
+                                  "value": "-"
+                                }
+                              ],
+                              "representation": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Pvm"
+                                }
+                              ],
+                              "repeatable": false,
+                              "required": false,
+                              "conditionalRequired": false,
+                              "nationwideRecordedInformation": false,
+                              "hiddenField": false,
+                              "hiddenTitle": false,
+                              "rowNumber": 19
+                            }
+                          },
+                          "paattymispaiva": {
+                            "type": "string",
+                            "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                            "sosmeta": {
+                              "name": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Päättymispäivä"
+                                }
+                              ],
+                              "description": [
+                                {
+                                  "lang": "fi",
+                                  "value": "-"
+                                }
+                              ],
+                              "example": [
+                                {
+                                  "lang": "fi",
+                                  "value": "-"
+                                }
+                              ],
+                              "representation": [
+                                {
+                                  "lang": "fi",
+                                  "value": "Pvm"
+                                }
+                              ],
+                              "repeatable": false,
+                              "required": false,
+                              "conditionalRequired": false,
+                              "nationwideRecordedInformation": false,
+                              "hiddenField": false,
+                              "hiddenTitle": false,
+                              "rowNumber": 20
+                            }
+                          }
+                        }
+                      },
+                      "maara_kuukaudessa": {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Määrä kuukaudessa"
+                            }
+                          ],
+                          "title": [
+                            {
+                              "lang": "fi",
+                              "value": "Määrä euroina kuukaudessa"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "Kenttään kirjataan euromäärä, jonka elatusavun suorittaja maksaa elatusta varten kuukaudessa."
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "100"
+                            }
+                          ],
+                          "implementationNote": [
+                            {
+                              "lang": "fi",
+                              "value": "Ehdollinen pakollisuus: Kenttä on pakollinen, jos \"Kertamaksuna suoritettavan elatusavun määrä euroina\" -kenttä jätetään tyhjäksi."
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Määrä"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": true,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 21
+                        },
+                        "required": [
+                          "value",
+                          "code"
+                        ],
+                        "properties": {
+                          "value": {
+                            "type": "number"
+                          },
+                          "code": {
+                            "type": "string"
+                          }
+                        }
+                      },
+                      "kuukausittainen_maksupaiva": {
+                        "type": "number",
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Kuukausittainen maksupäivä"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "Kenttään kirjataan elatusavun kuukausittainen maksupäivä."
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Numero"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 22
+                        }
+                      }
+                    }
+                  }
+                },
+                "kertamaksuna_suoritettava_elatusapu": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Kertamaksuna suoritettava elatusapu"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 23
+                  },
+                  "required": [],
+                  "properties": {
+                    "kertamaksuna_suoritettavan_elatusavun_maara_euroina": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Kertamaksuna suoritettavan elatusavun määrä euroina"
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Ehdollinen pakollisuus: Kenttä on pakollinen, jos \"Määrä euroina kuukaudessa\" -kenttä jätetään tyhjäksi."
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Määrä"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": false,
+                        "conditionalRequired": true,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 24
+                      },
+                      "required": [
+                        "value",
+                        "code"
+                      ],
+                      "properties": {
+                        "value": {
+                          "type": "number"
+                        },
+                        "code": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "kertamaksuna_suoritettavan_elatusavun_maksupaiva": {
+                      "type": "string",
+                      "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Kertamaksuna suoritettavan elatusavun maksupäivä"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Pvm"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 25
+                      }
+                    }
+                  }
+                }
+              }
+            },
+            "sopimusteksti": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sopimusteksti"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 26
+              }
+            }
+          }
+        },
+        "todistaja": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "string",
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Todistaja"
+                }
+              ],
+              "representation": [
+                {
+                  "lang": "fi",
+                  "value": "Nimi"
+                }
+              ],
+              "repeatable": true,
+              "required": false,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 27
+            }
+          }
+        },
+        "lisatiedot": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lisätiedot"
+              }
+            ],
+            "example": [
+              {
+                "lang": "fi",
+                "value": "Elatusapu on sidottu elinkustannusindeksiin. Vahvistetun elatusavun määrä tarkistetaan kalenterivuoden alusta ja määrään tehdään elinkustannusindeksin tarkistusta vastaava muutos."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 28
+          }
+        },
+        "lakiselostus": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lakiselostus"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä voidaan käyttää automaattitekstiä, jonka organisaatio yhdessä tietojärjestelmätoimittajan kanssa laatii. THL ei laadi kentässä näytettäviä tekstejä."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 29
+          }
+        },
+        "paivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Päivämäärä"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan asiakirjan laatimisen päivämäärä."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 30
+          }
+        },
+        "laatija": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Laatija"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "-"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 31
+          },
+          "required": [
+            "sukunimi",
+            "etunimet"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 32
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 33
+              }
+            },
+            "tehtavanimike": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Tehtävänimike"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 34
+              }
+            },
+            "palveluyksikko": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Palveluyksikkö"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.202"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 35
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "allekirjoitus": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Allekirjoitus"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakirjan allekirjoittavat sopijapuolet, kuten asiakkaina olevat puolisot tai puolison laillinen edustaja."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 36
+            },
+            "required": [
+              "allekirjoituksen_tyyppi"
+            ],
+            "properties": {
+              "allekirjoituksen_tyyppi": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoituksen tyyppi"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan luokituksen avulla allekirjoituksen tyyppi."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "1 \u003d Asiakirja on allekirjoitettu sähköisesti"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: eArkisto - Allekirjoitus 1.2.246.537.5.40161"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d252\u0026versionKey\u003d329"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.5.40161"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 37
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.5\\.40161(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              },
+              "paikka": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Paikka"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoituspaikka. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa silloin, kun asiakirja allekirjoitetaan käsin eli Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "Helsinki"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 38
+                }
+              },
+              "paivamaara": {
+                "type": "string",
+                "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Päivämäärä"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoituksen päivämäärä. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "29.05.2020"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Pvm"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 39
+                }
+              },
+              "allekirjoitus": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoitus"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoitus"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 40
+                }
+              },
+              "nimi": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoittajan nimi tai nimenselvennys. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 41
+                }
+              },
+              "rooli": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Rooli"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoittajan rooli. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 42
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

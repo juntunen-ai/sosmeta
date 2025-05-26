@@ -1,0 +1,1842 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Sosiaalihuollon ilmoitus toiselle viranomaiselle\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Sosiaalihuollon ilmoitus toiselle viranomaiselle\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2023-02-28",
+    "dataComponentLibraryVersion": "2023-02-27",
+    "oid": "1.2.246.537.6.1506.4021.2023.2.28",
+    "documentType": "Ilmoitus",
+    "documentAuthor": "Ammattihenkilö",
+    "documentSubject": "Sosiaalihuollon  palvelutehtäville yhteiset asiakasasiakirjat"
+  },
+  "required": [
+    "sosiaalihuollon_ilmoitus_toiselle_viranomaiselle"
+  ],
+  "properties": {
+    "sosiaalihuollon_ilmoitus_toiselle_viranomaiselle": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Sosiaalihuollon ilmoitus toiselle viranomaiselle"
+          },
+          {
+            "lang": "sv",
+            "value": "Anmälan från socialvården till en annan myndighet"
+          }
+        ]
+      },
+      "required": [
+        "vastaanottaja",
+        "asiakas",
+        "kuvaus_asiakkaan_tilanteesta_ja_tuen_tarpeista",
+        "ilmoituksen_tekemiseen_on_asiakkaan_suostumus",
+        "ilmoittaja"
+      ],
+      "properties": {
+        "vastaanottaja": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Vastaanottaja"
+              },
+              {
+                "lang": "sv",
+                "value": "Mottagare"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Vastaanottaja on viranomainen (organisaatio), jonka vastuulle tarvittavan tuen järjestäminen ensisijaisesti kuuluu. Sosiaalihuoltolain 40 §:n perusteella ilmoituksen vastaanottaneen viranomaisen tulee asiakkaan suostumuksella ilmoittaa siihen yhteyttä ottaneelle viranomaiselle ilman aiheetonta viivytystä, mihin toimiin se on ilmoituksen johdosta ryhtynyt. Ilmoittamista ei kuitenkaan tarvitse tehdä, jos se on ilmeisen tarpeetonta."
+              },
+              {
+                "lang": "sv",
+                "value": "Mottagaren är en myndighet (organisation) som i första hand ansvarar för att ordna det stöd som behövs. Enligt 40 § i socialvårdslagen ska den myndighet som har tagit emot anmälan med klientens samtycke utan ogrundat dröjsmål meddela den kontaktande myndigheten vilka åtgärder myndigheten har vidtagit med anledning av anmälan. Anmälan behöver dock inte göras, om det är uppenbart onödigt."
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 1
+          },
+          "required": [
+            "organisaation_nimi"
+          ],
+          "properties": {
+            "organisaation_nimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Organisaation nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Organisationens namn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan organisaation nimi."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas organisationens namn."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 2
+              }
+            },
+            "yhteystiedot": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Yhteystiedot"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kontaktuppgifter"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 3
+              },
+              "required": [],
+              "properties": {
+                "osoite": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Osoite"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Adress"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "implementationNote": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttä ei ole toistuva TK Yhteystietojen määrityksestä poiketen."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kenttä ei ole toistuva TK Yhteystietojen määrityksestä poiketen."
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 4
+                  },
+                  "required": [],
+                  "properties": {
+                    "lahiosoite": {
+                      "type": "string",
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Lähiosoite"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Näradress"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "-"
+                          }
+                        ],
+                        "example": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "-"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Teksti"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Text"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 5
+                      }
+                    },
+                    "postinumero": {
+                      "type": "string",
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Postinumero"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Postnummer"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "-"
+                          }
+                        ],
+                        "example": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "-"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Teksti"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Text"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 6
+                      }
+                    },
+                    "postitoimipaikka": {
+                      "type": "string",
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Postitoimipaikka"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Postkontor"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "-"
+                          }
+                        ],
+                        "example": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "-"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Nimi"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Namn"
+                          }
+                        ],
+                        "repeatable": false,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 7
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "asiakas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Klient"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                },
+                {
+                  "lang": "sv",
+                  "value": "-"
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 8
+            },
+            "required": [
+              "sukunimi",
+              "etunimet",
+              "henkilotunnus"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 9
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 10
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Personbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 11
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "turvakielto": {
+                "type": "boolean",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Turvakielto"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Spärrmarkering"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan onko henkilöllä yhteystietoja koskeva turvakielto. Palvelunantajalla on erityinen velvollisuus huolehtia, etteivät turvakiellon suojaamat tiedot pääse ulkopuolisten käsiin."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas om personen har en spärrmarkering som gäller kontaktuppgifterna. Tillhandahållaren av tjänster har särskild skyldighet att se till att uppgifterna som skyddas av spärrmarkeringen inte kommer i utomståendes händer."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "Kyllä"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Ja"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Kytkin"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Brytare"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 12
+                }
+              },
+              "yhteystiedot": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Yhteystiedot"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kontaktuppgifter"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 13
+                },
+                "required": [],
+                "properties": {
+                  "osoite": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Osoite"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Adress"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "-"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "-"
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 14
+                      },
+                      "required": [],
+                      "properties": {
+                        "lahiosoite": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Lähiosoite"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Näradress"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Teksti"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Text"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 15
+                          }
+                        },
+                        "postinumero": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Postinumero"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Postnummer"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Teksti"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Text"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 16
+                          }
+                        },
+                        "postitoimipaikka": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Postitoimipaikka"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Postkontor"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 17
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "puhelinnumero": {
+                    "type": "string",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Puhelinnumero"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Telefonnummer"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "example": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Teksti"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Text"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 18
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "kuvaus_asiakkaan_tilanteesta_ja_tuen_tarpeista": {
+          "type": "string",
+          "minLength": 1,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Kuvaus asiakkaan tilanteesta ja tuen tarpeista"
+              },
+              {
+                "lang": "sv",
+                "value": "Beskrivning av klientens situation och stödbehov"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 19
+          }
+        },
+        "perustelut": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Perustelut"
+              },
+              {
+                "lang": "sv",
+                "value": "Motiveringar"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Kuvaus sosiaalihuollossa annetusta tuesta ja perustelut sille, miksi asiakkaan tarpeisiin ei voida vastata vain sosiaalihuollon tuella"
+              },
+              {
+                "lang": "sv",
+                "value": "Beskrivning av det stöd som har getts inom socialvården och motiveringar till varför klientens behov inte kan tillgodoses endast med stöd av socialvården"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 20
+          }
+        },
+        "ilmoituksen_tekemiseen_on_asiakkaan_suostumus": {
+          "type": "boolean",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Ilmoituksen tekemiseen on asiakkaan suostumus"
+              },
+              {
+                "lang": "sv",
+                "value": "Klienten har gett sitt samtycke till att anmälan görs"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Ilmoituksen tekeminen perustuu sosiaalihuoltolain 40 §:n mukaan asiakkaan suostumukseen, mutta tietyissä sosiaalihuollon asiakaslain mukaisissa tilanteissa ilmoitus voidaan tehdä myös ilman asiakkaan suostumusta."
+              },
+              {
+                "lang": "sv",
+                "value": "Enligt 40 § i socialvårdslagen grundar sig anmälan på klientens samtycke, men i vissa situationer enligt klientlagen kan anmälan göras även utan klientens samtycke."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Kytkin"
+              },
+              {
+                "lang": "sv",
+                "value": "Brytare"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 21
+          }
+        },
+        "perustelut_ilmoituksen_tekemiselle_ilman_asiakkaan_suostumusta": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Perustelut ilmoituksen tekemiselle ilman asiakkaan suostumusta"
+              },
+              {
+                "lang": "sv",
+                "value": "Motivering till att anmälan görs utan klientens samtycke"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Perustelujen lisäksi tähän voidaan kirjata tieto siitä, onko asiakas tietoinen ilmoituksen tekemisestä. Sosiaalihuoltolain 40 §:n mukaan tietojen luovuttamisesta ilman asiakkaan suostumusta säädetään sosiaalihuollon asiakkaan asemasta ja oikeuksista annetussa laissa (812/2000)."
+              },
+              {
+                "lang": "sv",
+                "value": "Utöver motiveringarna kan här antecknas uppgifter om huruvida klienten är medveten om att anmälan görs. Enligt 40 § i socialvårdslagen föreskrivs om utlämnande av uppgifter utan klientens samtycke i lagen om klientens ställning och rättigheter inom socialvården (812/2000)."
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kenttä on pakollinen, jos edelliseen kenttään on vastattu \"ei\"."
+              },
+              {
+                "lang": "sv",
+                "value": "Fältet är obligatoriskt om svaret i föregående fält är \"nej\"."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 22
+          }
+        },
+        "ilmoittaja": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Ilmoittaja"
+              },
+              {
+                "lang": "sv",
+                "value": "Anmälare"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Ilmoittaja on asiakkaan palvelutarpeen arvioinnista vastaava sosiaalihuollon ammattihenkilö, omatyöntekijä tai muu asiakkaan palveluista vastaava työntekijä."
+              },
+              {
+                "lang": "sv",
+                "value": "Anmälaren är en yrkesutbildad person inom socialvården som ansvarar för bedömningen av klientens servicebehov, en egen kontaktperson eller någon annan arbetstagare som ansvarar för klientens service."
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 23
+          },
+          "required": [
+            "sukunimi",
+            "etunimet"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 24
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 25
+              }
+            },
+            "tehtavanimike": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Tehtävänimike"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Uppgiftsbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 26
+              }
+            },
+            "palveluyksikko": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Palveluyksikkö"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Serviceenhet"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas namnet på serviceenheten enligt Organisationsregistret för social- och hälsovården."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Esbo centrums barnskydd, Esbo stad, social- och hälsovårdssektorn"
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.202"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 27
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "yhteystiedot": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Yhteystiedot"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kontaktuppgifter"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 28
+              },
+              "required": [],
+              "properties": {
+                "osoite": {
+                  "type": "array",
+                  "minItems": 0,
+                  "items": {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Osoite"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Adress"
+                        }
+                      ],
+                      "description": [
+                        {
+                          "lang": "fi",
+                          "value": "-"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "-"
+                        }
+                      ],
+                      "repeatable": true,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 29
+                    },
+                    "required": [],
+                    "properties": {
+                      "lahiosoite": {
+                        "type": "string",
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Lähiosoite"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Näradress"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Teksti"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Text"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 30
+                        }
+                      },
+                      "postinumero": {
+                        "type": "string",
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Postinumero"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Postnummer"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Teksti"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Text"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 31
+                        }
+                      },
+                      "postitoimipaikka": {
+                        "type": "string",
+                        "sosmeta": {
+                          "name": [
+                            {
+                              "lang": "fi",
+                              "value": "Postitoimipaikka"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Postkontor"
+                            }
+                          ],
+                          "description": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "example": [
+                            {
+                              "lang": "fi",
+                              "value": "-"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "-"
+                            }
+                          ],
+                          "representation": [
+                            {
+                              "lang": "fi",
+                              "value": "Nimi"
+                            },
+                            {
+                              "lang": "sv",
+                              "value": "Namn"
+                            }
+                          ],
+                          "repeatable": false,
+                          "required": false,
+                          "conditionalRequired": false,
+                          "nationwideRecordedInformation": false,
+                          "hiddenField": false,
+                          "hiddenTitle": false,
+                          "rowNumber": 32
+                        }
+                      }
+                    }
+                  }
+                },
+                "puhelinnumero": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Puhelinnumero"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Telefonnummer"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 33
+                  }
+                },
+                "sahkopostiosoite": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Sähköpostiosoite"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "E-postadress"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 34
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ilmoittamispaivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Ilmoittamispäivämäärä"
+              },
+              {
+                "lang": "sv",
+                "value": "Anmälningsdatum"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 35
+          }
+        },
+        "lisatiedot": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lisätiedot"
+              },
+              {
+                "lang": "sv",
+                "value": "Mer information"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 36
+          }
+        },
+        "lakiselostus": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lakiselostus"
+              },
+              {
+                "lang": "sv",
+                "value": "Lagförklaring"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan tieto siitä, että ilmoitus perustuu sosiaalihuoltolain 40 §:ään, ja kuvataan mitä velvollisuuksia tämän ilmoituksen vastaanottajalla on."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas uppgifter om att anmälan grundar sig på 40 § i socialvårdslagen och beskrivs vilka skyldigheter mottagaren av anmälan har."
+              }
+            ],
+            "example": [
+              {
+                "lang": "fi",
+                "value": "Tämä ilmoitus on tehty sosiaalihuoltolain 40 §:n perusteella. Ilmoituksen vastaanottajan tulee asiakkaan suostumuksella ilmoittaa ilman aiheetonta viivytystä tämän ilmoituksen tekijälle sen, mihin toimiin se on ryhtynyt. Ilmoittamista ei kuitenkaan tarvitse tehdä, jos se on ilmeisen tarpeetonta."
+              },
+              {
+                "lang": "sv",
+                "value": "Denna anmälan har gjorts med stöd av 40 § i socialvårdslagen. Den som har tagit emot anmälan ska med klientens samtycke utan ogrundat dröjsmål meddela den kontaktande myndigheten vilka åtgärder den har vidtagit. Anmälan behöver dock inte göras, om det är uppenbart onödigt."
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä voidaan käyttää automaattitekstiä, jonka organisaatio yhdessä tietojärjestelmätoimittajan kanssa laatii. THL ei laadi kentässä näytettäviä tekstejä."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet kan man använda automattext, som organisationen upprättar tillsammans med datasystemleverantören. THL ansvarar inte för produktion av automattext i fältet."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 37
+          }
+        }
+      }
+    }
+  }
+}

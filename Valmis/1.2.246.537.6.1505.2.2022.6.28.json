@@ -1,0 +1,1456 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Asia-asiakirja\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Asia-asiakirja\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2022-06-28",
+    "dataComponentLibraryVersion": "2022-03-24",
+    "oid": "1.2.246.537.6.1505.2.2022.6.28",
+    "documentType": "Asia-asiakirja",
+    "documentAuthor": "Ammattihenkilö",
+    "documentSubject": "Asia- ja asiakkuusasiakirja"
+  },
+  "required": [
+    "asia_asiakirja"
+  ],
+  "properties": {
+    "asia_asiakirja": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Asia-asiakirja"
+          },
+          {
+            "lang": "sv",
+            "value": "Ärendehandling"
+          }
+        ]
+      },
+      "required": [
+        "palvelunjarjestajan_toimintayksikko",
+        "asiakas"
+      ],
+      "properties": {
+        "palvelunjarjestajan_toimintayksikko": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Palvelunjärjestäjän toimintayksikkö"
+              },
+              {
+                "lang": "sv",
+                "value": "Tjänsteanordnarens verksamhetsenhet"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan palvelunjärjestäjän toimintayksikkötasoinen nimi SOTE-organisaatiorekisterin avulla."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas namnet på anordnaren av tjänster på verksamhetsenhetsnivå med hjälp av Organisationsregistret för social- och hälsovården."
+              }
+            ],
+            "classification": [
+              {
+                "lang": "fi",
+                "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+              },
+              {
+                "lang": "sv",
+                "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+              }
+            ],
+            "classificationLink": [
+              {
+                "lang": "",
+                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+              }
+            ],
+            "classificationOid": [
+              {
+                "lang": "",
+                "value": "1.2.246.537.6.202"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Koodi"
+              },
+              {
+                "lang": "sv",
+                "value": "Kod"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 1
+          },
+          "required": [
+            "system",
+            "code",
+            "display"
+          ],
+          "properties": {
+            "system": {
+              "type": "string",
+              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+            },
+            "code": {
+              "type": "string"
+            },
+            "display": {
+              "type": "string"
+            }
+          }
+        },
+        "asiakas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Klient"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Tähän kirjataan sen asiakkaan tiedot, jonka asiasta on kyse. Asiakkaan tiedot toistuvat, jos kyseessä on yhteinen asia."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Här antecknas uppgifter för den klient, vars ärende det gäller. Klientens uppgifter upprepas, om det är frågan om ett gemensamt ärende."
+                }
+              ],
+              "implementationNote": [
+                {
+                  "lang": "fi",
+                  "value": "Ehdollisesti toistuva: Jos kyseessä on yhteinen asia, tämä kohta toistuu."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Villkorlig återkommande: Om det är frågan om ett gemensamt ärende, återkommer denna punkt."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 2
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan asiakkaan sukunimi."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas klientens efternamn."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Tietotyyppi kuvailutietotasolla CDA R2 headeria vastaava (PN), sisällössä JSON"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Informationstyp på nivån för beskrivningsinformation som motsvarar CDA R2 header (PN), i innehållet JSON"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 3
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan asiakkaan etunimi tai etunimet."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas klientens förnamn eller efternamn."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Tietotyyppi kuvailutietotasolla CDA R2 headeria vastaava (PN), sisällössä JSON"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Informationstyp på nivån för beskrivningsinformation som motsvarar CDA R2 header (PN), i innehållet JSON"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 4
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Personbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan asiakkaan henkilötunnus."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas klientens personbeteckning."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Joko henkilötunnus tai tilapäinen yksilöintitunnus on pakollinen. Tietotyyppi kuvailutietotasolla CDA R2 headeria vastaava (PN), sisällössä JSON"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Villkorlig obligatorisk: Antingen personbeteckning eller tillfällig identifikationskod är obligatorisk. Informationstyp på nivån för beskrivningsinformation som motsvarar CDA R2 header (PN), i innehållet JSON"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 5
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "tilapainen_yksilointitunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Tilapäinen yksilöintitunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Temporär identifikationskod"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan tarvittaessa asiakkaan tilapäinen yksilöintitunnus."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas vid behov klientens tillfälliga identifikationskod."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "112233-445a"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "112233-445a"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Joko henkilötunnus tai tilapäinen yksilöintitunnus on pakollinen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Villkorlig obligatorisk: Antingen personbeteckning eller tillfällig identifikationskod är obligatorisk."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 6
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "syntymaaika": {
+                "type": "string",
+                "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Syntymäaika"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Födelsetid"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan asiakkaan syntymäaika, jos käytetään tilapäistä yksilöintitunnusta."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas klientens födelsetid, om en tillfällig identifikationskod används."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "11.16.1922"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "11.16.1922"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Pvm"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 7
+                }
+              },
+              "asiaan_liittymishetki": {
+                "type": "string",
+                "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Asiaan liittymishetki"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Tidpunkt för anslutning till ärendet"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan ajankohta, jolloin asiakas on liittynyt yhteiseen asiaan."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas den tidpunkt, då klienten har anslutits till ett gemensamt ärende."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Jos kyseessä on yhteinen asia, asiakkaiden asiaan liittymishetket on kirjattava. Kenttää käytetään II-vaiheesta eteenpäin."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Villkorlig obligatorisk: Om det är frågan om ett gemensamt ärende, ska tidpunkten för klientens anslutning till ärendet antecknas. Fältet används från skede II framåt."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Hetki"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum och klockslag"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 8
+                }
+              },
+              "asiasta_poistumishetki": {
+                "type": "string",
+                "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Asiasta poistumishetki"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Tidpunkt för uteslutning till ärendet"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan ajankohta, jolloin asiakas on poistunut yhteisestä asiasta."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas den tidpunkt, då klienten har avlägsnats från ett gemensamt ärende."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttää käytetään, jos kyseessä on yhteinen asia. Kenttää käytetään II vaiheesta eteenpäin."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Fältet används om det är frågan om ett gemensamt ärende. Fältet används från skede II framåt."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Hetki"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum och klockslag"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 9
+                }
+              }
+            }
+          }
+        },
+        "asian_tiedot": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Asian tiedot"
+              },
+              {
+                "lang": "sv",
+                "value": "Information om ärendet"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 10
+          },
+          "required": [
+            "asiatunnus",
+            "nimi",
+            "tila",
+            "avauspaiva",
+            "palvelutehtava"
+          ],
+          "properties": {
+            "asiatunnus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Asiatunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ärendenummer"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan asian yksilöivä OID-tunnus."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas den OID-kod som identifierar ärendet."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Tunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Identifierare"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 11
+              },
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            },
+            "nimi": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan luokituksen avulla käsiteltävänä olevan asian nimi."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas med hjälp av klassificeringen namnet på det ärende som är under behandling."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: Sosiaalihuolto - Sosiaalihuollon asia 1.2.246.537.6.1265"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kodtjänsten: Socialvård - Socialvårdsärende 1.2.246.537.6.1265"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d2545\u0026versionKey\u003d2845"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.1265"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 12
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1265(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "lisatieto_luokkaan_muu": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Lisätieto luokkaan \"Muu\""
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ytterligare information i klassen ”Annan”"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään annetaan lisätietoa, jos Nimi-kentässä olevasta luokituksesta on valittu \"Muu\"."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas ytterligare information, om ”Annan” har valts i klassificeringen för fältet Namn."
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Jos Nimi-kentässä on valittu luokka \"99 Muu\", kenttä on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Jos Nimi-kentässä on valittu luokka \"99 Muu\", kenttä on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 13
+              }
+            },
+            "tila": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Tila"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Status"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan luokituksen avulla käsiteltävänä olevan asian tilatieto."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas med hjälp av klassificeringen status för det ärende som är under behandling."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: Sosiaalihuolto - Asian tila 1.2.246.537.6.1501"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kodtjänsten: Socialvård - Ärendestatus 1.2.246.537.6.1501"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d2364\u0026versionKey\u003d2624"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.1501"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 14
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1501(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "avauspaiva": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Avauspäivä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Öppningsdatum"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan ajankohta, jolloin asia avataan."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas det datum, då ärendet öppnas."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Pvm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 15
+              }
+            },
+            "paattymispaiva": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Päättymispäivä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Avslutningsdatum"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan ajankohta, jolloin asia suljetaan."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas det datum, då ärendet stängs."
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Jos asia on suljettu, kenttä on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Villkorlig obligatorisk: Om ärendet är stängt, är fältet obligatoriskt."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Pvm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 16
+              }
+            },
+            "yhteinen_asia": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Yhteinen asia"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Gemensamt ärende"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan, onko kyseessä usean asiakkaan yhteinen asia."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas, om det är frågan om flera klienters gemensamma ärende."
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Jos tähän on vastattu \"kyllä\" (true), Asiaan liittymishetki on pakollinen. Kenttää käytetään II vaiheesta eteenpäin."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Om svaret är \"ja” (true) här, är anslutningstidpunkt för ärendet obligatorisk. Fältet används från skede II framåt."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 17
+              }
+            },
+            "palvelutehtava": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Palvelutehtävä"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Serviceuppgift"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan luokituksen avulla sosiaalihuollon palvelutehtävä, jonka järjestämisen yhteydessä asia avataan."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas med hjälp av klassificeringen den serviceuppgift inom socialvården, för vilken ärendet öppnas."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: Sosiaalihuolto - Palvelutehtävä 1.2.246.537.6.1221"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kodtjänsten: Socialvård - Serviceuppgift 1.2.246.537.6.1221"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d704\u0026versionKey\u003d2563"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.1221"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 18
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1221(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "muut_asiaan_liittyvat_henkilot": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Muut asiaan liittyvät henkilöt"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Andra samhörande personer"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Tämä tietokokonaisuus toistuva, koska  asiaan liittyviä henkilöitä voi olla useita."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Den här uppgiftshelheten är återkommande, eftersom det kan finnas flera samhörande personer."
+                }
+              ],
+              "repeatable": true,
+              "required": false,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 19
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan asianosaisen sukunimi."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas partens efternamn."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 20
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan asianosaisen etunimet."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas partens förnamn."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 21
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Personbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan asianosaisen henkilötunnus."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas partens personbeteckning."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 22
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "rooli": {
+                "type": "array",
+                "minItems": 0,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Rooli"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Roll"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan luokituksen avulla rooli, jossa henkilö on suhteessa siihen asiakkaaseen, jonka asiasta on kyse. Kenttä on toistuva, koska henkilöllä voi olla useampia rooleja."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet antecknas med hjälp av klassificeringen den roll, i vilken personen anknyter till den klient vars ärende det gäller. Fältet upprepas, eftersom personen kan ha flera roller."
+                      }
+                    ],
+                    "classification": [
+                      {
+                        "lang": "fi",
+                        "value": "Koodistopalvelin: Sosiaalihuolto - Asiakkuuteen liittyvä rooli 1.2.246.537.6.1284"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kodtjänst: Socialvård ‑ Roll i samband med en klientrelation 1.2.246.537.6.1284"
+                      }
+                    ],
+                    "classificationLink": [
+                      {
+                        "lang": "",
+                        "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d3805\u0026versionKey\u003d4306"
+                      }
+                    ],
+                    "classificationOid": [
+                      {
+                        "lang": "",
+                        "value": "1.2.246.537.6.1284"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Koodi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kod"
+                      }
+                    ],
+                    "repeatable": true,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 23
+                  },
+                  "required": [
+                    "system",
+                    "code",
+                    "display"
+                  ],
+                  "properties": {
+                    "system": {
+                      "type": "string",
+                      "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1284(\\.\\d+)*$"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "display": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "roolin_kuvaus": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Roolin kuvaus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Rollbeskrivning"
+                    }
+                  ],
+                  "title": [
+                    {
+                      "lang": "fi",
+                      "value": "Lisätieto luokkaan \"Muu\" tai roolin tarkempi kuvaus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Ytterligare information i klassen ”Annan” eller noggrannare beskrivning av rollen"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään annetaan lisätietoa, jos Rooli-kentässä olevasta luokituksesta on valittu \"Muu\", tai kuvataan tarkemmin luokituksesta valittua luokkaa."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet anges ytterligare information om \"Övrigt\" har valts i klassificeringen i fältet Roll eller om en klass som har valts ska beskrivas noggrannare."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 24
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

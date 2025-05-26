@@ -1,0 +1,1755 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Sosiaalihuollon tarpeesta tehdyn ilmoituksen tai yhteydenoton arvio\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Sosiaalihuollon tarpeesta tehdyn ilmoituksen tai yhteydenoton arvio\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2023-09-11",
+    "dataComponentLibraryVersion": "2023-09-08",
+    "oid": "1.2.246.537.6.1506.1009.2023.9.11",
+    "documentType": "Arvio",
+    "documentAuthor": "Ammattihenkilö",
+    "documentSubject": "Sosiaalihuollon  palvelutehtäville yhteiset asiakasasiakirjat"
+  },
+  "required": [
+    "sosiaalihuollon_tarpeesta_tehdyn_ilmoituksen_tai_yhteydenoton_arvio"
+  ],
+  "properties": {
+    "sosiaalihuollon_tarpeesta_tehdyn_ilmoituksen_tai_yhteydenoton_arvio": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Sosiaalihuollon tarpeesta tehdyn ilmoituksen tai yhteydenoton arvio"
+          },
+          {
+            "lang": "sv",
+            "value": "Bedömning av en kontakt eller anmälan gällande stödbehov inom socialvården"
+          }
+        ]
+      },
+      "required": [
+        "asiakas",
+        "toimenpiteet",
+        "arvio_asian_kiireellisyydesta",
+        "laatija"
+      ],
+      "properties": {
+        "asiakas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Klient"
+                }
+              ],
+              "title": [
+                {
+                  "lang": "fi",
+                  "value": "Henkilö, josta yhteydenotto tai ilmoitus on tehty"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Person om vilken kontakt eller anmälan har gjorts"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                },
+                {
+                  "lang": "sv",
+                  "value": "-"
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 1
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 2
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 3
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Personbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Joko Henkilötunnus-kenttä tai Tilapäinen yksilöintitunnus -kenttä on pakollinen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Villkorligt obligatorisk: Antingen fältet Personbeteckning eller Tillfällig identifikationskod är obligatorisk."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 4
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "tilapainen_yksilointitunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Tilapäinen yksilöintitunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Temporär identifikationskod"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Joko Henkilötunnus-kenttä tai Tilapäinen yksilöintitunnus -kenttä on pakollinen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Villkorligt obligatorisk: Antingen fältet Personbeteckning eller Tillfällig identifikationskod är obligatorisk."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 5
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "yhteydenottotapa": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Yhteydenottotapa"
+              },
+              {
+                "lang": "sv",
+                "value": "Kontaktsätt"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan luokituksen avulla tapa, jolla ilmoittaja tai yhteydenottaja on ottanut sosiaalihuoltoon yhteyttä."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas med hjälp av klassificeringen det sätt på vilket anmälaren eller den som tar kontakt har kontaktat socialvården."
+              }
+            ],
+            "classification": [
+              {
+                "lang": "fi",
+                "value": "Koodistopalvelin: Sosiaalihuolto - Asiointitapa 1.2.246.537.6.1250"
+              },
+              {
+                "lang": "sv",
+                "value": "Kodtjänsten: Socialvård - Typ av kontakt med klienten 1.2.246.537.6.1250"
+              }
+            ],
+            "classificationLink": [
+              {
+                "lang": "",
+                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1803\u0026versionKey\u003d2043"
+              }
+            ],
+            "classificationOid": [
+              {
+                "lang": "",
+                "value": "1.2.246.537.6.1250"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Koodi"
+              },
+              {
+                "lang": "sv",
+                "value": "Kod"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": true,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 6
+          },
+          "required": [
+            "system",
+            "code",
+            "display"
+          ],
+          "properties": {
+            "system": {
+              "type": "string",
+              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1250(\\.\\d+)*$"
+            },
+            "code": {
+              "type": "string"
+            },
+            "display": {
+              "type": "string"
+            }
+          }
+        },
+        "asiasisalto": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiasisältö"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Sakinnehåll"
+                }
+              ],
+              "title": [
+                {
+                  "lang": "fi",
+                  "value": "Huoli, jonka takia yhteydenotto tai ilmoitus on tehty"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Bekymmer som har föranlett kontakt eller anmälan"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Kenttään täydennetään tarvittaessa yhteydenotossa tai ilmoituksessa olevia tietoja."
+                },
+                {
+                  "lang": "sv",
+                  "value": "I fältet kompletteras vid behov uppgifterna i kontakten eller anmälan."
+                }
+              ],
+              "classification": [
+                {
+                  "lang": "fi",
+                  "value": "Koodistopalvelin: Sosiaalihuolto - Tuen tarve 1.2.246.537.6.1282"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Kodtjänsten: Socialvård - Stödbehov 1.2.246.537.6.1282"
+                }
+              ],
+              "classificationLink": [
+                {
+                  "lang": "",
+                  "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d3043\u0026versionKey\u003d3403"
+                }
+              ],
+              "classificationOid": [
+                {
+                  "lang": "",
+                  "value": "1.2.246.537.6.1282"
+                }
+              ],
+              "representation": [
+                {
+                  "lang": "fi",
+                  "value": "Koodi"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Kod"
+                }
+              ],
+              "repeatable": true,
+              "required": false,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": true,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 7
+            },
+            "required": [
+              "system",
+              "code",
+              "display"
+            ],
+            "properties": {
+              "system": {
+                "type": "string",
+                "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1282(\\.\\d+)*$"
+              },
+              "code": {
+                "type": "string"
+              },
+              "display": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "lastensuojeluasian_syy": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Lastensuojeluasian syy"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Orsak till barnskyddsärende"
+                }
+              ],
+              "title": [
+                {
+                  "lang": "fi",
+                  "value": "Syyt, joiden perusteella käynnistettiin lastensuojeluasia"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Orsaker till att barnskyddsärendet inleddes"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Kenttää käytetään vain silloin, kun yhteydenoton tai ilmoituksen perusteella tulee vireille lastensuojeluasia."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Fältet används endast när ett barnskyddsärende anhängiggörs utifrån kontakten eller anmälan."
+                }
+              ],
+              "implementationNote": [
+                {
+                  "lang": "fi",
+                  "value": "Luokituksesta käytetään vain lehtisolmuja, eli tarkimman tason koodeja. Asiakirjan laatijalle voidaan näyttää yläluokat."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Luokituksesta käytetään vain lehtisolmuja, eli tarkimman tason koodeja. Asiakirjan laatijalle voidaan näyttää yläluokat."
+                }
+              ],
+              "classification": [
+                {
+                  "lang": "fi",
+                  "value": "Koodistopalvelin: Sosiaalihuolto - Lastensuojeluasian syy 1.2.246.537.6.1251"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Kodtjänsten: Socialvård - Orsak till barnskyddsärende 1.2.246.537.6.1251"
+                }
+              ],
+              "classificationLink": [
+                {
+                  "lang": "",
+                  "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1804\u0026versionKey\u003d2044"
+                }
+              ],
+              "classificationOid": [
+                {
+                  "lang": "",
+                  "value": "1.2.246.537.6.1251"
+                }
+              ],
+              "representation": [
+                {
+                  "lang": "fi",
+                  "value": "Koodi"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Kod"
+                }
+              ],
+              "repeatable": true,
+              "required": false,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": true,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 8
+            },
+            "required": [
+              "system",
+              "code",
+              "display"
+            ],
+            "properties": {
+              "system": {
+                "type": "string",
+                "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1251(\\.\\d+)*$"
+              },
+              "code": {
+                "type": "string"
+              },
+              "display": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "kuvaus_tilanteesta": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Kuvaus tilanteesta"
+              },
+              {
+                "lang": "sv",
+                "value": "Beskrivning av situationen"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään täydennetään tarvittaessa yhteydenotossa tai ilmoituksessa saatuja tietoja. Kenttään kirjataan myös ilmoituksen kohteena olevan henkilön näkemys tilanteesta."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet kompletteras vid behov de uppgifter som har erhållits i kontakten eller anmälan. I fältet antecknas också åsikten om situationen hos den person som anmälan gäller."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 9
+          }
+        },
+        "toimenpiteet": {
+          "type": "string",
+          "minLength": 1,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Toimenpiteet"
+              },
+              {
+                "lang": "sv",
+                "value": "Åtgärder"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Yhteydenotosta tai ilmoituksesta seuranneet toimenpiteet"
+              },
+              {
+                "lang": "sv",
+                "value": "Åtgärder som vidtagits utifrån en kontakt eller en anmälan"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan tieto siitä, mitä tilanteessa on jo tehty."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas uppgifter om vad som redan har gjorts i situationen."
+              }
+            ],
+            "example": [
+              {
+                "lang": "fi",
+                "value": "Esimerkiksi neuvonta, \nohjaus muun palvelun piiriin, asiakasprosessi alkaa, \nei toimenpiteitä."
+              },
+              {
+                "lang": "sv",
+                "value": "Till exempel rådgivning, hänvisning till annan service, klientprocessen börjar, inga åtgärder."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 10
+          }
+        },
+        "tyontekijan_arvio_tarvittavista_palveluista": {
+          "type": "array",
+          "minItems": 0,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Työntekijän arvio tarvittavista palveluista"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Arbetstagarens bedömning av vilken service som behövs"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Tähän kirjataan tieto siitä, millä palvelulla tai palveluilla asiakkaan tarpeisiin pystytään vastaamaan työntekijän arvion ja näkemyksen mukaan."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Här antecknas uppgifter om med vilken service man enligt arbetstagarens bedömning och åsikt kan svara på klientens behov."
+                }
+              ],
+              "example": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                },
+                {
+                  "lang": "sv",
+                  "value": "-"
+                }
+              ],
+              "repeatable": true,
+              "required": false,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 11
+            },
+            "required": [],
+            "properties": {
+              "palvelutehtava": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Palvelutehtävä"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Serviceuppgift"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan luokituksen avulla sosiaalihuollon palvelutehtävä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas socialvårdens serviceuppgift med hjälp av klassificeringen."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "15 \u003d Päihdehuolto"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "15 \u003d Missbrukarvård"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: Sosiaalihuolto - Palvelutehtävä 1.2.246.537.6.1221"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kodtjänsten: Socialvård - Serviceuppgift 1.2.246.537.6.1221"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d704\u0026versionKey\u003d2563"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.6.1221"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kod"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": true,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 12
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1221(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              },
+              "sosiaalipalvelu": {
+                "type": "array",
+                "minItems": 0,
+                "items": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Sosiaalipalvelu"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Socialservice"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan luokituksen avulla sosiaalipalvelu."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet antecknas socialservicen med hjälp av klassificeringen."
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "46 \u003d Sosiaalityö"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "46 \u003d Socialt arbete"
+                      }
+                    ],
+                    "classification": [
+                      {
+                        "lang": "fi",
+                        "value": "Koodistopalvelin: Sosiaalihuolto - Sosiaalipalvelut 1.2.246.537.6.1222"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kodtjänsten: Socialvård - Socialservice 1.2.246.537.6.1222"
+                      }
+                    ],
+                    "classificationLink": [
+                      {
+                        "lang": "",
+                        "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d703\u0026versionKey\u003d2683"
+                      }
+                    ],
+                    "classificationOid": [
+                      {
+                        "lang": "",
+                        "value": "1.2.246.537.6.1222"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Koodi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kod"
+                      }
+                    ],
+                    "repeatable": true,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": true,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 13
+                  },
+                  "required": [
+                    "system",
+                    "code",
+                    "display"
+                  ],
+                  "properties": {
+                    "system": {
+                      "type": "string",
+                      "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1222(\\.\\d+)*$"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "display": {
+                      "type": "string"
+                    }
+                  }
+                }
+              },
+              "kuvaus": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Kuvaus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Beskrivning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kuvataan tekstinä sosiaalihuollon palvelutehtävää tai sosiaalipalvelua ja annetaan luokituksista valittuihin luokkiin liittyvää lisätietoa. Voidaan kuvata esimerkiksi palvelun sisältöä, laatua ja laajuutta."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet beskrivs socialvårdens serviceuppgift eller socialservice och dessutom ges ytterligare information utifrån klassificeringen om de klasser som har valts. Exempelvis kan tjänstens innehåll, typ och omfattning beskrivas."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 14
+                }
+              }
+            }
+          }
+        },
+        "sovitut_jatkotoimenpiteet": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Sovitut jatkotoimenpiteet"
+              },
+              {
+                "lang": "sv",
+                "value": "Överenskomna fortsatta åtgärder"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kuvataan miten esimerkiksi asiakkaan kanssa on sovittu, että asia  etenee. Kenttään kirjataan myös asiakkaalle annettu ohjeistus ja toimijoiden sovitut vastuut."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet beskrivs till exempel hur man kommit överens med klienten om att ärendet ska fortsätta. I fältet antecknas också de anvisningar som getts till klienten och aktörernas avtalade ansvar."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 15
+          }
+        },
+        "henkilo_on_yli_seitsemanviisi_vuotias": {
+          "type": "boolean",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Henkilö on yli 75-vuotias"
+              },
+              {
+                "lang": "sv",
+                "value": "Personen är över 75 år"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Yhteydenotto tai ilmoitus on tehty henkilöstä, joka on yli 75-vuotias"
+              },
+              {
+                "lang": "sv",
+                "value": "Kontakten eller anmälan har gjorts om en person som är över 75 år"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Sosiaalihuoltolain 36 §:n mukaan palvelutarpeen arviointi on aloitettava viimeistään seitsemäntenä arkipäivänä yhteydenotosta, jos henkilö on yli 75-vuotias."
+              },
+              {
+                "lang": "sv",
+                "value": "Enligt 36 § i socialvårdslagen ska bedömningen av servicebehovet inledas senast den sjunde vardagen efter kontakten, om personen är över 75 år."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Kytkin"
+              },
+              {
+                "lang": "sv",
+                "value": "Brytare"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": true,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 16
+          }
+        },
+        "henkilo_saa_ylinta_hoitotukea": {
+          "type": "boolean",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Henkilö saa ylintä hoitotukea"
+              },
+              {
+                "lang": "sv",
+                "value": "Personen får vårdbidrag med högsta belopp"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Yhteydenotto tai ilmoitus on tehty henkilöstä, joka saa ylintä hoitotukea"
+              },
+              {
+                "lang": "sv",
+                "value": "Kontakt eller anmälan har gjorts om en person, som får vårdbidrag med högsta belopp"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Sosiaalihuoltolain 36 §:n mukaan palvelutarpeen arviointi on aloitettava viimeistään seitsemäntenä arkipäivänä yhteydenotosta, jos henkilö saa vammaisetuuksista annetun lain (570/2007) 9 §:n 3 momentin 3 kohdan mukaista ylintä hoitotukea."
+              },
+              {
+                "lang": "sv",
+                "value": "Enligt 36 § i socialvårdslagen ska bedömningen av servicebehovet inledas senast den sjunde vardagen efter kontakten, om personen får högsta vårdbidrag enligt 9 § 3 mom. 3 punkten i lagen om handikappförmåner (570/2007)."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Kytkin"
+              },
+              {
+                "lang": "sv",
+                "value": "Brytare"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": true,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 17
+          }
+        },
+        "erityista_tukea_tarvitseva_lapsi": {
+          "type": "boolean",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Erityistä tukea tarvitseva lapsi"
+              },
+              {
+                "lang": "sv",
+                "value": "Barn som behöver särskilt stöd"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Yhteydenotto tai ilmoitus on tehty lapsesta, jolla on oikeus erityiseen tukeen"
+              },
+              {
+                "lang": "sv",
+                "value": "Kontakt eller anmälan har gjorts om ett barn som har rätt till särskilt stöd"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Sosiaalihuoltolain 36 §:n mukaan palvelutarpeen arviointi on aloitettava viimeistään seitsemäntenä arkipäivänä yhteydenotosta, jos asia koskee erityistä tukea tarvitsevaa lasta."
+              },
+              {
+                "lang": "sv",
+                "value": "Enligt 36 § i socialvårdslagen ska bedömningen av servicebehovet inledas senast den sjunde vardagen efter kontakten, om ärendet gäller ett barn som behöver särskilt stöd."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Kytkin"
+              },
+              {
+                "lang": "sv",
+                "value": "Brytare"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": true,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 18
+          }
+        },
+        "arvio_asian_kiireellisyydesta": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Arvio asian kiireellisyydestä"
+              },
+              {
+                "lang": "sv",
+                "value": "Bedömning av ärendets brådska"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Jos tämä merkintä laaditaan kuraattoripalvelussa, ei luokituksesta käytetä luokkaa 3 \u003d \"Kiireettömiä toimenpiteitä vaativa tilanne\"."
+              },
+              {
+                "lang": "sv",
+                "value": "Om den här handlingen upprättas inom elev- och studerandevårdens kuratorservice, används inte klassen 3 \u003d \"Situation som kräver icke-brådskande åtgärder\"."
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Jos joku kolmen edellisen kentän kytkimestä on asennossa \"kyllä\", niin tässä kentässä ovat sallittuja vain arvot 1 ja 2. Jos kolmen edellisen kentän kytkimet ovat asennossa \"ei\", on tässä kentässä kaikki luokituksen arvot sallittuja."
+              },
+              {
+                "lang": "sv",
+                "value": "Om någon av de tre föregående fältens brytare är i läge \"ja\", är endast värdena 1 och 2 tillåtna i detta fält. Om de tre föregående fältens brytare är i läge \"nej\", är alla klassificeringsvärden tillåtna i detta fält."
+              }
+            ],
+            "classification": [
+              {
+                "lang": "fi",
+                "value": "Koodistopalvelin: Sosiaalihuolto - Sosiaalihuollon kiireellisyyden arvio 1.2.246.537.6.1252"
+              },
+              {
+                "lang": "sv",
+                "value": "Kodtjänsten: Socialvård - Socialvårdens bedömning av graden av brådska 1.2.246.537.6.1252"
+              }
+            ],
+            "classificationLink": [
+              {
+                "lang": "",
+                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d1805\u0026versionKey\u003d2045"
+              }
+            ],
+            "classificationOid": [
+              {
+                "lang": "",
+                "value": "1.2.246.537.6.1252"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Koodi"
+              },
+              {
+                "lang": "sv",
+                "value": "Kod"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": true,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 19
+          },
+          "required": [
+            "system",
+            "code",
+            "display"
+          ],
+          "properties": {
+            "system": {
+              "type": "string",
+              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1252(\\.\\d+)*$"
+            },
+            "code": {
+              "type": "string"
+            },
+            "display": {
+              "type": "string"
+            }
+          }
+        },
+        "kiireellisyyden_perustelu": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Kiireellisyyden perustelu"
+              },
+              {
+                "lang": "sv",
+                "value": "Motivering till graden av brådska"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan lainkohdat ja muut seikat, joiden perusteella kiireellisyys on arvioitu."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas lagstiftning och andra faktorer enligt vilka graden av brådska har bedömts."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 20
+          }
+        },
+        "lisatiedot": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lisätiedot"
+              },
+              {
+                "lang": "sv",
+                "value": "Mer information"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 21
+          }
+        },
+        "lakiselostus": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lakiselostus"
+              },
+              {
+                "lang": "sv",
+                "value": "Lagförklaring"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä voidaan käyttää automaattitekstiä, jonka organisaatio laatii yhdessä tietojärjestelmätoimittajan kanssa. THL ei vastaa kentän automaattitekstien tuottamisesta."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet kan man använda automattext, som organisationen upprättar tillsammans med datasystemleverantören. THL ansvarar inte för produktion av automattext i fältet."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 22
+          }
+        },
+        "paivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Päivämäärä"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan asiakirjan laatimisen päivämäärä."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas datumet då handlingen upprättades."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": true,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 23
+          }
+        },
+        "laatija": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Laatija"
+              },
+              {
+                "lang": "sv",
+                "value": "Upprättare"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Ilmoituksen tai yhteydenoton käsittelijä"
+              },
+              {
+                "lang": "sv",
+                "value": "Handläggare av anmälan eller kontakt"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "-"
+              },
+              {
+                "lang": "sv",
+                "value": "-"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 24
+          },
+          "required": [
+            "sukunimi",
+            "etunimet"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 25
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan ammattihenkilön etunimi."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas den yrkesutbildade personens förnamn."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 26
+              }
+            },
+            "tehtavanimike": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Tehtävänimike"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Uppgiftsbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 27
+              }
+            },
+            "palveluyksikko": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Palveluyksikkö"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Serviceenhet"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas namnet på serviceenheten enligt Organisationsregistret för social- och hälsovården."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Esbo centrums barnskydd, Esbo stad, social- och hälsovårdssektorn"
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.202"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": true,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 28
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

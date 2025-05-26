@@ -1,0 +1,3496 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Oikeudenomistajan suostumus\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Oikeudenomistajan suostumus\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2024-10-31",
+    "dataComponentLibraryVersion": "2024-10-23",
+    "oid": "1.2.246.537.6.1506.14002.2024.10.31",
+    "documentType": "Suostumus",
+    "documentAuthor": "lastenvalvoja",
+    "documentSubject": "Vanhemmuuden selvittämisen asiakasasiakirjat"
+  },
+  "required": [
+    "oikeudenomistajan_suostumus"
+  ],
+  "properties": {
+    "oikeudenomistajan_suostumus": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Oikeudenomistajan suostumus"
+          },
+          {
+            "lang": "sv",
+            "value": "Samtycke av rättsinnehavare"
+          }
+        ]
+      },
+      "required": [
+        "versiotunnus",
+        "asianumero",
+        "ohjeet",
+        "suostumus_koskee_kuollutta",
+        "asiakas",
+        "alaikainen_lapsi",
+        "ohje_yksi",
+        "suostumuksen_vastaanottanut_lastenvalvoja",
+        "allekirjoitus"
+      ],
+      "properties": {
+        "versiotunnus": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Versiotunnus"
+              },
+              {
+                "lang": "sv",
+                "value": "Versionnummer"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "VSAK-13-THL-2025-01-01-fi"
+              },
+              {
+                "lang": "sv",
+                "value": "VSAK-13-THL-2025-01-01-sv"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Versiotunnuksena näytetään asiakirjan alatunnisteessa otsikko-kentässä oleva tunnus."
+              },
+              {
+                "lang": "sv",
+                "value": "Versiotunnuksena näytetään asiakirjan alatunnisteessa otsikko-kentässä oleva tunnus."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Tunnus"
+              },
+              {
+                "lang": "sv",
+                "value": "Identifierare"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 1
+          },
+          "required": [
+            "value"
+          ],
+          "properties": {
+            "system": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          }
+        },
+        "asianumero": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Asianumero"
+              },
+              {
+                "lang": "sv",
+                "value": "Ärendenummer"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Asianumero näytetään asiakirjan ylätunnisteessa. Asianumeron tulee olla sama kuin asiakirjan metatiedoissa oleva asiatunnus."
+              },
+              {
+                "lang": "sv",
+                "value": "Ärendenumret visas i handlingens sidhuvud. Ärendenumret ska vara samma nummer som ärendekoden i handlingens metadata."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Tunnus"
+              },
+              {
+                "lang": "sv",
+                "value": "Identifierare"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 2
+          },
+          "required": [
+            "value"
+          ],
+          "properties": {
+            "system": {
+              "type": "string"
+            },
+            "value": {
+              "type": "string"
+            }
+          }
+        },
+        "vanhemmuuslaki_seitsemanseitsemanviisikaksinollakaksikaksi_kaksikahdeksan_": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Vanhemmuuslaki 775/2022 28 §"
+              },
+              {
+                "lang": "sv",
+                "value": "Föräldraskapslagen 775/2022 28 §"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä oleva lain nimi ja pykälä näytetään asiakirjan nimen alla."
+              },
+              {
+                "lang": "sv",
+                "value": "Kentässä oleva lain nimi ja pykälä näytetään asiakirjan nimen alla."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 3
+          },
+          "required": [],
+          "properties": {}
+        },
+        "ohjeet": {
+          "type": "string",
+          "enum": [
+            "Suostumukset voidaan antaa lapsen syntymän jälkeen. Suostumuksia ei edellytetä annettavan vastaanottajalle henkilökohtaisesti. Suostumusasiakirja täytetään jokaiselle oikeudenomistajalle."
+          ],
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Ohjeet"
+              },
+              {
+                "lang": "sv",
+                "value": "Anvisningar"
+              }
+            ],
+            "title": [
+              {
+                "lang": "fi",
+                "value": "Ohjeet (ks. lisää ohjeita thl.fi/vanhemmuus)"
+              },
+              {
+                "lang": "sv",
+                "value": "Anvisningar (se mer anvisningar thl.fi/foraldraskap)"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä näytetään fraasi-kohdassa oleva teksti.\nOhjeteksti näytetään lomakkeen mukaisesti ennen rooleja."
+              },
+              {
+                "lang": "sv",
+                "value": "Kentässä näytetään fraasi-kohdassa oleva teksti.\nOhjeteksti näytetään lomakkeen mukaisesti ennen rooleja."
+              }
+            ],
+            "phrase": [
+              {
+                "lang": "fi",
+                "value": "Suostumukset voidaan antaa lapsen syntymän jälkeen. Suostumuksia ei edellytetä annettavan vastaanottajalle henkilökohtaisesti. Suostumusasiakirja täytetään jokaiselle oikeudenomistajalle."
+              },
+              {
+                "lang": "sv",
+                "value": "Samtycke kan ges efter barnets födelse. Samtycke behöver inte ges personligen till mottagaren. En handling över samtycke fylls i för varje rättsinnehavare."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Fraasi"
+              },
+              {
+                "lang": "sv",
+                "value": "Fras"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 4
+          }
+        },
+        "suostumus_koskee_kuollutta": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Suostumus koskee kuollutta"
+              },
+              {
+                "lang": "sv",
+                "value": "Samtycke gäller den avlidna"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa."
+              },
+              {
+                "lang": "sv",
+                "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa."
+              }
+            ],
+            "classification": [
+              {
+                "lang": "fi",
+                "value": "Sisäinen luokitus: 1 \u003d mahdollista isää, 2 \u003d mahdollista toista äitiä, 3 \u003d otaksuttua synnyttänyttä äitiä, 4 \u003d synnyttänyttä äitiä"
+              },
+              {
+                "lang": "sv",
+                "value": "Internt kodsystem: 1 \u003d eventuella fadern, 2 \u003d eventuella andra modern, 3 \u003d förmodade mor som har fött barnet, 4 \u003d mor som har fött barnet"
+              }
+            ],
+            "classificationOid": [
+              {
+                "lang": "",
+                "value": "Oikeudenomistajan suostumus/Suostumus koskee kuollutta"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Koodi"
+              },
+              {
+                "lang": "sv",
+                "value": "Kod"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "acceptedValues": [
+              {
+                "lang": "",
+                "value": "1"
+              },
+              {
+                "lang": "",
+                "value": "2"
+              },
+              {
+                "lang": "",
+                "value": "3"
+              },
+              {
+                "lang": "",
+                "value": "4"
+              }
+            ],
+            "rowNumber": 5
+          },
+          "required": [
+            "system",
+            "code",
+            "display"
+          ],
+          "properties": {
+            "system": {
+              "type": "string",
+              "enum": [
+                "oikeudenomistajan_suostumus/suostumus_koskee_kuollutta"
+              ]
+            },
+            "code": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ]
+            },
+            "display": {
+              "type": "string"
+            }
+          }
+        },
+        "asiakas": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakas"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Klient"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "-"
+                },
+                {
+                  "lang": "sv",
+                  "value": "-"
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 6
+            },
+            "required": [
+              "sukunimi",
+              "etunimet"
+            ],
+            "properties": {
+              "sukunimi": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Sukunimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Efternamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 7
+                }
+              },
+              "etunimet": {
+                "type": "string",
+                "minLength": 1,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Etunimet"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Samtliga förnamn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 8
+                }
+              },
+              "henkilotunnus": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Henkilötunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Personbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Tunnus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Identifierare"
+                    }
+                  ],
+                  "systemUri": [
+                    {
+                      "lang": "",
+                      "value": "urn:oid:1.2.246.21"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 9
+                },
+                "required": [
+                  "value"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string"
+                  },
+                  "value": {
+                    "type": "string"
+                  }
+                }
+              },
+              "syntymaaika": {
+                "type": "string",
+                "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Syntymäaika"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Födelsetid"
+                    }
+                  ],
+                  "title": [
+                    {
+                      "lang": "fi",
+                      "value": "Syntymäaika, jos henkilöllä ei ole suomalaista henkilötunnusta"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Födelsedatum, om personen inte har en finsk personbeteckning"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "-"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "-"
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Pvm"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": true,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 10
+                }
+              }
+            }
+          }
+        },
+        "alaikainen_lapsi": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Alaikäinen lapsi"
+              },
+              {
+                "lang": "sv",
+                "value": "Det minderåriga barnet"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "-"
+              },
+              {
+                "lang": "sv",
+                "value": "-"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 11
+          },
+          "required": [
+            "sukunimi",
+            "etunimet"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 12
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 13
+              }
+            },
+            "henkilotunnus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Henkilötunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Tunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Identifierare"
+                  }
+                ],
+                "systemUri": [
+                  {
+                    "lang": "",
+                    "value": "urn:oid:1.2.246.21"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 14
+              },
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            },
+            "syntymaaika": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Syntymäaika"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Födelsetid"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Syntymäaika, jos henkilöllä ei ole suomalaista henkilötunnusta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Födelsedatum, om personen inte har en finsk personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Pvm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 15
+              }
+            }
+          }
+        },
+        "synnyttanyt_aiti_tai_otaksuttu_synnyttanyt_aiti": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Synnyttänyt äiti tai otaksuttu synnyttänyt äiti"
+              },
+              {
+                "lang": "sv",
+                "value": "Mor som har fött barnet eller den förmodade mor som fött barnet"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 16
+          },
+          "required": [
+            "sukunimi",
+            "etunimet"
+          ],
+          "properties": {
+            "synnyttanyt_aiti": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Synnyttänyt äiti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Mor som har fött barnet"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin toteutetaan valintaruutuna kuten lomakkeessa. Ehdollisesti pakollinen: \"Synnyttänyt äiti\" tai \"Otaksuttu synnyttänyt äiti\" -kentistä toinen on pakollinen. Toiseen kentistä on vastattava \"Kyllä\"."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kytkin toteutetaan valintaruutuna kuten lomakkeessa. Ehdollisesti pakollinen: \"Synnyttänyt äiti\" tai \"Otaksuttu synnyttänyt äiti\" -kentistä toinen on pakollinen. Toiseen kentistä on vastattava \"Kyllä\"."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 17
+              }
+            },
+            "otaksuttu_synnyttanyt_aiti": {
+              "type": "boolean",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Otaksuttu synnyttänyt äiti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Den förmodade mor som har fött barnet"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin toteutetaan valintaruutuna kuten lomakkeessa. Ehdollisesti pakollinen: \"Synnyttänyt äiti\" tai \"Otaksuttu synnyttänyt äiti\" -kentistä toinen on pakollinen. Toiseen kentistä on vastattava \"Kyllä\"."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kytkin toteutetaan valintaruutuna kuten lomakkeessa. Ehdollisesti pakollinen: \"Synnyttänyt äiti\" tai \"Otaksuttu synnyttänyt äiti\" -kentistä toinen on pakollinen. Toiseen kentistä on vastattava \"Kyllä\"."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Kytkin"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Brytare"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 18
+              }
+            },
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 19
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 20
+              }
+            },
+            "henkilotunnus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Henkilötunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Personbeteckning"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Tunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Identifierare"
+                  }
+                ],
+                "systemUri": [
+                  {
+                    "lang": "",
+                    "value": "urn:oid:1.2.246.21"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 21
+              },
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            },
+            "syntymaaika": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Syntymäaika"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Födelsetid"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Syntymäaika, jos henkilöllä ei ole suomalaista henkilötunnusta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Födelsedatum, om personen inte har en finsk personbeteckning"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Pvm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 22
+              }
+            }
+          }
+        },
+        "mahdollinen_toinen_vanhempi": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Mahdollinen toinen vanhempi"
+              },
+              {
+                "lang": "sv",
+                "value": "Den eventuella andra föräldern"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Tietokokonaisuus on täytettävä, jos mahdollinen toinen vanhempi on tiedossa."
+              },
+              {
+                "lang": "sv",
+                "value": "Uppgiftshelheten ska fyllas i om den möjliga andra föräldern är känd."
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 23
+          },
+          "required": [
+            "sukunimi",
+            "etunimet"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 24
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 25
+              }
+            },
+            "henkilotunnus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Henkilötunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Tunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Identifierare"
+                  }
+                ],
+                "systemUri": [
+                  {
+                    "lang": "",
+                    "value": "urn:oid:1.2.246.21"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 26
+              },
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            },
+            "syntymaaika": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Syntymäaika"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Födelsetid"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Syntymäaika, jos henkilöllä ei ole suomalaista henkilötunnusta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Födelsedatum, om personen inte har en finsk personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Pvm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 27
+              }
+            }
+          }
+        },
+        "oikeudenomistaja": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Oikeudenomistaja"
+              },
+              {
+                "lang": "sv",
+                "value": "Rättsinnehavare"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "-"
+              },
+              {
+                "lang": "sv",
+                "value": "-"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 28
+          },
+          "required": [
+            "sukunimi",
+            "etunimet"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 29
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 30
+              }
+            },
+            "henkilotunnus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Henkilötunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Tunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Identifierare"
+                  }
+                ],
+                "systemUri": [
+                  {
+                    "lang": "",
+                    "value": "urn:oid:1.2.246.21"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 31
+              },
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            },
+            "syntymaaika": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Syntymäaika"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Födelsetid"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Syntymäaika, jos henkilöllä ei ole suomalaista henkilötunnusta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Födelsedatum, om personen inte har en finsk personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Pvm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 32
+              }
+            },
+            "yhteystiedot": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Yhteystiedot"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kontaktuppgifter"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": true,
+                "hiddenTitle": false,
+                "rowNumber": 33
+              },
+              "required": [],
+              "properties": {
+                "puhelinnumero": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Puhelinnumero"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Telefonnummer"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 34
+                  }
+                }
+              }
+            }
+          }
+        },
+        "oikeudenomistajan_laillinen_edustaja": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Oikeudenomistajan laillinen edustaja"
+              },
+              {
+                "lang": "sv",
+                "value": "Rättsinnehavarens lagliga företrädare"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "-"
+              },
+              {
+                "lang": "sv",
+                "value": "-"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 35
+          },
+          "required": [
+            "sukunimi",
+            "etunimet"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 36
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 37
+              }
+            },
+            "henkilotunnus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Henkilötunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Tunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Identifierare"
+                  }
+                ],
+                "systemUri": [
+                  {
+                    "lang": "",
+                    "value": "urn:oid:1.2.246.21"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 38
+              },
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            },
+            "syntymaaika": {
+              "type": "string",
+              "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Syntymäaika"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Födelsetid"
+                  }
+                ],
+                "title": [
+                  {
+                    "lang": "fi",
+                    "value": "Syntymäaika, jos henkilöllä ei ole suomalaista henkilötunnusta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Födelsedatum, om personen inte har en finsk personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Henkilötunnus- ja Syntymäaika -kentistä toinen on pakollinen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Pvm"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Datum"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 39
+              }
+            },
+            "yhteystiedot": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Yhteystiedot"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kontaktuppgifter"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": true,
+                "hiddenTitle": false,
+                "rowNumber": 40
+              },
+              "required": [],
+              "properties": {
+                "puhelinnumero": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Puhelinnumero"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Telefonnummer"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "-"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "-"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 41
+                  }
+                }
+              }
+            }
+          }
+        },
+        "oikeusgeneettinen_vanhemmuustutkimus": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Oikeusgeneettinen vanhemmuustutkimus"
+              },
+              {
+                "lang": "sv",
+                "value": "Rättsgenetisk föräldraskapsundersökning"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 42
+          },
+          "required": [
+            "suostumus",
+            "suostumuksen_antaja",
+            "nayte"
+          ],
+          "properties": {
+            "suostumus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Suostumus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtycke"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa.\nOtsikkoa ei näytetä tarkoittaa, että kentän sisältö näytetään Oikeusgeneettinen vanhemmuustutkimus -otsikon alle sisennettynä ilman kentän nimeä \"Suostus\"."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa.\nOtsikkoa ei näytetä tarkoittaa, että kentän sisältö näytetään Oikeusgeneettinen vanhemmuustutkimus -otsikon alle sisennettynä ilman kentän nimeä \"Suostus\"."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Sisäinen luokitus: 1 \u003d Annan suostumukseni, 2 \u003d En anna suostumustani"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Internt kodsystem: 1\u003d Jag ger mitt samtycke, 2 \u003d Jag ger inte mitt samtycke"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "OIkeudenomistajan suostumus/Suostumus"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": true,
+                "acceptedValues": [
+                  {
+                    "lang": "",
+                    "value": "1"
+                  },
+                  {
+                    "lang": "",
+                    "value": "2"
+                  }
+                ],
+                "rowNumber": 43
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "enum": [
+                    "oikeudenomistajan_suostumus/suostumus"
+                  ]
+                },
+                "code": {
+                  "type": "string",
+                  "enum": [
+                    "1",
+                    "2"
+                  ]
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "suostumuksen_antaja": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Suostumuksen antaja"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtyckesgivare"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa.\nOtsikkoa ei näytetä tarkoittaa, että kentän sisältö näytetään Oikeusgeneettinen vanhemmuustutkimus -otsikon alle sisennettynä ilman kentän nimeä \"Suostumuksen antaja\"."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa.\nOtsikkoa ei näytetä tarkoittaa, että kentän sisältö näytetään Oikeusgeneettinen vanhemmuustutkimus -otsikon alle sisennettynä ilman kentän nimeä \"Suostumuksen antaja\"."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Sisäinen luokitus: 1\u003d mahdollisen isän, synnyttäneen äidin tai otaksutun synnyttäneen äidin oikeudenomistajana, 2 \u003d mahdollisen isän, synnyttäneen äidin tai otaksutun synnyttäneen äidin oikeudenomistajan laillisena edustajana"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Internt kodsystem: 1 \u003d i egenskap av rättsinnehavare för den eventuella fadern, den mor som har fött barnet eller den förmodade mor som har fött barnet, 2 \u003d i egenskap av rättsinnehavarens lagliga företrädare för den eventuella fadern, den mor som har fött barnet eller den förmodade mor som har fött barnet"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "Oikeudenomistajan suostumus/Suostumuksen antajan rooli"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": true,
+                "acceptedValues": [
+                  {
+                    "lang": "",
+                    "value": "1"
+                  },
+                  {
+                    "lang": "",
+                    "value": "2"
+                  }
+                ],
+                "rowNumber": 44
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "enum": [
+                    "oikeudenomistajan_suostumus/suostumuksen_antajan_rooli"
+                  ]
+                },
+                "code": {
+                  "type": "string",
+                  "enum": [
+                    "1",
+                    "2"
+                  ]
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "nayte": {
+              "type": "string",
+              "enum": [
+                "että vainajasta otettua näytettä tai hänestä aiemmin otettua näytettä tai kyseisestä henkilöstä aiemmassa oikeusgeneettisessä vanhemmuustutkimuksessa saatuja tietoja saa käyttää oikeusgeneettisessä vanhemmuustutkimuksessa selvitettäessä edellä mainitun lapsen biologista vanhemmuutta."
+              ],
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Näyte"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Prov"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Fraasi-kentässä ”Otsikkoa ei näytetä” tarkoittaa, että kentästä näytetään fraasiteksti tietojärjestelmässä ja valmiissa asiakirjassa, mutta ei kentän nimeä tai otsikkoa. Ammattilainen ei voi täyttää kenttää. Fraasi-kohdassa oleva teksti näytetään sekä tietojärjestelmässä että valmiissa asiakirjassa."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Fraasi-kentässä ”Otsikkoa ei näytetä” tarkoittaa, että kentästä näytetään fraasiteksti tietojärjestelmässä ja valmiissa asiakirjassa, mutta ei kentän nimeä tai otsikkoa. Ammattilainen ei voi täyttää kenttää. Fraasi-kohdassa oleva teksti näytetään sekä tietojärjestelmässä että valmiissa asiakirjassa."
+                  }
+                ],
+                "phrase": [
+                  {
+                    "lang": "fi",
+                    "value": "että vainajasta otettua näytettä tai hänestä aiemmin otettua näytettä tai kyseisestä henkilöstä aiemmassa oikeusgeneettisessä vanhemmuustutkimuksessa saatuja tietoja saa käyttää oikeusgeneettisessä vanhemmuustutkimuksessa selvitettäessä edellä mainitun lapsen biologista vanhemmuutta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "till att det prov som tagits på den avlidne eller som tidigare tagits på den avlidne eller uppgifter som erhållits om personen i fråga i en tidigare rättsgenetisk föräldraskapsundersökning får användas i en rättsgenetisk föräldraskapsundersökning för att utreda det biologiska föräldraskapet till ovan nämnda barn."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Fraasi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Fras"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": true,
+                "rowNumber": 45
+              }
+            }
+          }
+        },
+        "vanhemmuuden_vahvistaminen_digi__ja_vaestotietovirastossa": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Vanhemmuuden vahvistaminen Digi- ja väestötietovirastossa"
+              },
+              {
+                "lang": "sv",
+                "value": "Fastställande av föräldraskap hos Myndigheten för digitalisering och befolkningsdata"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 46
+          },
+          "required": [
+            "suostumus",
+            "suostumuksen_antaja"
+          ],
+          "properties": {
+            "suostumus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Suostumus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtycke"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa. Otsikkoa ei näytetä tarkoittaa, että kentän sisältö näytetään Oikeusgeneettinen vanhemmuustutkimus -otsikon alle sisennettynä ilman kentän nimeä \"Suostus\"."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kentässä käytetään sisäistä luokitusta eli luokitusta, jota ei ole kansallisella koodistopalvelimella. Kentässä sallitut arvot on esitetty Luokitus-kohdassa. Otsikkoa ei näytetä tarkoittaa, että kentän sisältö näytetään Oikeusgeneettinen vanhemmuustutkimus -otsikon alle sisennettynä ilman kentän nimeä \"Suostus\"."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Sisäinen luokitus: 1 \u003d Annan suostumukseni, 2 \u003d En anna suostumustani"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Internt kodsystem: 1\u003d Jag ger mitt samtycke, 2 \u003d Jag ger inte mitt samtycke"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "Oikeudenomistajan suostumus/Suostumus"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": true,
+                "rowNumber": 47
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "enum": [
+                    "oikeudenomistajan_suostumus/suostumus"
+                  ]
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            },
+            "suostumuksen_antaja": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Suostumuksen antaja"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtyckesgivare"
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Sisäinen luokitus: \n1 \u003d mahdollisen isän oikeudenomistajana, että isyys vahvistetaan ilman oikeudenkäyntiä Digi- ja väestötietoviraston päätöksellä, jos alaikäisen lapsen isyyden selvittäminen ja oikeusgeneettinen isyystutkimus tai kirjallinen hedelmöityshoitotodistus osoittavat kuolleen henkilön olevan kyseisen lapsen isä. \n2 \u003d mahdollisen toisen äidin oikeudenomistajana, että äitiys vahvistetaan ilman oikeudenkäyntiä Digi- ja väestötietoviraston päätöksellä, jos alaikäisen lapsen äitiyden selvittäminen ja kirjallinen hedelmöityshoitotodistus osoittavat kuolleen henkilön olevan kyseisen lapsen toinen äiti. \n3 \u003d otaksutun synnyttäneen äidin oikeudenomistajana, että äitiys vahvistetaan ilman oikeudenkäyntiä Digi- ja väestötietoviraston päätöksellä, jos alaikäisen lapsen äitiyden selvittäminen ja oikeusgeneettinen vanhemmuustutkimus osoittavat kuolleen henkilön olevan kyseisen lapsen äiti."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Internt kodsystem: \n1 \u003d i egenskap av rättsinnehavare för den eventuella fadern till att faderskapet fastställs utan rättegång genom beslut av Myndigheten för digitalisering och befolkningsdata, om faderskapsutredningen för det minderåriga barnet och den rättsgenetiska föräldraskapsundersökningen eller det skriftliga intyget över assisterad befruktning visar att den avlidna personen är barnets far. \n2 \u003d i egenskap av rättsinnehavare för den eventuella andra modern till att moderskapet fastställs utan rättegång genom beslut av Myndigheten för digitalisering och befolkningsdata, om moderskapsutredningen för det minderåriga barnet och det skriftliga intyget över assisterad befruktning visar att den avlidna personen är barnets andra mor. \n3 \u003d i egenskap av rättsinnehavare för den förmodade mor som har fött barnet till att moderskapet fastställs utan rättegång genom beslut av Myndigheten för digitalisering och befolkningsdata, om moderskapsutredningen för det minderåriga barnet och den rättsgenetiska föräldraskapsundersökningen visar att den avlidna personen är barnets mor."
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "Oikeudenomistajan suostumus/Suostumuksen antaja"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": true,
+                "acceptedValues": [
+                  {
+                    "lang": "",
+                    "value": "1"
+                  },
+                  {
+                    "lang": "",
+                    "value": "2"
+                  },
+                  {
+                    "lang": "",
+                    "value": "3"
+                  }
+                ],
+                "rowNumber": 48
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "enum": [
+                    "oikeudenomistajan_suostumus/suostumuksen_antaja"
+                  ]
+                },
+                "code": {
+                  "type": "string",
+                  "enum": [
+                    "1",
+                    "2",
+                    "3"
+                  ]
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "ohje_yksi": {
+          "type": "string",
+          "enum": [
+            "Jos oikeudenomistaja on alaikäinen tai hänellä on edunvalvoja, hänen laillinen edustajansa ei voi antaa suostumusta vanhemmuuden vahvistamiseen Digi- ja väestötietovirastossa. \n\nJos oikeudenomistaja ei itse kykene ymmärtämään asian merkitystä ja antamaan suostumusta vanhemmuuden vahvistamiseen Digi- ja väestötietovirastossa, vanhemmuuden voi vahvistaa vain tuomioistuin."
+          ],
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Ohje yksi"
+              },
+              {
+                "lang": "sv",
+                "value": "Anvisning ett"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Fraasi-kentässä ”Otsikkoa ei näytetä” tarkoittaa, että kentästä näytetään fraasiteksti tietojärjestelmässä ja valmiissa asiakirjassa, mutta ei kentän nimeä tai otsikkoa. Ammattilainen ei voi täyttää kenttää."
+              },
+              {
+                "lang": "sv",
+                "value": "Fraasi-kentässä ”Otsikkoa ei näytetä” tarkoittaa, että kentästä näytetään fraasiteksti tietojärjestelmässä ja valmiissa asiakirjassa, mutta ei kentän nimeä tai otsikkoa. Ammattilainen ei voi täyttää kenttää."
+              }
+            ],
+            "phrase": [
+              {
+                "lang": "fi",
+                "value": "Jos oikeudenomistaja on alaikäinen tai hänellä on edunvalvoja, hänen laillinen edustajansa ei voi antaa suostumusta vanhemmuuden vahvistamiseen Digi- ja väestötietovirastossa. \n\nJos oikeudenomistaja ei itse kykene ymmärtämään asian merkitystä ja antamaan suostumusta vanhemmuuden vahvistamiseen Digi- ja väestötietovirastossa, vanhemmuuden voi vahvistaa vain tuomioistuin."
+              },
+              {
+                "lang": "sv",
+                "value": "Om rättsinnehavaren är minderårig eller har en intressebevakare, kan rättsinnehavarens lagliga företrädare inte ge sitt samtycke till att föräldraskapet fastställs av Myndigheten för digitalisering och befolkningsdata. \nOm rättsinnehavaren inte själv kan förstå sakens betydelse och ge sitt samtycke till att föräldraskapet fastställs av Myndigheten för digitalisering och befolkningsdata, kan endast domstolen fastställa föräldraskapet."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Fraasi"
+              },
+              {
+                "lang": "sv",
+                "value": "Fras"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": true,
+            "rowNumber": 49
+          }
+        },
+        "lisatiedot": {
+          "type": "string",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Lisätiedot"
+              },
+              {
+                "lang": "sv",
+                "value": "Mer information"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Teksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Text"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 50
+          }
+        },
+        "paivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Päivämäärä"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan asiakirjan laatimisen päivämäärä."
+              },
+              {
+                "lang": "sv",
+                "value": "I fältet antecknas datum för upprättandet av handlingen."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 51
+          }
+        },
+        "suostumuksen_vastaanottanut_lastenvalvoja": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Suostumuksen vastaanottanut lastenvalvoja"
+              },
+              {
+                "lang": "sv",
+                "value": "Barnatillsyningsman som mottagit samtycket"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "-"
+              },
+              {
+                "lang": "sv",
+                "value": "-"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 52
+          },
+          "required": [
+            "sukunimi",
+            "etunimet",
+            "palveluyksikko"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 53
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 54
+              }
+            },
+            "palveluyksikko": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Palveluyksikkö"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Serviceenhet"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet antecknas namnet på serviceenheten enligt Organisationsregistret för social- och hälsovården."
+                  }
+                ],
+                "example": [
+                  {
+                    "lang": "fi",
+                    "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Esbo centrums barnskydd, Esbo stad, social- och hälsovårdssektorn"
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttä on pakollinen tietokomponentin määrityksestä poiketen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kenttä on pakollinen tietokomponentin määrityksestä poiketen."
+                  }
+                ],
+                "classification": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+                  }
+                ],
+                "classificationLink": [
+                  {
+                    "lang": "",
+                    "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                  }
+                ],
+                "classificationOid": [
+                  {
+                    "lang": "",
+                    "value": "1.2.246.537.6.202"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Koodi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kod"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 55
+              },
+              "required": [
+                "system",
+                "code",
+                "display"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string",
+                  "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                },
+                "code": {
+                  "type": "string"
+                },
+                "display": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "allekirjoitus": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "sosmeta": {
+              "name": [
+                {
+                  "lang": "fi",
+                  "value": "Allekirjoitus"
+                },
+                {
+                  "lang": "sv",
+                  "value": "Underskrift"
+                }
+              ],
+              "description": [
+                {
+                  "lang": "fi",
+                  "value": "Asiakirjan allekirjoittavat oikeudenomistaja tai hänen laillinen edustajansa sekä suostumuksen vastaanottanut lastenvalvoja."
+                },
+                {
+                  "lang": "sv",
+                  "value": "Handlingen underskrivs av rättsinnehavaren eller hans eller hennes lagliga företrädare samt barnatillsyningsman som har mottagit samtycket."
+                }
+              ],
+              "repeatable": true,
+              "required": true,
+              "conditionalRequired": false,
+              "nationwideRecordedInformation": false,
+              "hiddenField": false,
+              "hiddenTitle": false,
+              "rowNumber": 56
+            },
+            "required": [
+              "allekirjoituksen_tyyppi"
+            ],
+            "properties": {
+              "allekirjoituksen_tyyppi": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoituksen tyyppi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Typ av underskrift"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan luokituksen avulla allekirjoituksen tyyppi."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas underskriftens typ med hjälp av klassificeringen."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "1 \u003d Asiakirja on allekirjoitettu sähköisesti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "1 \u003d Handlingen har undertecknats elektroniskt"
+                    }
+                  ],
+                  "classification": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodistopalvelin: eArkisto - Allekirjoitus 1.2.246.537.5.40161"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kodtjänsten: eArkiv - Underskrift 1.2.246.537.5.40161"
+                    }
+                  ],
+                  "classificationLink": [
+                    {
+                      "lang": "",
+                      "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d252\u0026versionKey\u003d329"
+                    }
+                  ],
+                  "classificationOid": [
+                    {
+                      "lang": "",
+                      "value": "1.2.246.537.5.40161"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Koodi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Kod"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": true,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 57
+                },
+                "required": [
+                  "system",
+                  "code",
+                  "display"
+                ],
+                "properties": {
+                  "system": {
+                    "type": "string",
+                    "pattern": "^urn:oid:1\\.2\\.246\\.537\\.5\\.40161(\\.\\d+)*$"
+                  },
+                  "code": {
+                    "type": "string"
+                  },
+                  "display": {
+                    "type": "string"
+                  }
+                }
+              },
+              "paikka": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Paikka"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Plats"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoituspaikka. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa silloin, kun asiakirja allekirjoitetaan käsin eli Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas orten för underskriften. Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand dvs. kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ. Fältet kan ifyllas i klientdatasystemet samtidigt som handlingen upprättas, om handlingen undertecknas i samband med upprättandet."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "Helsinki"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Helsingfors"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Teksti"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Text"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 58
+                }
+              },
+              "paivamaara": {
+                "type": "string",
+                "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Päivämäärä"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoituksen päivämäärä. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas datum för underskriften. Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand och kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ. Fältet kan ifyllas i klientdatasystemet samtidigt som handlingen upprättas, om handlingen undertecknas i samband med upprättandet."
+                    }
+                  ],
+                  "example": [
+                    {
+                      "lang": "fi",
+                      "value": "29.05.2020"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "29.05.2020"
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Pvm"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Datum"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 59
+                }
+              },
+              "allekirjoitus": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoitus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Underskrift"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand och kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Allekirjoitus"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Underskrift"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 60
+                }
+              },
+              "nimi": {
+                "type": "string",
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Kenttään kirjataan allekirjoittajan nimi tai nimenselvennys. Kenttää käytetään vain paperitulosteessa tai -lomakkeessa, kun asiakirja allekirjoitetaan käsin ja Allekirjoituksen tyyppi -kenttään on valittu koodi 2 \u003d Asiakirja on allekirjoitettu käsin. Kenttä voidaan täyttää asiakastietojärjestelmässä samalla kun asiakirja laaditaan, jos asiakirja allekirjoitetaan laatimisen yhteydessä."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "I fältet antecknas undertecknarens namn eller namnförtydligande. Fältet används endast för pappersutskrift eller -blankett när handlingen undertecknas för hand och kod 2 \u003d Handlingen har undertecknats för hand har valts i fältet Underskriftens typ. Fältet kan ifyllas i klientdatasystemet samtidigt som handlingen upprättas, om handlingen undertecknas i samband med upprättandet."
+                    }
+                  ],
+                  "representation": [
+                    {
+                      "lang": "fi",
+                      "value": "Nimi"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Namn"
+                    }
+                  ],
+                  "repeatable": false,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 61
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

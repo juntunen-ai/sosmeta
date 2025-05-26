@@ -1,0 +1,3025 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "\u0027Kieltoasiakirja\u0027 JSON schema",
+  "type": "object",
+  "additionalProperties": false,
+  "sosmeta": {
+    "title": "\u0027Kieltoasiakirja\u0027 JSON schema",
+    "status": "Valmis",
+    "documentDefinitionVersion": "2023-06-05",
+    "dataComponentLibraryVersion": "2023-06-05",
+    "oid": "1.2.246.537.6.1505.9.2023.6.5",
+    "documentType": "Kieltoasiakirja",
+    "documentAuthor": "Ammattihenkilö",
+    "documentSubject": "Tahdonilmaisupalvelun asiakirjat"
+  },
+  "required": [
+    "kieltoasiakirja"
+  ],
+  "properties": {
+    "kieltoasiakirja": {
+      "type": "object",
+      "additionalProperties": false,
+      "sosmeta": {
+        "name": [
+          {
+            "lang": "fi",
+            "value": "Kieltoasiakirja"
+          },
+          {
+            "lang": "sv",
+            "value": "Förbudshandling"
+          }
+        ]
+      },
+      "required": [
+        "asiakas",
+        "infoteksti"
+      ],
+      "properties": {
+        "asiakas": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Asiakas"
+              },
+              {
+                "lang": "sv",
+                "value": "Klient"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Asiakas on henkilö, jonka asiakastietojen luovuttamista kielto koskee."
+              },
+              {
+                "lang": "sv",
+                "value": "Klienten är den person vars klientuppgifter förbudet mot utlämnande gäller."
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 1
+          },
+          "required": [
+            "sukunimi",
+            "etunimet",
+            "henkilotunnus"
+          ],
+          "properties": {
+            "sukunimi": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Sukunimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Efternamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 2
+              }
+            },
+            "etunimet": {
+              "type": "string",
+              "minLength": 1,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Etunimet"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Samtliga förnamn"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "-"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "-"
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Nimi"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Namn"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 3
+              }
+            },
+            "henkilotunnus": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Henkilötunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Personbeteckning"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttään kirjataan asiakkaan henkilötunnus. Kenttään ei saa kirjata asiakkaan tilapäistä yksilöintitunnusta."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "I fältet registreras klientens personbeteckning. En klients tillfälliga identifikationskod får inte registreras i fältet."
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Kenttä on pakollinen TK Yksityishenkilön määrityksestä poiketen."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Tunnus"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Identifierare"
+                  }
+                ],
+                "systemUri": [
+                  {
+                    "lang": "",
+                    "value": "urn:oid:1.2.246.21"
+                  }
+                ],
+                "repeatable": false,
+                "required": true,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 4
+              },
+              "required": [
+                "value"
+              ],
+              "properties": {
+                "system": {
+                  "type": "string"
+                },
+                "value": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "infoteksti": {
+          "type": "string",
+          "enum": [
+            "Voit kieltää / olet kieltänyt asiakastietojesi luovuttamisen toiselle sosiaalihuollon rekisterinpitäjälle. Kielto tarkoittaa, että kiellon kohteena olevia asiakastietojasi ei luovuteta toiselle sosiaalihuollon rekisterinpitäjälle. Tämä voi vaikuttaa palveluusi.\n\nTekemäsi kiellot eivät koske sitä rekisterinpitäjää, jonka rekisteriin kieltämäsi asiakastiedot kuuluvat tai tilannetta, jossa palveluntuottaja tuottaa palvelusi rekisterinpitäjän puolesta. Tekemäsi kiellot ovat voimassa toistaiseksi ja voit muuttaa niitä tai perua ne halutessasi sosiaalihuollon palvelunantajan luona tai OmaKanta-palvelussa."
+          ],
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Infoteksti"
+              },
+              {
+                "lang": "sv",
+                "value": "Infotext"
+              }
+            ],
+            "implementationNote": [
+              {
+                "lang": "fi",
+                "value": "Kentässä näytetään Fraasi-kentässä oleva automaattiteksti."
+              },
+              {
+                "lang": "sv",
+                "value": "Kentässä näytetään Fraasi-kentässä oleva automaattiteksti."
+              }
+            ],
+            "phrase": [
+              {
+                "lang": "fi",
+                "value": "Voit kieltää / olet kieltänyt asiakastietojesi luovuttamisen toiselle sosiaalihuollon rekisterinpitäjälle. Kielto tarkoittaa, että kiellon kohteena olevia asiakastietojasi ei luovuteta toiselle sosiaalihuollon rekisterinpitäjälle. Tämä voi vaikuttaa palveluusi.\n\nTekemäsi kiellot eivät koske sitä rekisterinpitäjää, jonka rekisteriin kieltämäsi asiakastiedot kuuluvat tai tilannetta, jossa palveluntuottaja tuottaa palvelusi rekisterinpitäjän puolesta. Tekemäsi kiellot ovat voimassa toistaiseksi ja voit muuttaa niitä tai perua ne halutessasi sosiaalihuollon palvelunantajan luona tai OmaKanta-palvelussa."
+              },
+              {
+                "lang": "sv",
+                "value": "Du kan förbjuda/har förbjudit att dina klientuppgifter lämnas ut till en annan personuppgiftsansvarig inom socialvården. Förbudet innebär att dina klientuppgifter, som är föremål för förbudet, inte lämnas ut till någon annan personuppgiftsansvarig inom socialvården. Detta kan påverka den service du får.\n\nDe förbud du meddelar gäller inte den personuppgiftsansvarige vars register innehåller de klientuppgifter som ditt förbud avser eller i en situation där tjänsteproducenten producerar din service för den personuppgiftsansvariges räkning. De förbud som du meddelar gäller tills vidare och du kan ändra dem eller återkalla dem om du vill hos en tjänstetillhandahållare inom socialvården eller i tjänsten MittKanta."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Fraasi"
+              },
+              {
+                "lang": "sv",
+                "value": "Fras"
+              }
+            ],
+            "repeatable": false,
+            "required": true,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 5
+          }
+        },
+        "rekisterinpitajaa_koskevat_luovutuskiellot": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Rekisterinpitäjää koskevat luovutuskiellot"
+              },
+              {
+                "lang": "sv",
+                "value": "Samtliga förbud mot utlämnande som gäller den personuppgiftsansvarige"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 6
+          },
+          "required": [],
+          "properties": {
+            "rekisterinpitajaa_koskeva_luovutuskielto": {
+              "type": "array",
+              "minItems": 0,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Rekisterinpitäjää koskeva luovutuskielto"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Förbud mot utlämnande som gäller den personuppgiftsansvarige"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Tähän kirjataan luokituksen avulla ne sosiaalihuollon rekisterinpitäjät, joiden rekisteriin tallennettuja asiakastietoja tämä luovutuskielto koskee."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Här registreras med hjälp av klassificering de personuppgiftsansvariga inom socialvården i vilkas register de klientuppgifter är införda som detta förbud mot utlämnande gäller."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                    }
+                  ],
+                  "repeatable": true,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 7
+                },
+                "required": [
+                  "rekisterinpitaja_jonka_tietojen_luovutus_kielletaan",
+                  "kiellon_asettamisen_ajankohta"
+                ],
+                "properties": {
+                  "rekisterinpitaja_jonka_tietojen_luovutus_kielletaan": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Rekisterinpitäjä, jonka tietojen luovutus kielletään"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Personuppgiftsansvarig vars uppgifter förbudet mot utlämnande gäller"
+                          }
+                        ],
+                        "example": [
+                          {
+                            "lang": "fi",
+                            "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Esbo centrums barnskydd, Esbo stad, social- och hälsovårdssektorn"
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen. Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen. Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          }
+                        ],
+                        "classification": [
+                          {
+                            "lang": "fi",
+                            "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+                          }
+                        ],
+                        "classificationLink": [
+                          {
+                            "lang": "",
+                            "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                          }
+                        ],
+                        "classificationOid": [
+                          {
+                            "lang": "",
+                            "value": "1.2.246.537.6.202"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Koodi"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kod"
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": true,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 8
+                      },
+                      "required": [
+                        "system",
+                        "code",
+                        "display"
+                      ],
+                      "properties": {
+                        "system": {
+                          "type": "string",
+                          "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "display": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "kiellon_asettamisen_ajankohta": {
+                    "type": "string",
+                    "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Kiellon asettamisen ajankohta"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Tidpunkten för meddelande av förbud"
+                        }
+                      ],
+                      "implementationNote": [
+                        {
+                          "lang": "fi",
+                          "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen."
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Pvm"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Datum"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": true,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 9
+                    }
+                  },
+                  "kieltaja_on_laillinen_edustaja": {
+                    "type": "boolean",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Kieltäjä on laillinen edustaja"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Personen är klientens lagliga företrädare"
+                        }
+                      ],
+                      "title": [
+                        {
+                          "lang": "fi",
+                          "value": "Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Personen som förbjuder utlämnande av klientuppgifter är klientens lagliga företrädare"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Kytkin"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Brytare"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 10
+                    }
+                  },
+                  "henkilo_joka_kieltaa_asiakastietojen_luovuttamisen": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Henkilö, joka kieltää asiakastietojen luovuttamisen"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Person som förbjuder utlämnande av klientuppgifter"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "Asiakastietojen luovuttamisen voi kieltää asiakas itse tai hänen laillinen edustajansa. Laillinen edustaja on asiakkaan huoltaja, edunvalvoja, edunvalvontavaltuutettu tai muu asiakkaan valtuuttama henkilö. Tähän kirjataan asiakkaan laillisen edustajan tiedot silloin, kun hän kieltää asiakastietojen luovuttamisen. Asiakkaan tietoja ei kirjata tähän."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Klienten själv eller klientens lagliga företrädare kan förbjuda utlämnande av klientuppgifter. En laglig företrädare är klientens vårdnadshavare, intressebevakare, intressebevakningsfullmäktig eller någon annan person som klienten har befullmäktigat. Här antecknas uppgifter om klientens lagliga företrädare då denne förbjuder utlämnande av klientuppgifter. Klientens uppgifter antecknas inte här."
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Tietokokonaisuus näytetään, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Ehdollisesti pakollinen: Tietokokonaisuus on pakollinen, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Tietokokonaisuus näytetään, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Ehdollisesti pakollinen: Tietokokonaisuus on pakollinen, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": true,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 11
+                      },
+                      "required": [
+                        "sukunimi",
+                        "etunimet",
+                        "rooli"
+                      ],
+                      "properties": {
+                        "sukunimi": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Sukunimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Efternamn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 12
+                          }
+                        },
+                        "etunimet": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Etunimet"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Samtliga förnamn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 13
+                          }
+                        },
+                        "henkilotunnus": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Henkilötunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Personbeteckning"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Tunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Identifierare"
+                              }
+                            ],
+                            "systemUri": [
+                              {
+                                "lang": "",
+                                "value": "urn:oid:1.2.246.21"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": true,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 14
+                          },
+                          "required": [
+                            "value"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "tilapainen_yksilointitunnus": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Tilapäinen yksilöintitunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Temporär identifikationskod"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan asiakastietojen luovuttamisen kieltävän henkilön tilapäinen yksilöintitunnus. Tilapäistä yksilöintitunnusta käytetään tilanteissa, joissa asiakastietojen luovuttamisen kieltäjänä on esimerkiksi asiakkaan huoltaja, eikä hänellä ole henkilötunnusta."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet registreras den tillfälliga identifikationskoden för den person som meddelar förbud mot utlämnade av klientuppgifter. En tillfällig identifikationskod används till exempel när klientens vårdnadshavare meddelar förbud mot utlämnande av klientuppgifter och han eller hon inte har någon personbeteckning."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Tunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Identifierare"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": true,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 15
+                          },
+                          "required": [
+                            "value"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "edunvalvojan_tunniste": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Edunvalvojan tunniste"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Intressebevakarens identifikationskod"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan edunvalvojan tunniste, jos puolesta-asioija on edunvalvontatoimistossa työskentelevä yleinen edunvalvoja tai vastaavassa roolissa ostopalvelutuottajan palveluksessa."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet registreras intressebevakarens identifikationskod, om den som sköter ärenden för klientens räkning är en allmän intressebevakare som arbetar vid intressebevakningsbyrån eller i motsvarande roll hos en producent av köpta tjänster."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Teksti"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Text"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": true,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 16
+                          }
+                        },
+                        "rooli": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Rooli"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Roll"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan luokituksen avulla rooli, jossa henkilö kieltää asiakastietojen luovuttamisen. Jos henkilö on asiakkaan valtuuttama henkilö, on valtuutuksen voimassaolo tarkistettava erikseen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet registreras med hjälp av klassificering den roll i vilken personen förbjuder utlämnande av klientuppgifter. Om det är fråga om en person som klienten bemyndigat, ska fullmaktens giltighet kontrolleras separat."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttä ei ole toistuva TK Henkilön määrityksestä poiketen. Kenttä on pakollinen TK Henkilön määrityksestä poiketen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kenttä ei ole toistuva TK Henkilön määrityksestä poiketen. Kenttä on pakollinen TK Henkilön määrityksestä poiketen."
+                              }
+                            ],
+                            "classification": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodistopalvelin: Sosiaalihuolto - Asiakkuuteen liittyvä rooli 1.2.246.537.6.1284"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kodtjänst: Socialvård ‑ Roll i samband med en klientrelation 1.2.246.537.6.1284"
+                              }
+                            ],
+                            "classificationLink": [
+                              {
+                                "lang": "",
+                                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d3805\u0026versionKey\u003d4306"
+                              }
+                            ],
+                            "classificationOid": [
+                              {
+                                "lang": "",
+                                "value": "1.2.246.537.6.1284"
+                              }
+                            ],
+                            "valueSet": [
+                              {
+                                "lang": "fi",
+                                "value": "31 \u003d Huoltaja,\n32 \u003d Edunvalvoja,\n33 \u003d Edunvalvontavaltuutettu,\n34 \u003d Valtuutettu"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "31 \u003d Vårdnadshavare,\n32 \u003d Intressebevakare,\n33 \u003d Intressebevakningsfullmäktig,\n34 \u003d Befullmäktigad"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kod"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "acceptedValues": [
+                              {
+                                "lang": "",
+                                "value": "31"
+                              },
+                              {
+                                "lang": "",
+                                "value": "32"
+                              },
+                              {
+                                "lang": "",
+                                "value": "33"
+                              },
+                              {
+                                "lang": "",
+                                "value": "34"
+                              }
+                            ],
+                            "rowNumber": 17
+                          },
+                          "required": [
+                            "system",
+                            "code",
+                            "display"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string",
+                              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1284(\\.\\d+)*$"
+                            },
+                            "code": {
+                              "type": "string",
+                              "enum": [
+                                "31",
+                                "32",
+                                "33",
+                                "34"
+                              ]
+                            },
+                            "display": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "palvelutehtavaa_koskevat_luovutuskiellot": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Palvelutehtävää koskevat luovutuskiellot"
+              },
+              {
+                "lang": "sv",
+                "value": "Samtliga förbud mot utlämnande som gäller serviceuppgiften"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 18
+          },
+          "required": [],
+          "properties": {
+            "palvelutehtavaa_koskeva_luovutuskielto": {
+              "type": "array",
+              "minItems": 0,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Palvelutehtävää koskeva luovutuskielto"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Förbud mot utlämnande som gäller serviceuppgiften"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Tähän kirjataan luokituksen avulla palvelutehtäväkohtaiset luovutuskiellot. Kielto koskee kaikkia rekisterinpitäjiä. Tämä tarkoittaa sitä, että mitään kyseiseen palvelutehtävään kuuluvia asiakirjoja ei luovuteta muille rekisterinpitäjille."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Här registreras med hjälp av klassificering förbud mot utlämnande som gäller serviceuppgifter. Förbudet gäller alla personuppgiftsansvariga. Detta innebär att inga handlingar som ingår i den aktuella serviceuppgiften kommer att lämnas ut till andra personuppgiftsansvariga."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                    }
+                  ],
+                  "repeatable": true,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 19
+                },
+                "required": [
+                  "palvelutehtava_jonka_tietojen_luovutus_kielletaan",
+                  "kiellon_asettamisen_ajankohta"
+                ],
+                "properties": {
+                  "palvelutehtava_jonka_tietojen_luovutus_kielletaan": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Palvelutehtävä, jonka tietojen luovutus kielletään"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Serviceuppgift som omfattar de uppgifter som förbudet mot utlämnande gäller"
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen. Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen. Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          }
+                        ],
+                        "classification": [
+                          {
+                            "lang": "fi",
+                            "value": "Koodistopalvelin: Sosiaalihuolto - Palvelutehtävä 1.2.246.537.6.1221"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kodtjänsten: Socialvård - Serviceuppgift 1.2.246.537.6.1221"
+                          }
+                        ],
+                        "classificationLink": [
+                          {
+                            "lang": "",
+                            "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d704\u0026versionKey\u003d2563"
+                          }
+                        ],
+                        "classificationOid": [
+                          {
+                            "lang": "",
+                            "value": "1.2.246.537.6.1221"
+                          }
+                        ],
+                        "representation": [
+                          {
+                            "lang": "fi",
+                            "value": "Koodi"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kod"
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": true,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 20
+                      },
+                      "required": [
+                        "system",
+                        "code",
+                        "display"
+                      ],
+                      "properties": {
+                        "system": {
+                          "type": "string",
+                          "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1221(\\.\\d+)*$"
+                        },
+                        "code": {
+                          "type": "string"
+                        },
+                        "display": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  },
+                  "kiellon_asettamisen_ajankohta": {
+                    "type": "string",
+                    "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Kiellon asettamisen ajankohta"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Tidpunkten för meddelande av förbud"
+                        }
+                      ],
+                      "implementationNote": [
+                        {
+                          "lang": "fi",
+                          "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen."
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Pvm"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Datum"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": true,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 21
+                    }
+                  },
+                  "kieltaja_on_laillinen_edustaja": {
+                    "type": "boolean",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Kieltäjä on laillinen edustaja"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Personen är klientens lagliga företrädare"
+                        }
+                      ],
+                      "title": [
+                        {
+                          "lang": "fi",
+                          "value": "Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Personen som förbjuder utlämnande av klientuppgifter är klientens lagliga företrädare"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Kytkin"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Brytare"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 22
+                    }
+                  },
+                  "henkilo_joka_kieltaa_asiakastietojen_luovuttamisen": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Henkilö, joka kieltää asiakastietojen luovuttamisen"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Person som förbjuder utlämnande av klientuppgifter"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "Asiakastietojen luovuttamisen voi kieltää asiakas itse tai hänen laillinen edustajansa. Laillinen edustaja on asiakkaan huoltaja, edunvalvoja, edunvalvontavaltuutettu tai muu asiakkaan valtuuttama henkilö. Tähän kirjataan asiakkaan laillisen edustajan tiedot silloin, kun hän kieltää asiakastietojen luovuttamisen. Asiakkaan tietoja ei kirjata tähän."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Klienten själv eller klientens lagliga företrädare kan förbjuda utlämnande av klientuppgifter. En laglig företrädare är klientens vårdnadshavare, intressebevakare, intressebevakningsfullmäktig eller någon annan person som klienten har befullmäktigat. Här antecknas uppgifter om klientens lagliga företrädare då denne förbjuder utlämnande av klientuppgifter. Klientens uppgifter antecknas inte här."
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Tietokokonaisuus näytetään, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Ehdollisesti pakollinen: Tietokokonaisuus on pakollinen, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Tietokokonaisuus näytetään, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Ehdollisesti pakollinen: Tietokokonaisuus on pakollinen, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": true,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 23
+                      },
+                      "required": [
+                        "sukunimi",
+                        "etunimet",
+                        "rooli"
+                      ],
+                      "properties": {
+                        "sukunimi": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Sukunimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Efternamn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 24
+                          }
+                        },
+                        "etunimet": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Etunimet"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Samtliga förnamn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 25
+                          }
+                        },
+                        "henkilotunnus": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Henkilötunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Personbeteckning"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Tunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Identifierare"
+                              }
+                            ],
+                            "systemUri": [
+                              {
+                                "lang": "",
+                                "value": "urn:oid:1.2.246.21"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": true,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 26
+                          },
+                          "required": [
+                            "value"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "tilapainen_yksilointitunnus": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Tilapäinen yksilöintitunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Temporär identifikationskod"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan asiakastietojen luovuttamisen kieltävän henkilön tilapäinen yksilöintitunnus. Tilapäistä yksilöintitunnusta käytetään tilanteissa, joissa asiakastietojen luovuttamisen kieltäjänä on esimerkiksi asiakkaan huoltaja, eikä hänellä ole henkilötunnusta."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet registreras den tillfälliga identifikationskoden för den person som meddelar förbud mot utlämnade av klientuppgifter. En tillfällig identifikationskod används till exempel när klientens vårdnadshavare meddelar förbud mot utlämnande av klientuppgifter och han eller hon inte har någon personbeteckning."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Tunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Identifierare"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": true,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 27
+                          },
+                          "required": [
+                            "value"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "edunvalvojan_tunniste": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Edunvalvojan tunniste"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Intressebevakarens identifikationskod"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan edunvalvojan tunniste, jos puolesta-asioija on edunvalvontatoimistossa työskentelevä yleinen edunvalvoja tai vastaavassa roolissa ostopalvelutuottajan palveluksessa."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet registreras intressebevakarens identifikationskod, om den som sköter ärenden för klientens räkning är en allmän intressebevakare som arbetar vid intressebevakningsbyrån eller i motsvarande roll hos en producent av köpta tjänster."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Teksti"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Text"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": true,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 28
+                          }
+                        },
+                        "rooli": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Rooli"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Roll"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan luokituksen avulla rooli, jossa henkilö kieltää asiakastietojen luovuttamisen. Jos henkilö on asiakkaan valtuuttama henkilö, on valtuutuksen voimassaolo tarkistettava erikseen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet registreras med hjälp av klassificering den roll i vilken personen förbjuder utlämnande av klientuppgifter. Om det är fråga om en person som klienten bemyndigat, ska fullmaktens giltighet kontrolleras separat."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttä ei ole toistuva TK Henkilön määrityksestä poiketen. Kenttä on pakollinen TK Henkilön määrityksestä poiketen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kenttä ei ole toistuva TK Henkilön määrityksestä poiketen. Kenttä on pakollinen TK Henkilön määrityksestä poiketen."
+                              }
+                            ],
+                            "classification": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodistopalvelin: Sosiaalihuolto - Asiakkuuteen liittyvä rooli 1.2.246.537.6.1284"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kodtjänst: Socialvård ‑ Roll i samband med en klientrelation 1.2.246.537.6.1284"
+                              }
+                            ],
+                            "classificationLink": [
+                              {
+                                "lang": "",
+                                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d3805\u0026versionKey\u003d4306"
+                              }
+                            ],
+                            "classificationOid": [
+                              {
+                                "lang": "",
+                                "value": "1.2.246.537.6.1284"
+                              }
+                            ],
+                            "valueSet": [
+                              {
+                                "lang": "fi",
+                                "value": "31 \u003d Huoltaja, \n32 \u003d Edunvalvoja, \n33 \u003d Edunvalvontavaltuutettu, \n34 \u003d Valtuutettu"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "31 \u003d Vårdnadshavare, \n32 \u003d Intressebevakare, \n33 \u003d Intressebevakningsfullmäktig, \n34 \u003d Befullmäktigad"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kod"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "acceptedValues": [
+                              {
+                                "lang": "",
+                                "value": "31"
+                              },
+                              {
+                                "lang": "",
+                                "value": "32"
+                              },
+                              {
+                                "lang": "",
+                                "value": "33"
+                              },
+                              {
+                                "lang": "",
+                                "value": "34"
+                              }
+                            ],
+                            "rowNumber": 29
+                          },
+                          "required": [
+                            "system",
+                            "code",
+                            "display"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string",
+                              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1284(\\.\\d+)*$"
+                            },
+                            "code": {
+                              "type": "string",
+                              "enum": [
+                                "31",
+                                "32",
+                                "33",
+                                "34"
+                              ]
+                            },
+                            "display": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "asiakirjoja_koskevat_luovutuskiellot": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Asiakirjoja koskevat luovutuskiellot"
+              },
+              {
+                "lang": "sv",
+                "value": "Samtliga förbud mot utlämnande som gäller handlingar"
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 30
+          },
+          "required": [],
+          "properties": {
+            "asiakirjaa_koskeva_luovutuskielto": {
+              "type": "array",
+              "minItems": 0,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "sosmeta": {
+                  "name": [
+                    {
+                      "lang": "fi",
+                      "value": "Asiakirjaa koskeva luovutuskielto"
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Förbud mot utlämnande som gäller handlingar"
+                    }
+                  ],
+                  "description": [
+                    {
+                      "lang": "fi",
+                      "value": "Tähän kirjataan yksittäisiä, Sosiaalihuollon asiakastiedon arkistoon tallennettuja asiakirjoja koskevat luovutuskiellot. Kiellon voi asettaa 2. vaiheen asiakasasiakirjoille ja asiakaskertomusmerkinnöille."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Här registreras enskilda förbud mot utlämnande som gäller handlingar som lagrats i Klientdataarkivet för socialvården. Förbudet kan meddelas så att det gäller klienthandlingar i andra fasen och anteckningar i klientjournaler."
+                    }
+                  ],
+                  "implementationNote": [
+                    {
+                      "lang": "fi",
+                      "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                    },
+                    {
+                      "lang": "sv",
+                      "value": "Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                    }
+                  ],
+                  "repeatable": true,
+                  "required": false,
+                  "conditionalRequired": false,
+                  "nationwideRecordedInformation": false,
+                  "hiddenField": false,
+                  "hiddenTitle": false,
+                  "rowNumber": 31
+                },
+                "required": [
+                  "asiakirja_jonka_luovutus_kielletaan",
+                  "kiellon_asettamisen_ajankohta"
+                ],
+                "properties": {
+                  "asiakirja_jonka_luovutus_kielletaan": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Asiakirja, jonka luovutus kielletään"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Handling vars utlämnande förbjuds"
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen. Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen. Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": true,
+                        "conditionalRequired": false,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 32
+                      },
+                      "required": [
+                        "oid_tunnus"
+                      ],
+                      "properties": {
+                        "oid_tunnus": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "OID-tunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "OID-kod"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan alkuperäisen asiakirjan yksilöivä OID-tunnus, eli tunnus joka pysyy samana, vaikka asiakirja versioidaan. Näyttömuodoissa ja muissa asiakkaalle suunnitelluissa näkymissä OID-tunnusta ei näytetä."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas OID-koden som specificerar den hänvisande handlingen. I visningsformen och andra vyer som är planerade för klienten visas inte OID-koden."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "1.2.246.10.2048198.11.2002.3567"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "1.2.246.10.2048198.11.2002.3567"
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttä on pakollinen TK Asiakirjaviittauksen määrityksestä poiketen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kenttä on pakollinen TK Asiakirjaviittauksen määrityksestä poiketen."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Tunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Identifierare"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 33
+                          },
+                          "required": [
+                            "value"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "nimi": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan luokituksen avulla asiakirjan nimi."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas namnet på den hänvisande handlingen med hjälp av klassificeringen."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "15024 \u003d Vammaispalvelujen toteuttamissuunnitelma"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "15024 \u003d  Genomförandeplan inom servicen för personer med funktionsnedsättning"
+                              }
+                            ],
+                            "classification": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodistopalvelin: Sosiaalihuolto - Asiakasasiakirjatyyppi 1.2.246.537.6.1506"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kodtjänsten: Socialvård - Typ av klienthandling 1.2.246.537.6.1506"
+                              }
+                            ],
+                            "classificationLink": [
+                              {
+                                "lang": "",
+                                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d2363\u0026versionKey\u003d3183"
+                              }
+                            ],
+                            "classificationOid": [
+                              {
+                                "lang": "",
+                                "value": "1.2.246.537.6.1506"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kod"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 34
+                          },
+                          "required": [
+                            "system",
+                            "code",
+                            "display"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string",
+                              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1506(\\.\\d+)*$"
+                            },
+                            "code": {
+                              "type": "string"
+                            },
+                            "display": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "laatimisaika": {
+                          "type": "string",
+                          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1])(T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9](\\.[0-9]+)?(Z|(\\+|-)((0[0-9]|1[0-3]):[0-5][0-9]|14:00)))?)?)?$",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Laatimisaika"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Tidpunkt för upprättande"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan asiakirjan laatimisaika."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet antecknas tidpunkten då den hänvisande handlingen upprättades."
+                              }
+                            ],
+                            "example": [
+                              {
+                                "lang": "fi",
+                                "value": "2010-10-13T10:49:14+03:00"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "2010-10-13T10:49:14+03:00"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Hetki"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Datum och klockslag"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 35
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "kiellon_asettamisen_ajankohta": {
+                    "type": "string",
+                    "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Kiellon asettamisen ajankohta"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Tidpunkten för meddelande av förbud"
+                        }
+                      ],
+                      "implementationNote": [
+                        {
+                          "lang": "fi",
+                          "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen."
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Kenttä on pakollinen TK Luovutuskiellon määrityksestä poiketen."
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Pvm"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Datum"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": true,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 36
+                    }
+                  },
+                  "kieltaja_on_laillinen_edustaja": {
+                    "type": "boolean",
+                    "sosmeta": {
+                      "name": [
+                        {
+                          "lang": "fi",
+                          "value": "Kieltäjä on laillinen edustaja"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Personen är klientens lagliga företrädare"
+                        }
+                      ],
+                      "title": [
+                        {
+                          "lang": "fi",
+                          "value": "Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Personen som förbjuder utlämnande av klientuppgifter är klientens lagliga företrädare"
+                        }
+                      ],
+                      "representation": [
+                        {
+                          "lang": "fi",
+                          "value": "Kytkin"
+                        },
+                        {
+                          "lang": "sv",
+                          "value": "Brytare"
+                        }
+                      ],
+                      "repeatable": false,
+                      "required": false,
+                      "conditionalRequired": false,
+                      "nationwideRecordedInformation": false,
+                      "hiddenField": false,
+                      "hiddenTitle": false,
+                      "rowNumber": 37
+                    }
+                  },
+                  "henkilo_joka_kieltaa_asiakastietojen_luovuttamisen": {
+                    "type": "array",
+                    "minItems": 0,
+                    "items": {
+                      "type": "object",
+                      "additionalProperties": false,
+                      "sosmeta": {
+                        "name": [
+                          {
+                            "lang": "fi",
+                            "value": "Henkilö, joka kieltää asiakastietojen luovuttamisen"
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Person som förbjuder utlämnande av klientuppgifter"
+                          }
+                        ],
+                        "description": [
+                          {
+                            "lang": "fi",
+                            "value": "Asiakastietojen luovuttamisen voi kieltää asiakas itse tai hänen laillinen edustajansa. Laillinen edustaja on asiakkaan huoltaja, edunvalvoja, edunvalvontavaltuutettu tai muu asiakkaan valtuuttama henkilö. Tähän kirjataan asiakkaan laillisen edustajan tiedot silloin, kun hän kieltää asiakastietojen luovuttamisen. Asiakkaan tietoja ei kirjata tähän."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Klienten själv eller klientens lagliga företrädare kan förbjuda utlämnande av klientuppgifter. En laglig företrädare är klientens vårdnadshavare, intressebevakare, intressebevakningsfullmäktig eller någon annan person som klienten har befullmäktigat. Här antecknas uppgifter om klientens lagliga företrädare då denne förbjuder utlämnande av klientuppgifter. Klientens uppgifter antecknas inte här."
+                          }
+                        ],
+                        "implementationNote": [
+                          {
+                            "lang": "fi",
+                            "value": "Tietokokonaisuus näytetään, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Ehdollisesti pakollinen: Tietokokonaisuus on pakollinen, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          },
+                          {
+                            "lang": "sv",
+                            "value": "Tietokokonaisuus näytetään, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Ehdollisesti pakollinen: Tietokokonaisuus on pakollinen, jos \"Tietojen luovuttamisen kieltävä henkilö on asiakkaan sijaan hänen laillinen edustajansa\" -kenttään on kirjattu \"kyllä\". Otsikko näytetään vain kerran, vaikka tietokokonaisuus toistuu."
+                          }
+                        ],
+                        "repeatable": true,
+                        "required": false,
+                        "conditionalRequired": true,
+                        "nationwideRecordedInformation": false,
+                        "hiddenField": false,
+                        "hiddenTitle": false,
+                        "rowNumber": 38
+                      },
+                      "required": [
+                        "sukunimi",
+                        "etunimet",
+                        "rooli"
+                      ],
+                      "properties": {
+                        "sukunimi": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Sukunimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Efternamn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 39
+                          }
+                        },
+                        "etunimet": {
+                          "type": "string",
+                          "minLength": 1,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Etunimet"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Samtliga förnamn"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Nimi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Namn"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 40
+                          }
+                        },
+                        "henkilotunnus": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Henkilötunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Personbeteckning"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "-"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "-"
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Tunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Identifierare"
+                              }
+                            ],
+                            "systemUri": [
+                              {
+                                "lang": "",
+                                "value": "urn:oid:1.2.246.21"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": true,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 41
+                          },
+                          "required": [
+                            "value"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "tilapainen_yksilointitunnus": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Tilapäinen yksilöintitunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Temporär identifikationskod"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan asiakastietojen luovuttamisen kieltävän henkilön tilapäinen yksilöintitunnus. Tilapäistä yksilöintitunnusta käytetään tilanteissa, joissa asiakastietojen luovuttamisen kieltäjänä on esimerkiksi asiakkaan huoltaja, eikä hänellä ole henkilötunnusta."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet registreras den tillfälliga identifikationskoden för den person som meddelar förbud mot utlämnade av klientuppgifter. En tillfällig identifikationskod används till exempel när klientens vårdnadshavare meddelar förbud mot utlämnande av klientuppgifter och han eller hon inte har någon personbeteckning."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Tunnus"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Identifierare"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": true,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 42
+                          },
+                          "required": [
+                            "value"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string"
+                            },
+                            "value": {
+                              "type": "string"
+                            }
+                          }
+                        },
+                        "edunvalvojan_tunniste": {
+                          "type": "string",
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Edunvalvojan tunniste"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Intressebevakarens identifikationskod"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan edunvalvojan tunniste, jos puolesta-asioija on edunvalvontatoimistossa työskentelevä yleinen edunvalvoja tai vastaavassa roolissa ostopalvelutuottajan palveluksessa."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet registreras intressebevakarens identifikationskod, om den som sköter ärenden för klientens räkning är en allmän intressebevakare som arbetar vid intressebevakningsbyrån eller i motsvarande roll hos en producent av köpta tjänster."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Ehdollisesti pakollinen: Henkilötunnus, Tilapäinen yksilöintitunnus ja Edunvalvojan tunniste -kentistä yksi on pakollinen."
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Teksti"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Text"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": false,
+                            "conditionalRequired": true,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "rowNumber": 43
+                          }
+                        },
+                        "rooli": {
+                          "type": "object",
+                          "additionalProperties": false,
+                          "sosmeta": {
+                            "name": [
+                              {
+                                "lang": "fi",
+                                "value": "Rooli"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Roll"
+                              }
+                            ],
+                            "description": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttään kirjataan luokituksen avulla rooli, jossa henkilö kieltää asiakastietojen luovuttamisen. Jos henkilö on asiakkaan valtuuttama henkilö, on valtuutuksen voimassaolo tarkistettava erikseen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "I fältet registreras med hjälp av klassificering den roll i vilken personen förbjuder utlämnande av klientuppgifter. Om det är fråga om en person som klienten bemyndigat, ska fullmaktens giltighet kontrolleras separat."
+                              }
+                            ],
+                            "implementationNote": [
+                              {
+                                "lang": "fi",
+                                "value": "Kenttä ei ole toistuva TK Henkilön määrityksestä poiketen. Kenttä on pakollinen TK Henkilön määrityksestä poiketen."
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kenttä ei ole toistuva TK Henkilön määrityksestä poiketen. Kenttä on pakollinen TK Henkilön määrityksestä poiketen."
+                              }
+                            ],
+                            "classification": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodistopalvelin: Sosiaalihuolto - Asiakkuuteen liittyvä rooli 1.2.246.537.6.1284"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kodtjänst: Socialvård ‑ Roll i samband med en klientrelation 1.2.246.537.6.1284"
+                              }
+                            ],
+                            "classificationLink": [
+                              {
+                                "lang": "",
+                                "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d3805\u0026versionKey\u003d4306"
+                              }
+                            ],
+                            "classificationOid": [
+                              {
+                                "lang": "",
+                                "value": "1.2.246.537.6.1284"
+                              }
+                            ],
+                            "valueSet": [
+                              {
+                                "lang": "fi",
+                                "value": "31 \u003d Huoltaja, \n32 \u003d Edunvalvoja, \n33 \u003d Edunvalvontavaltuutettu, \n34 \u003d Valtuutettu"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "31 \u003d Vårdnadshavare, \n32 \u003d Intressebevakare, \n33 \u003d Intressebevakningsfullmäktig, \n34 \u003d Befullmäktigad"
+                              }
+                            ],
+                            "representation": [
+                              {
+                                "lang": "fi",
+                                "value": "Koodi"
+                              },
+                              {
+                                "lang": "sv",
+                                "value": "Kod"
+                              }
+                            ],
+                            "repeatable": false,
+                            "required": true,
+                            "conditionalRequired": false,
+                            "nationwideRecordedInformation": false,
+                            "hiddenField": false,
+                            "hiddenTitle": false,
+                            "acceptedValues": [
+                              {
+                                "lang": "",
+                                "value": "31"
+                              },
+                              {
+                                "lang": "",
+                                "value": "32"
+                              },
+                              {
+                                "lang": "",
+                                "value": "33"
+                              },
+                              {
+                                "lang": "",
+                                "value": "34"
+                              }
+                            ],
+                            "rowNumber": 44
+                          },
+                          "required": [
+                            "system",
+                            "code",
+                            "display"
+                          ],
+                          "properties": {
+                            "system": {
+                              "type": "string",
+                              "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.1284(\\.\\d+)*$"
+                            },
+                            "code": {
+                              "type": "string",
+                              "enum": [
+                                "31",
+                                "32",
+                                "33",
+                                "34"
+                              ]
+                            },
+                            "display": {
+                              "type": "string"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ammattihenkilon_laatima_asiakirja": {
+          "type": "object",
+          "additionalProperties": false,
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Ammattihenkilön laatima asiakirja"
+              },
+              {
+                "lang": "sv",
+                "value": "Handling som upprättats av en yrkesutbildad person"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Tähän kirjataan tiedot silloin, kun kieltoasiakirja laaditaan asiakkaan tai hänen laillisen edustajansa asioidessa sosiaalihuollon palveluyksikössä ja ammattihenkilö laatii asiakirjan."
+              },
+              {
+                "lang": "sv",
+                "value": "Här registreras uppgifter när en handling med förbud mot utlämnande upprättas av en yrkesutbildad person medan klienten eller dennes lagliga företrädare sköter ärenden vid en serviceenhet inom socialvården."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Otsikko"
+              },
+              {
+                "lang": "sv",
+                "value": "Rubrik"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 45
+          },
+          "required": [],
+          "properties": {
+            "laatija": {
+              "type": "object",
+              "additionalProperties": false,
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Laatija"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Upprättad av"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Laatijan tiedot kirjataan, jos kieltoasiakirja on laadittu asiakkaan tai hänen laillisen edustajansa asioidessa sosiaalihuollon palveluyksikössä."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Uppgifter om den som upprättat handlingen registreras, om förbudshandlingen upprättas medan klienten eller dennes lagliga företrädare sköter ärenden vid en serviceenhet inom socialvården."
+                  }
+                ],
+                "implementationNote": [
+                  {
+                    "lang": "fi",
+                    "value": "Ehdollisesti pakollinen: Laatija on pakollinen, jos kieltoasiakirja laaditaan asiakastietojärjestelmässä (eikä OmaKannassa)."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Ehdollisesti pakollinen: Laatija on pakollinen, jos kieltoasiakirja laaditaan asiakastietojärjestelmässä (eikä OmaKannassa)."
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": true,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 46
+              },
+              "required": [
+                "sukunimi",
+                "etunimet"
+              ],
+              "properties": {
+                "sukunimi": {
+                  "type": "string",
+                  "minLength": 1,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Sukunimi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Efternamn"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan ammattihenkilön sukunimi."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet antecknas den yrkesutbildade personens efternamn."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Nimi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Namn"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": true,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 47
+                  }
+                },
+                "etunimet": {
+                  "type": "string",
+                  "minLength": 1,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Etunimet"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Samtliga förnamn"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan ammattihenkilön etunimi."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet antecknas den yrkesutbildade personens förnamn."
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Nimi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Namn"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": true,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 48
+                  }
+                },
+                "tehtavanimike": {
+                  "type": "string",
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Tehtävänimike"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Uppgiftsbeteckning"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan ammattihenkilön työtehtävän yksilöivä nimike. Koulutuksesta ja kelpoisuudesta sosiaalihuollon ammatillisiin tehtäviin säädetään lainsäädännössä."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet antecknas en beteckning som preciserar den yrkesutbildade personens arbetsuppgift. I lagstiftningen finns bestämmelser om utbildning och behörighet för yrkesuppgifter inom socialvården."
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "Sosiaalityöntekijä"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Socialarbetare"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Teksti"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Text"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 49
+                  }
+                },
+                "palveluyksikko": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "sosmeta": {
+                    "name": [
+                      {
+                        "lang": "fi",
+                        "value": "Palveluyksikkö"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Serviceenhet"
+                      }
+                    ],
+                    "description": [
+                      {
+                        "lang": "fi",
+                        "value": "Kenttään kirjataan palveluyksikön nimi SOTE-organisaatiorekisterin avulla."
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "I fältet antecknas namnet på serviceenheten enligt Organisationsregistret för social- och hälsovården."
+                      }
+                    ],
+                    "example": [
+                      {
+                        "lang": "fi",
+                        "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Espoon keskuksen lastensuojelu, Espoon kaupunki, sosiaali- ja terveystoimi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "1.2.246.10.1012636.10.1.1.100768 \u003d Esbo centrums barnskydd, Esbo stad, social- och hälsovårdssektorn"
+                      }
+                    ],
+                    "classification": [
+                      {
+                        "lang": "fi",
+                        "value": "Koodistopalvelin: THL - SOTE-organisaatiorekisteri 1.2.246.537.6.202"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kodtjänsten: THL - SOTE-organisationsregister 1.2.246.537.6.202"
+                      }
+                    ],
+                    "classificationLink": [
+                      {
+                        "lang": "",
+                        "value": "https://koodistopalvelu.kanta.fi/codeserver/pages/classification-view-page.xhtml?classificationKey\u003d421\u0026versionKey\u003d501"
+                      }
+                    ],
+                    "classificationOid": [
+                      {
+                        "lang": "",
+                        "value": "1.2.246.537.6.202"
+                      }
+                    ],
+                    "representation": [
+                      {
+                        "lang": "fi",
+                        "value": "Koodi"
+                      },
+                      {
+                        "lang": "sv",
+                        "value": "Kod"
+                      }
+                    ],
+                    "repeatable": false,
+                    "required": false,
+                    "conditionalRequired": false,
+                    "nationwideRecordedInformation": false,
+                    "hiddenField": false,
+                    "hiddenTitle": false,
+                    "rowNumber": 50
+                  },
+                  "required": [
+                    "system",
+                    "code",
+                    "display"
+                  ],
+                  "properties": {
+                    "system": {
+                      "type": "string",
+                      "pattern": "^urn:oid:1\\.2\\.246\\.537\\.6\\.202(\\.\\d+)*$"
+                    },
+                    "code": {
+                      "type": "string"
+                    },
+                    "display": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            },
+            "perustelut_tai_muut_lisatiedot_kiellon_asettamisesta_tai_perumisesta": {
+              "type": "string",
+              "sosmeta": {
+                "name": [
+                  {
+                    "lang": "fi",
+                    "value": "Perustelut tai muut lisätiedot kiellon asettamisesta tai perumisesta"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Motiveringar eller andra tilläggsuppgifter om meddelande av eller återkallande av tillstånd för utlämnande"
+                  }
+                ],
+                "description": [
+                  {
+                    "lang": "fi",
+                    "value": "Ammattihenkilö voi kirjata lisätietoja kiellon asettamisesta tai perumisesta esimerkiksi silloin, kun huoltaja on perunut alaikäisen asettamia kieltoja tai kieltojen asettamisessa tai perumisessa on ollut jokin muu ristiriitatilanne, jota tulee perustella."
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "En yrkesutbildad person kan registrera ytterligare information om meddelande eller återkallande av förbud mot utlämnande, till exempel om vårdnadshavaren har återkallat förbud som meddelats av en minderårig eller i händelse av en annan konflikt i samband med meddelande eller återkallande av förbud som måste redovisas."
+                  }
+                ],
+                "representation": [
+                  {
+                    "lang": "fi",
+                    "value": "Teksti"
+                  },
+                  {
+                    "lang": "sv",
+                    "value": "Text"
+                  }
+                ],
+                "repeatable": false,
+                "required": false,
+                "conditionalRequired": false,
+                "nationwideRecordedInformation": false,
+                "hiddenField": false,
+                "hiddenTitle": false,
+                "rowNumber": 51
+              }
+            }
+          }
+        },
+        "laatimispaivamaara": {
+          "type": "string",
+          "pattern": "^-?[0-9]{4}(-(0[1-9]|1[0-2])(-(0[0-9]|[1-2][0-9]|3[0-1]))?)?$",
+          "sosmeta": {
+            "name": [
+              {
+                "lang": "fi",
+                "value": "Laatimispäivämäärä"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum för upprättande"
+              }
+            ],
+            "description": [
+              {
+                "lang": "fi",
+                "value": "Kenttään kirjataan asiakirjan laatimisen päivämäärä."
+              },
+              {
+                "lang": "sv",
+                "value": "Datum för upprättande av handlingen ska anges i fältet."
+              }
+            ],
+            "representation": [
+              {
+                "lang": "fi",
+                "value": "Pvm"
+              },
+              {
+                "lang": "sv",
+                "value": "Datum"
+              }
+            ],
+            "repeatable": false,
+            "required": false,
+            "conditionalRequired": false,
+            "nationwideRecordedInformation": false,
+            "hiddenField": false,
+            "hiddenTitle": false,
+            "rowNumber": 52
+          }
+        }
+      }
+    }
+  }
+}
